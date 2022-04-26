@@ -9,4 +9,8 @@ Next step:
 
 1. Run npm init vite@latest in the terminal and in the folder of our project
 2. Name the project and then choose "vanilla" or "vue" 😅
-3. 
+3. NPM install -D sass in the termina to install Sass
+
+Next step:
+
+1. Run npm run dev to open localhost and get a live view of the website
