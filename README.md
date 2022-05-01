@@ -14,3 +14,7 @@ Next step:
 Next step:
 
 1. Run npm run dev to open localhost and get a live view of the website
+
+ Next step|:
+ 1. I believe that you have to install vue on your machine
+ 2. so in the terminal npm install -g @vue/cli
