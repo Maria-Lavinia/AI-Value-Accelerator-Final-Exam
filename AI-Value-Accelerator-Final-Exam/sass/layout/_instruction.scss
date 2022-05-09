@@ -1,7 +1,7 @@
-@use "variables";
+@use "../base/variables";
 
 .instructions {
-  background: url("./public/assets/instructions-bakcground.png");
+  background: url("./assets/instructions-bakcground.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
