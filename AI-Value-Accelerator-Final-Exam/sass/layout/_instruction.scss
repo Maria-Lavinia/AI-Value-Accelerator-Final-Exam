@@ -1,13 +1,5 @@
-<<<<<<< HEAD:AI-Value-Accelerator-Final-Exam/_instruction.scss
-@use "variables";
-body, html{
-    height: 100%;
-    width: 100%;
-}
-=======
 @use "../base/variables";
 
->>>>>>> main:AI-Value-Accelerator-Final-Exam/sass/layout/_instruction.scss
 .instructions {
   background: url("./assets/instructions-bakcground.png");
   background-position: center center;
@@ -99,7 +91,8 @@ h1 {
   margin-right: auto;
   margin-top: -8rem;
 }
-.button {
+
+button {
   width: 228px;
   height: 70px;
   object-fit: contain;
@@ -111,6 +104,7 @@ h1 {
   margin: 0 auto;
   font-size: 1.6rem;
   border: 0;
+  margin-bottom: 2rem;
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -135,13 +129,7 @@ h1 {
   h1{
     font-size: 2rem;
   }
-  .parallax {
-    min-height: 417px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  
   .cards {
     display: flex;
     flex-direction: column;
@@ -159,4 +147,5 @@ h1 {
   .button{
     font-size: 1rem ;
   }
+
 }
