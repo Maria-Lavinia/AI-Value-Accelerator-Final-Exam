@@ -1,7 +1,6 @@
 @use "../base/variables";
 
 .titleScreen {
-    width: 100vp;
     height: 100vh;
     padding: 3.125rem 3.125rem;
     background-color: variables.$light-blue;
@@ -12,18 +11,23 @@
 }
 
 .textImageContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    flex-basis: 100%
     
 }
 
 .mainHeading {
+    font-size: 86px;
     padding: 0px
 }
 
@@ -42,6 +46,14 @@
     color: white;
     font-size: 33px;
     box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
-  
     background-color: variables.$dark-blue;
+}
+
+.imageContainer {
+    margin-right: 10%;
+    flex-basis: 100%
+}
+
+.graphic {
+    max-width: 100%;
 }
