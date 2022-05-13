@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.scss" />
+    <title>End screen</title>
   </head>
-  <body>
-    <div class="logoContainer">
-      <img src="" />
-    </div>
-    <div class="textContainer">
-      <h1 class="mainHeading">AI VALUE ACCELERATOR</h1>
-      <h2 class="secondHeading">You have finished the game!</h2>
-      <p class="text">Congratulations for finishing the AI VALUE ACCELERATOR game. We hope you learned more about AI and how it could benefit your company.</p>
-      <div class="buttonFlex">
-        <button>HOME</button>
+  <body class="endScreen">
+    <main class="endScreenMain">
+        <img class="sasLogo" src="public/assets/sass-logo.png">
+      <div class="endTextImageContainer">
+        <div class="endImageContainer">
+          <img class="endGraphic" src="public/assets/titleScreen.svg">
+        </div>
+    <div class="endTextContainer">
+      <h1 class="endMainHeading">AI VALUE ACCELERATOR</h1>
+      <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
+      <p class="endTitleScreenText">We hope you learned more about AI and how it could benefit your company.</p>
+      <div class="endButtonFlex">
+        <button class="titleScreenBtn">SUMMARY</button>
+        <button class="titleScreenBtn">HOME</button>
       </div>
     </div>
-    <div class="imageContainer"></div>
+  </div>
+  </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>

@@ -1,4 +1,86 @@
 @use "../base/variables";
-// End screen one
 
-// Final end screen
+.endScreen {
+    height: 100vh;
+    background-color: variables.$light-blue;
+}
+
+.endScreenMain {
+    height: 100%;
+}
+
+.sasLogo {
+    position: absolute;
+margin-top: 2.5rem;
+margin-left: 3.125rem;
+width: 10rem;
+height: 4rem;
+}
+
+.endTextImageContainer {
+    display: flex;
+    height: inherit;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.endTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 10%;
+    flex-basis: 100%
+    
+}
+
+.endMainHeading {
+    font-size: 5.375rem;
+    margin-bottom: -0.5rem;
+    padding: 0rem
+}
+
+.endSecondHeading {
+    font-size: 4rem;
+    color: variables.$dark-blue;
+    text-align: center;
+}
+
+.endTitleScreenText {
+    font-size: 2.938rem;
+    color: variables.$dark-blue;
+    text-align: center;
+}
+
+.endButtonFlex {
+    display: flex;
+}
+
+.titleScreenBtn:first-child {
+    margin-right: 2.25rem;
+}
+
+.titleScreenBtn:nth-child(2) {
+    margin-left: 2.25rem;
+}
+
+.titleScreenBtn {
+    width: 17.063rem;
+    height: 4.75rem;
+    border-radius: 1.063rem;
+    border-style: none;
+    color: white;
+    font-size: 2.063rem;
+    box-shadow: 0.938rem 0.938rem 1.063rem 0 rgba(0, 0, 0, 0.16);
+    background-color: variables.$dark-blue;
+}
+
+.endImageContainer {
+    margin-left: 10%;
+    flex-basis: 100%;
+    display: flex
+}
+
+.endGgraphic {
+    max-width: 100%;
+}
