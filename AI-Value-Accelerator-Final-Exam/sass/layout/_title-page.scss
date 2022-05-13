@@ -6,13 +6,16 @@
     background-color: variables.$light-blue;
 }
 
+.logoContainer {
+    display: block;
+    position: absolute;
+}
+
 .sasLogo {
-    width: 210px;
+    max-width: 210px;
 }
 
 .textImageContainer {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     display: flex;
 }
 
@@ -35,6 +38,14 @@
     font-size: 60px;
     color: variables.$dark-blue;
     text-align: center;
+}
+
+.titleScreenBtn:first-child {
+    margin-right: 36px;
+}
+
+.titleScreenBtn:nth-child(2) {
+    margin-left: 36px;
 }
 
 .titleScreenBtn {
