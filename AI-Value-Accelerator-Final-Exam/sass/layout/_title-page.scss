@@ -22,6 +22,7 @@ height: 4rem;
     height: inherit;
     padding-top: 5%;
     padding-bottom: 5%;
+    
 }
 
 .textContainer {
@@ -30,14 +31,18 @@ height: 4rem;
     align-items: center;
     justify-content: space-evenly;
     margin-left: 10%;
+    padding-top: 250px;
     flex-basis: 100%
     
 }
 
 .mainHeading {
     font-size: 5.375rem;
-    margin-bottom: -1.875rem;
-    padding: 0rem
+    position: absolute;
+    top: 250px;
+    left: 10%;
+    /* margin-bottom: -1.875rem;
+    padding: 0rem */
 }
 
 .titleScreenText {
