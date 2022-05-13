@@ -11,8 +11,8 @@
 
 .sasLogo {
     position: absolute;
-margin-top: 40px;
-margin-left: 50px;
+margin-top: 2.5rem;
+margin-left: 3.125rem;
 width: 10rem;
 height: 4rem;
 }
@@ -20,6 +20,8 @@ height: 4rem;
 .textImageContainer {
     display: flex;
     height: inherit;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .textContainer {
@@ -33,12 +35,13 @@ height: 4rem;
 }
 
 .mainHeading {
-    font-size: 86px;
-    padding: 0px
+    font-size: 5.375rem;
+    margin-bottom: -1.875rem;
+    padding: 0rem
 }
 
 .titleScreenText {
-    font-size: 60px;
+    font-size: 3.75rem;
     color: variables.$dark-blue;
     text-align: center;
 }
@@ -48,22 +51,22 @@ height: 4rem;
 }
 
 .titleScreenBtn:first-child {
-    margin-right: 36px;
+    margin-right: 2.25rem;
 }
 
 .titleScreenBtn:nth-child(2) {
-    margin-left: 36px;
+    margin-left: 2.25rem;
 }
 
 .titleScreenBtn {
-    width: 273px;
-    height: 76px;
+    width: 17.063rem;
+    height: 4.75rem;
     
-    border-radius: 17px;
+    border-radius: 1.063rem;
     border-style: none;
     color: white;
-    font-size: 33px;
-    box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
+    font-size: 2.063rem;
+    box-shadow: 0.938rem 0.938rem 1.063rem 0 rgba(0, 0, 0, 0.16);
     background-color: variables.$dark-blue;
 }
 
