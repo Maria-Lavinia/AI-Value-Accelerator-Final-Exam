@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //login
 
 //game
@@ -31,7 +30,6 @@ function init() {
 
   console.log(init());
   //end of loading anim
-=======
 "use strict";
 //login
 
@@ -46,4 +44,3 @@ function init() {
 //    e.preventDefault();
 //    onchange="try{setCustomValidity('')}catch(e)"
 //  })
->>>>>>> main
