@@ -2,21 +2,24 @@
 
 .titleScreen {
     height: 100vh;
-    padding: 3.125rem 3.125rem;
     background-color: variables.$light-blue;
 }
 
-.logoContainer {
-    display: block;
-    position: absolute;
+.titleScreenMain {
+    height: 100%;
 }
 
 .sasLogo {
-    max-width: 210px;
+    position: absolute;
+margin-top: 40px;
+margin-left: 50px;
+width: 10rem;
+height: 4rem;
 }
 
 .textImageContainer {
     display: flex;
+    height: inherit;
 }
 
 .textContainer {
@@ -38,6 +41,10 @@
     font-size: 60px;
     color: variables.$dark-blue;
     text-align: center;
+}
+
+.buttonFlex {
+    display: flex;
 }
 
 .titleScreenBtn:first-child {
@@ -62,7 +69,8 @@
 
 .imageContainer {
     margin-right: 10%;
-    flex-basis: 100%
+    flex-basis: 100%;
+    display: flex
 }
 
 .graphic {
