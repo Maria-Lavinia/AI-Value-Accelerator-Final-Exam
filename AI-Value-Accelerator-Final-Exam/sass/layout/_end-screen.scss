@@ -30,26 +30,30 @@ height: 4rem;
     align-items: center;
     justify-content: space-evenly;
     margin-right: 10%;
-    flex-basis: 100%
+    flex-basis: 130%;
+    padding-top: 12rem;
     
 }
 
 .endMainHeading {
     font-size: 5.375rem;
-    margin-bottom: -0.5rem;
-    padding: 0rem
+    position: absolute;
+    top: 10rem;
+    right: 6%;
 }
 
 .endSecondHeading {
     font-size: 4rem;
     color: variables.$dark-blue;
     text-align: center;
+    margin-top: -1rem;
 }
 
-.endTitleScreenText {
+.endScreenText {
     font-size: 2.938rem;
     color: variables.$dark-blue;
     text-align: center;
+    margin-top: -1rem;
 }
 
 .endButtonFlex {
@@ -76,10 +80,11 @@ height: 4rem;
 }
 
 .endImageContainer {
-    margin-left: 10%;
+    margin-left: 6%;
     flex-basis: 100%;
     display: flex;
     align-items: center;
+    padding-top: 5rem;
 }
 
 .endGraphic {
