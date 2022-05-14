@@ -2,7 +2,7 @@
 
 .endScreen {
     height: 100vh;
-    background-color: variables.$light-blue;
+    background-image: url("/public/assets/endBackground2.png");
 }
 
 .endScreenMain {
@@ -78,9 +78,10 @@ height: 4rem;
 .endImageContainer {
     margin-left: 10%;
     flex-basis: 100%;
-    display: flex
+    display: flex;
+    align-items: center;
 }
 
-.endGgraphic {
+.endGraphic {
     max-width: 100%;
 }
