@@ -107,6 +107,7 @@ height: 4rem;
     }
 } 
 
+
 @media only screen and (max-width: 1200px) {
     
     .textContainer {
@@ -141,6 +142,7 @@ height: 4rem;
     }
 } 
 
+
 @media only screen and (max-width: 1000px) {
     
     .textContainer {
@@ -149,13 +151,14 @@ height: 4rem;
     }
 } 
 
+
 @media only screen and (max-width: 900px) {
     
     .titleScreen {
         background-color: white;
         background-image: url("/public/assets/mobileBackground3.svg");
         background-repeat: no-repeat;
-        background-position-y: -434px;
+        background-position-y: -24.4rem;
         background-position-x: center;
         background-size: cover;
     }
@@ -167,7 +170,7 @@ height: 4rem;
     .textContainer {
         margin-left: 6%;
         margin-right: 6%;
-        padding-top: 4rem;
+        padding-top: 3rem;
     }
 
     .mainHeading {
@@ -191,5 +194,126 @@ height: 4rem;
     .graphic {
         max-width: 60%;
     }
-    
+}
+
+
+@media only screen and (max-width: 850px) {
+    .titleScreen {
+        background-position-y: -26rem;
     }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .titleScreen {
+        background-position-y: -23rem;
+    }
+
+    .graphic {
+        max-width: 70%;
+    }
+
+    .mainHeading {
+        font-size: 3rem;
+    }
+
+    .titleScreenText {
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+
+    .titleScreen {
+        background-position-y: -24rem;
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+
+    .titleScreen {
+        background-position-y: -26rem;
+    }
+}
+
+
+@media only screen and (max-width: 680px) {
+
+    .graphic {
+        max-width: 75%;
+    }
+
+    .mainHeading {
+        font-size: 2.8rem;
+    }
+
+    .titleScreenText {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media only screen and (max-width: 634px) {
+
+    .graphic {
+        max-width: 80%;
+    }
+
+    .mainHeading {
+        font-size: 2.6rem;
+    }
+
+    .titleScreenText {
+        font-size: 2rem;
+    }
+
+    .titleScreenBtn {
+        width: 11.563rem;
+        height: 3.188rem; 
+        font-size: 1.313rem;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .titleScreen {
+        background-position-y: -28rem;
+    }
+
+    .graphic {
+        max-width: 78%;
+    }
+
+    .mainHeading {
+        font-size: 2.2rem;
+    }
+
+    .titleScreenText {
+        font-size: 2rem;
+    }
+
+    .buttonFlex {
+        flex-direction: column;
+    }
+
+    .titleScreenBtn:first-child {
+        margin-right: 0;
+    }
+    
+    .titleScreenBtn:nth-child(2) {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .graphic {
+        max-width: 94%;
+    }
+
+}
