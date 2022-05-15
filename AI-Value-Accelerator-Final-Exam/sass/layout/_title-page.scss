@@ -39,7 +39,7 @@ height: 4rem;
 .mainHeading {
     font-size: 5.375rem;
     position: absolute;
-    top: 250px;
+    top: 15.625rem;
     left: 6%;
     /* margin-bottom: -1.875rem;
     padding: 0rem */
@@ -66,7 +66,6 @@ height: 4rem;
 .titleScreenBtn {
     width: 17.063rem;
     height: 4.75rem;
-    
     border-radius: 1.063rem;
     border-style: none;
     color: white;
@@ -84,3 +83,113 @@ height: 4rem;
 .graphic {
     max-width: 100%;
 }
+
+
+@media only screen and (max-width: 1500px) {
+    
+    .textContainer {
+        margin-left: 8%;
+    }
+    
+    .mainHeading {
+        font-size: 5rem;
+        top: 15rem;
+    }
+
+    .titleScreenText {
+        font-size: 3.5rem;
+    }
+
+    .titleScreenBtn {
+        width: 13.063rem;
+        height: 3.75rem; 
+        font-size: 1.7rem;
+    }
+} 
+
+@media only screen and (max-width: 1200px) {
+    
+    .textContainer {
+        margin-left: 8%;
+        padding-top: 9.6rem;
+    }
+    
+    .mainHeading {
+        font-size: 4rem;
+        top: 13rem;
+    }
+
+    .titleScreenText {
+        font-size: 2.7rem;
+    }
+
+    
+
+    .titleScreenBtn {
+        width: 13.063rem;
+        height: 3.75rem; 
+        font-size: 1.7rem;
+        margin-top: -5rem;
+    }
+
+    .titleScreenBtn:first-child {
+        margin-right: 1.5rem;
+    }
+    
+    .titleScreenBtn:nth-child(2) {
+        margin-left: 1.5rem;
+    }
+} 
+
+@media only screen and (max-width: 1000px) {
+    
+    .textContainer {
+        margin-left: 6%;
+        padding-top: 9.6rem;
+    }
+} 
+
+@media only screen and (max-width: 900px) {
+    
+    .titleScreen {
+        background-color: white;
+        background-image: url("/public/assets/mobileBackground3.svg");
+        background-repeat: no-repeat;
+        background-position-y: -434px;
+        background-position-x: center;
+        background-size: cover;
+    }
+
+    .textImageContainer {
+        flex-direction: column-reverse;
+    }
+
+    .textContainer {
+        margin-left: 6%;
+        margin-right: 6%;
+        padding-top: 4rem;
+    }
+
+    .mainHeading {
+        position: initial;
+        font-size: 3.5rem;
+        padding: 0;
+    }
+
+    .titleScreenBtn {
+        width: 13.063rem;
+        height: 3.75rem; 
+        font-size: 1.7rem;
+        margin-top: 1rem;
+    }
+
+    .imageContainer {
+        margin-left: 6%;
+        justify-content: center;
+    }
+
+    .graphic {
+        max-width: 60%;
+    }
+    
+    }
