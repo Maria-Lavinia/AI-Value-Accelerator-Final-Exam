@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/style.scss" />
     <title>AI Value Accelerator</title>
 </head>
-<body>
-    <div class="loading-animation">
+<body class="game">
+    <!-- <div class="loading-animation">
     <div class="countdown">
         <div class="number">
           <h2>3</h2>
@@ -24,9 +24,313 @@
           </div>
       </div> 
     </div>
-    <div class="game">
+    <div class="game-screen">
         <h1>This is the game</h1>
     </div>
-    <script src="/main.js"></script>
-</body>
-</html>
+    <script src="jsboard.min.js"></script>
+    <script src="/main.js"></script> -->
+
+    <section class="game_board">
+      <div class="logo-white">
+        <img src="public/assets/logo-white.png"/>
+      </div>
+
+      <div class="sas-white">
+        <img src="./public/assets/sass-logo.png" class="icon3"/>
+      </div>
+      <div class="row">
+        <div class="cell square" id="square7" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+          <img src="./public/assets/blue3-icon.png" class="icon2"/>
+          <p id="square11-name" class="square-name" style="font-size: 21px; padding: 0;">Roll the dice.</p>
+        </div>
+        <div class="cell square" id="square8" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="#" class="icon2"/>
+          <p id="square8-name" class="square-name"></p>
+        </div>
+        <div class="cell square" id="square9" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square9-name" class="square-name"></p>
+        </div>
+        <div class="cell square" id="square10" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="#" class="icon2"/>
+          <p id="square10-name" class="square-name"></p>
+        </div>
+        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC;height: 1rem;">
+          <img src="./public/assets/blue2-icon.png" class="icon"/>
+          <p id="square11-name" class="square-name" style="font-size: 21px; padding:0; height: 1rem;">Refill your drink.</p>
+        
+
+        </div>
+        <div class="cell square" id="square12" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square10-name" class="square-name"></p>
+        </div>
+        <div class="cell square" id="square13" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="./public/assets/green-icon.png" class="icon2"/>
+          <p id="square10-name" class="square-name"></p>
+        </div>
+        <div class="cell square" id="square14" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+          <img src="./public/assets/blue-icon.png" class="icon2"/>
+          <p id="square10-name" class="square-name"></p>
+        </div>
+  
+      </div>
+      <div class="row">
+        <div class="cell square" id="square6" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square6-name" class="square-name"></p>
+        </div>
+        
+        
+        <div class="cell middle"> </div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+
+
+        
+        <div class="cell square" id="square11" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square11-name" class="square-name"></p>
+        </div>
+
+</div>
+
+
+<div class="row">
+  <div class="cell square" id="square6" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+    <img src="#" class="icon2"/>
+    <p id="square6-name" class="square-name"></p>
+  </div>
+  
+  
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+
+
+  
+  <div class="cell square" id="square11" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+    <img src="#" class="icon2"/>
+    <p id="square11-name" class="square-name"></p>
+  </div>
+
+</div>
+<div class="row">
+  <div class="cell square" id="square6" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
+    <img src="./public/assets/blue-icon.png" class="icon"/>
+    <p id="square6-name" class="square-name" style="font-size: 21px; padding: 0;">Move two steps forward.</p>
+  </div>
+  
+  
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+  <div class="cell middle"></div>
+
+
+  
+        <div class="cell square" id="square11" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square11-name" class="square-name"></p>
+        </div>
+      </div>
+        <div class="row">
+          <div class="cell square" id="square7" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+            <img src="#" class="icon2"/>
+            <p id="square6-name" class="square-name"></p>
+          </div>
+          
+          
+          <div class="cell middle"></div>
+          <div class="cell middle"></div>
+          <div class="cell middle"></div>
+          <div class="cell middle"></div>
+          <div class="cell middle"></div>
+          <div class="cell middle"></div>
+  
+  
+          
+          <div class="cell square" id="square11" style="background-color: #FFCDA9; border: solid 6px #FF822C;">
+            <img src="#" class="icon2"/>
+            <p id="square11-name" class="square-name"></p>
+          </div>
+      
+        
+      </div>
+      <div class="row">
+        <div class="cell square" id="square5" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="./public/assets/green3-icon.png" class="icon2"/>
+          <p id="square5-name" class="square-name"></p>
+        </div>
+        
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        <div class="cell middle"></div>
+        
+        <div class="cell square" id="square12" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+          <img src="#" class="icon2"/>
+          <p id="square12-value"></p>
+        </div>
+
+
+      </div>
+      <div class="row">
+        <div class="cell square" id="square4" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="./public/assets/green4-icon.png" class="icon2"/>
+          <p id="square4-value"></p>
+   
+        </div>
+        <div class="cell square" id="square3" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square3-name" class="square-name"></p>
+
+        </div>
+        <div class="cell square" id="square2" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+          <img src="./public/assets/green2-icon.png" class="icon2"/>
+          <p id="square2-name" class="square-name"></p>
+         
+
+        </div>
+        <div class="cell square" id="square2" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square2-name" class="square-name"></p>
+
+        </div>
+        <div class="cell square" id="square3" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
+          <img src="#" class="icon"/>
+          <p id="square3-name" class="square-name" style="font-size: 21px; height: 1rem;">Grab a bite.</p>
+     
+        </div>
+        <div class="cell square" id="square2" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+          <img src="./public/assets/blue-icon.png" class="icon"/>
+          <p id="square2-name" class="square-name" style="font-size: 21px;">Return to START.</p>
+          <!-- <div id="square2-value"></p> -->
+ 
+        </div>
+        <div class="cell square" id="square2" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <img src="#" class="icon2"/>
+          <p id="square2-name" class="square-name"></p>
+       
+        </div>
+        <div class="cell start" id="square1" style="background-color: #FFDBED; border: solid 6px #ff6fbb">
+          <img src="#" class="icon"/>
+          <p class="square-name">START</p>
+        </div>
+  
+      </div>
+  
+    </section>
+
+    <!-- dice -->
+    <div id="ui_dado">
+      <p id="result"></p>
+        <div id="platform">
+          <div id="dice" onclick="dado()">
+            <div class="side front">
+              <div class="dot center"></div>
+            </div>
+            <div class="side front inner"></div>
+            <div class="side top">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side top inner"></div>
+            <div class="side right">
+              <div class="dot dtop dleft"></div>
+              <div class="dot center"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side right inner"></div>
+            <div class="side left">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side left inner"></div>
+            <div class="side bottom">
+              <div class="dot center"></div>
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side bottom inner"></div>
+            <div class="side back">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+              <div class="dot center dleft"></div>
+              <div class="dot center dright"></div>
+            </div>
+            <div class="side back inner"></div>
+            <div class="side cover x"></div>
+            <div class="side cover y"></div>
+            <div class="side cover z"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rollme">Roll Me!</div>
+      <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+      <script type="text/javascript">
+    function dado(){
+	  $('#platform').removeClass('stop').addClass('playing');
+	  $('#dice');
+	  setTimeout(function(){
+	    $('#platform').removeClass('playing').addClass('stop');
+	    var number = Math.floor(Math.random() * 6) + 1;
+	    var x = 0, y = 20, z = -20;
+	    switch(number){
+	        case 1:
+	          x = 0; y = 20; z = -20;
+	          break;
+	        case 2:
+	          x = -100; y = -150; z = 10;
+	          break;
+	        case 3:
+	          x = 0; y = -100; z = -10;
+	          break;
+	        case 4:
+	          x = 0; y = 100; z = -10;
+	          break;
+	        case 5:
+	          x = 80; y = 120; z = -10;
+	          break;
+	        case 6:
+	          x = 0; y = 200; x = 10;
+	          break;
+	    }
+	    
+	    $('#dice').css({
+	      'transform': 'rotateX(' + x + 'deg) rotateY(' + y + 'deg) rotateZ(' + z + 'deg)'
+	    });
+	    
+	    $('#platform').css({
+	      'transform': 'translate3d(0,0, 0px)'
+	    });
+	    
+	    $('#result').html(number);
+	    
+	  }, 1120);
+	};
+
+      </script>
+
+      <script type="module" src="main.js"></script>
+    <!-- <script src="jsboard.min.js"></script> -->
+  </body>
+  
+  </html>
