@@ -188,6 +188,10 @@ height: 4rem;
     .endTextContainer {
         margin-right: 6%;
     }
+
+    .endMainHeading {
+        width: 38rem;
+    }
 } 
 
 
@@ -209,7 +213,7 @@ height: 4rem;
     .endTextContainer {
         margin-left: 6%;
         margin-right: 6%;
-        padding-top: 3rem;
+        padding-top: 5rem;
         padding-left: 0;
         justify-content: space-between;
     }
@@ -252,10 +256,6 @@ height: 4rem;
         flex-basis: 90%;
     }
 
-    .endMainHeading {
-        font-size: 3rem;
-    }
-
     .endTextContainer {
         padding-top: 6rem;
         padding-bottom: 2rem;
@@ -270,7 +270,7 @@ height: 4rem;
 @media only screen and (max-width: 680px) {
     .endMainHeading {
         position: initial;
-        font-size: 2.6rem;
+        width: 100%;
         padding: 0;
     }
 
