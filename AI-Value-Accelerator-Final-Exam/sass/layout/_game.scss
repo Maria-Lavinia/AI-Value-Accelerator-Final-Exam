@@ -1,101 +1,102 @@
 @use "../base/variables";
 // loading animation
-// .game{
-//     margin: 0;
-//     padding: 0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     min-height: 100vh;
-//     background: variables.$dark-blue;
-// }
-//     // .loading-animation{
-//     //     filter: blur(20px);
-//     // }
-// .countdown
-// {
-//   position: relative;
-//   width: 400px;
-//   height: 400px;
-//   transform-style: preserve-3d;
-//   perspective: 1000px;
-// }
-// .countdown:before
-// {
-//   content: '';
-//   position: absolute;
-//   bottom: -50px;
-//   left: 0;
-//   width: 100%;
-//   height: 10px;
-//   background: #000;
-//   border-radius: 50%;
-//   filter: blur(20px);
-//   animation: shadow 1s linear;
-// }
 
-// @keyframes shadow
-// {
-//   0%,100%
-//   {
-//     transform: scale(0.5);
-//   }
-//   50%
-//   {
-//     transform: scale(1);
-//   }
-//   100%{
-//       opacity: 0;
-//   }
-// }
-// .countdown .number
-// {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   transform: rotateY(270deg);
-// }
-// .countdown .number:nth-child(1)
-// {
-//   animation-delay: 0s;
-// }
-// .countdown .number:nth-child(2)
-// {
-//   animation-delay: 1s;
-// }
-// .countdown .number:nth-child(3)
-// {
-//   animation-delay: 2s;
-// }
-// .countdown .number:nth-child(4)
-// {
-//   animation-delay: 3s;
-// }
+.blur{
+  background-image: url(/public/assets/game-background.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(11px);
+  -webkit-filter: blur(11px);
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  z-index: -1000;
+}
 
-// .countdown .number h2
-// {
-//   margin: 0;
-//   padding: 0;
-//   font-size: 20em;
-//   color: variables.$white;
-// }
+.countdown{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  color: variables.$white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  text-align: center;
+  
+}
+.countdown:before
+{
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
 
-//   @keyframes animate 
-//   {
-//     0%
-//     {
-//       transform: rotateY(90deg);
-//     }
-//     10%,100%
-//     {
-//       transform: rotateY(-90deg);
-//     }
-//   }
+.countdown .number
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(270deg);
+  animation: animate 10s linear;
+}
+.countdown .number:nth-child(1)
+{
+  animation-delay: 0s;
+  
+}
+.countdown .number:nth-child(2)
+{
+  animation-delay: 1s;
+
+}
+.countdown .number:nth-child(3)
+{
+  animation-delay: 2s;
+}
+.countdown .number:nth-child(4)
+{
+  animation-delay: 3s;
+}
+
+.countdown .number h2
+{
+  margin: 0;
+  padding: 0;
+  font-size: 20em;
+  color: variables.$white;
+  align-items: center;
+}
+
+@keyframes animate 
+{
+  0%
+  {
+    transform: rotateY(90deg);
+  }
+  10%,100%
+  {
+    transform: rotateY(-90deg);
+  }
+}
+
+// end of loading animation
+// game
 
 .game{
   background-color: variables.$dark-blue;
@@ -118,7 +119,7 @@
   display: table-cell;
   table-layout: fixed;
   width: 14rem;
-  height: 7.9rem;
+  height: 7.5rem;
   text-align: center;
 }
 
@@ -127,7 +128,6 @@
   color: variables.$white;
   padding: 0;
   margin: 0;
-  // text-align: center;
 }
 
 .middle, .info {
@@ -143,7 +143,7 @@
   padding: 0;
 }
 .icon2{
-  margin-top: 1.3rem;
+  margin-top: 1.8rem;
   width: 5rem;
   height: 5rem;
   padding: 0;  
@@ -166,8 +166,6 @@
   left:78%;
   color: variables.$white;
   font-size: 20px;
-
-
 }
 // dice
 
@@ -177,9 +175,9 @@
   border-radius: 8px;
   padding: 5px;
   position: absolute;
-  width: 70px;
+  width: 50px;
   bottom: 30%;
-  left: 53.5%;
+  left: 59.5%;
   font-size: 3rem;
 }
 
@@ -187,8 +185,10 @@
   margin: 0px auto;
   position: absolute;
   top:58%;
-  left: 30%;
-  width: 100%;
+  left: 59.5%;
+  width: 40%;
+  overflow: hidden;
+  background-attachment: fixed;
   transition: opacity .4s;
   //transform: scale(.6,.6);
   text-align: center;
