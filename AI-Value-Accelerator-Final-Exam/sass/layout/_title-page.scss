@@ -86,6 +86,25 @@ height: 4rem;
 }
 
 
+@media only screen and (max-width: 1700px) {
+    
+    .textContainer {
+        padding-top: 14.6rem;
+    }
+    
+    .mainHeading {
+        width: 64rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    
+    .mainHeading {
+        width: 60rem;
+    }
+}
+
+
 @media only screen and (max-width: 1500px) {
     
     .textContainer {
@@ -93,8 +112,8 @@ height: 4rem;
     }
     
     .mainHeading {
-        font-size: 5rem;
-        top: 15rem;
+        width: 55rem;
+        top: 16rem;
     }
 
     .titleScreenText {
@@ -109,16 +128,24 @@ height: 4rem;
 } 
 
 
+@media only screen and (max-width: 1350px) {
+    .mainHeading {
+        width: 52rem;
+        top: 16rem;
+    }
+}
+
+
 @media only screen and (max-width: 1200px) {
     
     .textContainer {
         margin-left: 8%;
-        padding-top: 9.6rem;
+        padding-top: 11.6rem;
     }
     
     .mainHeading {
-        font-size: 4rem;
-        top: 13rem;
+        width: 50rem;
+        top: 17rem;
     }
 
     .titleScreenText {
@@ -150,6 +177,11 @@ height: 4rem;
         margin-left: 6%;
         padding-top: 9.6rem;
     }
+
+    .mainHeading {
+        width: 43rem;
+        top: 15.6rem;
+    }
 } 
 
 
@@ -176,7 +208,6 @@ height: 4rem;
 
     .mainHeading {
         position: initial;
-        font-size: 3.5rem;
         padding: 0;
     }
 
@@ -216,7 +247,7 @@ height: 4rem;
     }
 
     .mainHeading {
-        font-size: 3rem;
+        width: 40rem;
     }
 
     .titleScreenText {
@@ -248,7 +279,7 @@ height: 4rem;
     }
 
     .mainHeading {
-        font-size: 2.8rem;
+        width: 100%;
     }
 
     .titleScreenText {
@@ -264,7 +295,7 @@ height: 4rem;
     }
 
     .mainHeading {
-        font-size: 2.6rem;
+        width: 100%;
     }
 
     .titleScreenText {
