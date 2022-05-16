@@ -328,3 +328,84 @@
     80% { transform: translate3d(-150px,-20px,0px) }
     100% { transform: translate3d(0px,0px,0px) }
 }
+
+
+@media screen and (max-width: 90rem)
+and (max-width: 102rem){
+.logo-white img{
+width: 50rem;
+}
+.cell{
+  height: 7rem;
+}
+.icon{
+  margin-top: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon2{
+  margin-top: 1.7rem;
+  width: 4rem;
+  height: 4rem;
+  // display: block;
+  // margin: 0 auto;
+}
+.square-name{
+  font-size: 1rem;
+}
+#ui_dado{
+  top:54%;
+}
+.rollme{
+  top: 80%
+}
+}
+
+@media screen and (max-width: 102rem){
+  .cell{
+    height: 9.3rem;
+  }
+}
+
+@media screen and (max-width: 50rem){
+  .cell{
+    height: 8.7rem;
+    width: 2rem;
+  }
+  .logo-white img{
+    width: 18rem;
+    
+    }
+    .logo-white{
+      left: 22.5%;
+    }
+    .icon3{
+      width: 10rem;
+      left: 36%;
+    }
+    .icon{
+      margin-top: 0 !important;
+      width: 2rem;
+      height: 2rem;
+    }
+    .icon2{
+      margin-top: 2rem;
+      width: 3rem;
+      height: 3rem;
+    }
+    .square-name{
+      font-size: 1rem !important;
+    }
+    #ui_dado{
+      top:54%;
+      left:35%;
+      width: 50%;
+    }
+    .rollme{
+      left:53%;
+    }
+    #result{
+      left: 80%;
+    }
+}
