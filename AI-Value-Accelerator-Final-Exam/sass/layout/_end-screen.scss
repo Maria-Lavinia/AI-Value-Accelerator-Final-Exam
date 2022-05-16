@@ -10,11 +10,19 @@
 }
 
 .sasLogo {
-    position: absolute;
+position: absolute;
 margin-top: 2.5rem;
 margin-left: 3.125rem;
 width: 10rem;
 height: 4rem;
+}
+
+.sasLogoBlue2 {
+position: absolute;
+margin-top: 2.5rem;
+margin-left: 3.125rem;
+width: 10rem;
+display: none;
 }
 
 .endTextImageContainer {
@@ -251,6 +259,14 @@ height: 4rem;
     .endGraphic {
         max-width: 60%;
     }
+
+    .sasLogo {
+        display: none;
+    }
+
+    .sasLogoBlue2 {
+        display: block;
+    }
 }
 
 
@@ -266,6 +282,10 @@ height: 4rem;
 
     .endGraphic {
         max-width: 68%;
+    }
+
+    .sasLogoBlue2 {
+        margin-left: 6%;
     }
 }
 
@@ -286,6 +306,7 @@ height: 4rem;
     }
 
     .endTextContainer {
+        padding-top: 7rem;
         padding-bottom: 1rem;
     }
 
@@ -336,6 +357,10 @@ height: 4rem;
 
     .endGraphic {
         max-width: 84%;
+    }
+
+    .sasLogoBlue2 {
+        width: 8rem;
     }
 }
 
