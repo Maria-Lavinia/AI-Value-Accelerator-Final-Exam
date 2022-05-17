@@ -333,6 +333,32 @@
 }
 
 
+@media only screen and (min-width: 114.375rem) {
+  #ui_dado {
+    left: 56%;
+  }
+
+  .rollme {
+    left: 74.5%;
+  }
+}
+
+
+@media only screen and (min-width: 102rem) {
+  .icon3 {
+    left: 17%;
+  }
+
+  .logo-white {
+    left: 28%;
+  }
+
+  .rollme {
+    top: 83%;
+  }
+}
+
+
 @media only screen and (max-width: 90rem)
 and (max-width: 102rem){
 .logo-white img{
@@ -366,19 +392,11 @@ width: 50rem;
 }
 
 
-/* @media only screen and (min-width: 1600px){
-  .cell .square{
-    height: 1rem !important;
-  
-  }
-} */
-
-
 @media only screen and (max-width: 102rem){
   .cell{
     height: 7.2rem;
-  
   }
+
 }
 
 @media screen and (max-width: 50rem){
