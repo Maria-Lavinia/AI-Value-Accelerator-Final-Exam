@@ -60,23 +60,6 @@
         "icon": "./icon/discussion.png",
         "header": "Business areas - 1",
         "discussionQuestion": "AI can create value by automating work tasks and thereby changing business logic and business models. In what areas within your organization could this be relevant?",
-<<<<<<< HEAD
-        "questionAnswer": "Which one area is the most important?" 
-    },
-    {
-        "id": 8,
-        "icon": "./icon/refill-your-drink.png",
-        "header": "Business areas - 2",
-        "discussionQuestion": "Within what business areas do you see the greatest potential for AI to deliver rapid improvements/efficiency improvements/profits?",
-        "questionAnswer": "Select the most important area?"   
-    },
-    {
-        "id": 9,
-        "icon": "./icon/id14.png",
-        "header": "Business areas - 3",
-        "discussionQuestion": "AI offers a new toolbox for decision support where machine learning techniques can be used for e.g. image recognition, text analytics and prediction/forecasting. In what areas do you see that such tools can be applied within your organization?",
-        "questionAnswer": "Name the most important area?"   
-=======
         "questionAnswer": "Which one area is the most important?",
         "gameLogo": "./icon/white-game-logo.png"
     },
@@ -95,14 +78,12 @@
         "discussionQuestion": "AI offers a new toolbox for decision support where machine learning techniques can be used for e.g. image recognition, text analytics and prediction/forecasting. In what areas do you see that such tools can be applied within your organization?",
         "questionAnswer": "Name the most important area?",
         "gameLogo": "./icon/white-game-logo.png" 
->>>>>>> main
     },
     {
         "id": 10,
         "icon": "./icon/discussion.png",
         "header": "Business areas - 4",
-        "discussionQuestion": "AI is not only used to replace/automate processes, but more and more often to augment employees in their professional roles. Do you see that your skills and abilities can benefit from AI augmentation, and if so – in what way?",
-<<<<<<< HEAD
+
         "questionAnswer": "Which one augmented AI area / initiative should we do?"   
     },
     {
@@ -185,8 +166,7 @@
     {
         "id":26,
         "icon": "./icon/discussion.png",
-        "takeActionCard":"Return to START"   
-
+        "takeActionCard":"Return to START",  
         "questionAnswer": "Which one augmented AI area / initiative should we do?",
         "gameLogo": "./icon/white-game-logo.png"  
     },
