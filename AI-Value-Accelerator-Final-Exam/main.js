@@ -1,8 +1,8 @@
-
 "use strict";
 window.addEventListener("DOMContentLoaded", loading_anim());
 
 function loading_anim(){
+    localStorage.setItem('currentPosition', -1)
     const number = document.querySelector(".number");
     const game = document.querySelector(".game_board");
     const dice = document.querySelector("#ui_dado");
@@ -30,6 +30,23 @@ function loading_anim(){
         roll.style.display="block";
         roll.style.visibility="visible";
     }, 3500);
+    loadJSON();
 }
 
-console.log(loading_anim());
+
+function loadJSON() {
+  fetch("card.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+  prepareData();    
+}
+
+
+
+
+

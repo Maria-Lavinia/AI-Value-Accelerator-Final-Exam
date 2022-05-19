@@ -1,0 +1,162 @@
+[
+    {
+        "id": 0,
+        "icon": "/public/icon/do-some-exercise.png",
+        "header": "State of knowledge - 1",
+        "discussionQuestion": "Do you have the AI skills you need within your organization? Why/why not?",
+        "questionAnswer": "Name one key skill gab?"
+    },
+    {   
+        "id": 1,
+        "icon": "./public/icon/discussion.png",
+        "header": "State of knowledge - 2",
+        "discussionQuestion": "Some organizations focus primarily on increasing management’s competence in AI, while others raise the competence broadly among multiple or all employees. Which strategy do you think is best for your organization and why? Are there other ways?",
+        "questionAnswer": "Which strategy is best for your organization?"
+    },
+    {
+        "id": 2,
+        "icon": "./icon/discussion.png",
+        "header": "State of knowledge - 3",
+        "discussionQuestion": "Is training/education enough or do you also need to recruit new competence in order to speed up your AI development? Where would you look to find that competence?",
+        "questionAnswer": "Which area / company should we embark a dialogue with?"
+    },
+    {
+        "id": 3,
+        "icon": "./icon/id12.png",
+        "header": "State of knowledge - 4",
+        "discussionQuestion": "A strategic investment in AI often requires efforts in e.g. business and competitive intelligence, strategy and process development, as well as training. What efforts are needed within your organization in order to benefit from AI?",
+        "questionAnswer": "Name the most important effort?"
+    },
+    {
+        "id": 4,
+        "icon": "./icon/discussion.png",
+        "header": "Leadership - 1",
+        "discussionQuestion": "It has been proved challenging to go from small scale projects to actual deployment of AI. Are such attempts in progress within your organization? What challenges do you face?",
+        "questionAnswer": "What is the biggest challenge in scaling AI projects?" 
+    },
+    {
+        "id": 5,
+        "icon": "./icon/move-to-the-next.png",
+        "header": "Leadership - 2",
+        "discussionQuestion": "What new demands do AI put on leaders of today and tomorrow?",
+        "questionAnswer": "Name the biggest change?"  
+    },
+    {
+        "id": 6,
+        "icon": "./icon/id13.png",
+        "header": "Leadership - 3",
+        "discussionQuestion": "How will the role of the leader change as AI is increasingly implemented?",
+        "questionAnswer": "Name the most important role." 
+    },
+    {
+        "id": 7,
+        "icon": "./icon/discussion.png",
+        "header": "Business areas - 1",
+        "discussionQuestion": "AI can create value by automating work tasks and thereby changing business logic and business models. In what areas within your organization could this be relevant?",
+        "questionAnswer": "Which one area is the most important?" 
+    },
+    {
+        "id": 8,
+        "icon": "./icon/refill-your-drink.png",
+        "header": "Business areas - 2",
+        "discussionQuestion": "Within what business areas do you see the greatest potential for AI to deliver rapid improvements/efficiency improvements/profits?",
+        "questionAnswer": "Select the most important area?"   
+    },
+    {
+        "id": 9,
+        "icon": "./icon/id14.png",
+        "header": "Business areas - 3",
+        "discussionQuestion": "AI offers a new toolbox for decision support where machine learning techniques can be used for e.g. image recognition, text analytics and prediction/forecasting. In what areas do you see that such tools can be applied within your organization?",
+        "questionAnswer": "Name the most important area?"   
+    },
+    {
+        "id": 10,
+        "icon": "./icon/discussion.png",
+        "header": "Business areas - 4",
+        "discussionQuestion": "AI is not only used to replace/automate processes, but more and more often to augment employees in their professional roles. Do you see that your skills and abilities can benefit from AI augmentation, and if so – in what way?",
+        "questionAnswer": "Which one augmented AI area / initiative should we do?"   
+    },
+    {
+        "id": 11,
+        "icon": "./icon/id15.png",
+        "header": "Business  areas - 5",
+        "discussionQuestion": "How could you measure the benefit and value of an AI application in production?",
+        "questionAnswer": "Select one KPI that you want to measure?" 
+    },
+    {
+        "id":12,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"Do you see any ethical challenges related to AI development?"
+    },
+    {
+        "id":13,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"How do you increase competence to benefit from new technology?"
+    },
+    {
+        "id":14,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"Do you think AI can replace your job? Do you feel threatened? Why/why not?"
+    },
+    {
+        "id":15,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"How do you talk about AI at your workplace"
+    },
+    {
+        "id":16,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"What potential do you see for AI within your organization?"  
+    },
+    {
+        "id":17,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"How far have you come with AI within your organization?"  
+    },
+    {
+        "id":18,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"When do you think your organization can start making money from AI?"  
+    },
+    {
+        "id":19,
+        "icon": "./icon/discussion.png",
+        "discussionQuestion":"Do you think there is a risk that AI will make people passive and incompetent?"     
+    },
+    {
+        "id":20,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Do some exercise"      
+    },
+    {
+        "id":21,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Move to the next."    
+    },
+    {
+        "id":22,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Refill your drink."
+    },
+    {
+        "id":23,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Roll the dice again"  
+    },
+    {
+        "id":24,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"2 Min. break"   
+    },
+    {
+        "id":25,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Grab a bite"   
+    },
+    {
+        "id":26,
+        "icon": "./icon/discussion.png",
+        "takeActionCard":"Return to START"   
+    }
+
+]

@@ -286,6 +286,20 @@
 
       <div class="rollme">Roll Me!</div>
 
+<!-- 
+      <template class="template">
+        <div id="popup1">
+          <img class="input-icon" src="image/Artboard 2.png" alt="input-icon" />
+          <div class="input-card">
+            <h1>Leadership</h1>
+            <h2 clas="">What new demands does AI put on leaders of today and tomorrow?</h2>
+            <textarea id="input" name="input" placeholder="Write down your answer here…"></textarea>
+            <img class="game-logo" src="image/logo.png" alt="game-logo" />
+          </div>
+        </div>
+      </template> -->
+
+
       <script src="main.js"></script>
 
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
@@ -293,9 +307,17 @@
        function dice(){
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
+
+  
+
         setTimeout(function(){
           $('#platform').removeClass('playing').addClass('stop');
           var number = Math.floor(Math.random() * 6) + 1;
+
+          let previousPosition = localStorage.getItem('currentPosition')
+           let currentPlayerPostion = parseInt(previousPosition) + number;
+          localStorage.setItem('currentPosition', currentPlayerPostion);
+          
           var x = 0, y = 20, z = -20;
           switch(number){
               case 1:

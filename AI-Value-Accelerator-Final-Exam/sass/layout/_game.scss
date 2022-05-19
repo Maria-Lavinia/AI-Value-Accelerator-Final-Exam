@@ -330,13 +330,12 @@
 }
 
 
-@media only screen and (max-width: 90rem)
-and (max-width: 102rem){
+@media only screen and (max-width: 77rem){
 .logo-white img{
 width: 50rem;
 }
 .cell{
-  height: 7rem;
+  height: 5rem;
 }
 .icon{
   margin-top: 0.5rem;
@@ -362,7 +361,7 @@ width: 50rem;
 }
 }
 
-@media only screen and (max-width: 102rem){
+@media (max-width: 103.75rem){
   .cell{
     height: 7.2rem;
   
