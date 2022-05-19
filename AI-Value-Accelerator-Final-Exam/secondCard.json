@@ -186,7 +186,7 @@
         "id":26,
         "icon": "./icon/discussion.png",
         "takeActionCard":"Return to START"   
-=======
+
         "questionAnswer": "Which one augmented AI area / initiative should we do?",
         "gameLogo": "./icon/white-game-logo.png"  
     },
@@ -287,7 +287,7 @@
         "icon": "./icon/return-to-start.png",
         "takeActionCard":"Return to START",
         "gameLogo": "./icon/white-game-logo.png"   
->>>>>>> main
+
     }
 
 ]
