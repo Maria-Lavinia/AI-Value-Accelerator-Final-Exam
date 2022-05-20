@@ -65,10 +65,13 @@ function loading_anim(){
 // }
 
 function showModal(){
-    this.querySelector(".popup").classList.remove("hide");  
+    console.log("hej")
+    // const popup = document.querySelectorAll("#popup");
+    this.querySelector(".popup").classList.remove("hide");
+
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 1000);
+      }, 1000);   
 }
 
 const square2 = document.querySelectorAll(".square");
