@@ -1,22 +1,28 @@
 @use "../base/variables";
 
 #modal {
-    position: absolute;
+    // position: absolute;
     padding: 3rem 9rem;
     border-radius: 53px;
     box-shadow: 15px 15px 17px 0 rgb(0 0 0 / 40%);
     border: solid 29px #FF822C;
-    top: 5rem;
-    left: 7.8rem;
+    // top: 5rem;
+    // left: 7.8rem;
     border-radius: 15px;
     background-color: #04304A;
     width: 74rem;
     height: auto;
     display: block;
     color: white;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     z-index: 1;
+  }
+  .popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .hide {
