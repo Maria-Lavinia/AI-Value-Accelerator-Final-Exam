@@ -70,5 +70,5 @@ function showModal(){
     this.querySelector(".popup").classList.remove("hide");
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 1000);
+      }, 10000);
 }
