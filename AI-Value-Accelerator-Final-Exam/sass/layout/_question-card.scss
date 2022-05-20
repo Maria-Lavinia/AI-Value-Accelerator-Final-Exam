@@ -2,7 +2,7 @@
 
 #modal {
     position: absolute;
-    padding: 3rem 4rem;
+    padding: 3rem 9rem;
     border-radius: 53px;
     box-shadow: 15px 15px 17px 0 rgb(0 0 0 / 40%);
     border: solid 29px #FF822C;
@@ -24,20 +24,38 @@
     display: block;
   }
   
-  #modal .input-card h1 {
+.input-card .header {
     text-align: center;
     margin-top: 1.5rem;
     color: white;
     
   }
-  #modal .input-card h2 {
-    text-align: center;
+.input-card .Question1{
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 2rem; 
+    font-weight: lighter;
+}
+  .input-card .Question2{
+    text-align: left;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  .input-card .blue-Question{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .input-card .green-Question{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
   
   #input{
-    width: 41rem;
+    width: 53rem;
     height: 12rem;
     border-radius: 14px;
     border: solid 3px #ffcda9;
@@ -57,7 +75,7 @@
   .input-icon{
     position: absolute;
     left: 2vw;
-    top: 1vw;
+    top: 2vw;
     width: auto;
     height: 6rem;
     /* background-size: contain; */

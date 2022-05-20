@@ -65,10 +65,10 @@ function loading_anim(){
 
 function showModal(){
     console.log("hej")
-
     // const popup = document.querySelectorAll("#popup");
     this.querySelector(".popup").classList.remove("hide");
+
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 1000);
+      }, 1000);   
 }
