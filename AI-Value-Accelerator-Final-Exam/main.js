@@ -1,6 +1,5 @@
 
 "use strict";
-// window.addEventListener("DOMContentLoaded", loading_anim());
 
 window.addEventListener("DOMContentLoaded", start());
 // let card;
@@ -13,7 +12,11 @@ function start(){
 
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
+  
 }
+let click = false;
+
+
 
 function loading_anim(){
     const number = document.querySelector(".number");
@@ -61,14 +64,23 @@ function loading_anim(){
 //     document.querySelector("#square7").addEventListener("click", showModal);
 // }
 
-
-
 function showModal(){
-    console.log("hej")
-
-    // const popup = document.querySelectorAll("#popup");
-    this.querySelector(".popup").classList.remove("hide");
+    this.querySelector(".popup").classList.remove("hide");  
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
       }, 1000);
 }
+
+const square2 = document.querySelectorAll(".square");
+square2.forEach((apple) => apple.addEventListener("click", showColor));
+
+
+function showColor(){
+   this.style.backgroundColor = "gray";
+   this.style.border = "gray";
+//    this.style.opacity = "50%"; 
+//    document.querySelector(".popup").style.pointerEvents = "none";
+  }
+
+
+
