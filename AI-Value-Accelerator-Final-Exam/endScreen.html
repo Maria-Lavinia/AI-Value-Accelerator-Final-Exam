@@ -8,26 +8,47 @@
     <title>End screen</title>
   </head>
   <body class="endScreen">
-    <main class="endScreenMain">
-        <img class="sasLogo" src="public/assets/sass-logo.png">
-        <img class="sasLogoBlue2" src="public/assets/sasLogoBlue2.png">
-      <div class="endTextImageContainer">
-        <div class="endImageContainer">
+
+<div class = "endddScreenz">
+
+        <img class="sasLogo" src="public/assets/sass-logo.png"/>
+        <img class="sasLogoBlue2" src="public/assets/sasLogoBlue2.png"/>
+    
+      
           <img class="endGraphic" src="public/assets/endGraphic2.png">
-        </div>
-    <div class="endTextContainer">
-      <!-- <h1 class="endMainHeading">AI VALUE ACCELERATOR</h1> -->
-      <img class="endMainHeading" src="public/assets/finalLogoBig2.png">
+    
+  
+      <img class="endMainHeading" src="public/assets/finalLogoBig2.png"/>
       <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
       <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
-      <div class="endButtonFlex">
-        <button class="endScreenBtn" onclick="window.location.href ='insights.html'">INSIGHTS</button>
-        <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
-      </div>
+ 
+      <button class="insButton">WRITE YOUR INSIGHTS</button>
+      <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
     </div>
-  </div>
-  </main>
 
-    <script src="./main.js"></script>
+
+<form class="formz hide">
+  <textarea id="input1" name="content" placeholder="Write down your answer here…"></textarea>
+  <input type="submit" class="button" value="Send">
+</form>
+
+
+<section id = "insightsId">
+<div class="mainContainer"></div>
+
+<template class="insightsTemplate">
+<div class="insights">
+
+  <h1>KEY INSIGHTS</h1>
+  <p class="line">
+
+  </p>
+</div>
+</template>
+</section>
+
+
+    <script src="./script.js"></script>
+    <!-- <script src="./main.js"></script> -->
   </body>
 </html>

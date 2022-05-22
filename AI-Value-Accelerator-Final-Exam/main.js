@@ -2,21 +2,17 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", start());
-// let card;
+
 
 function start(){
     loading_anim(); 
-    // hentData();
     const popup = document.querySelectorAll(".popup");
     const square = document.querySelectorAll(".square");
-
+   
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
   
 }
-let click = false;
-
-
 
 function loading_anim(){
     const number = document.querySelector(".number");
@@ -48,31 +44,15 @@ function loading_anim(){
     }, 3500);
 }
 
-// async function hentData(){
-//     console.log("hentData");
-//     const result = await fetch("secondCard.json");
-//     card = await result.json();
-//     console.log("card", card);
-//     visCard();
-// }
-
-// function visCard(){
-//     console.log("visCard", card);
-//     const cardList = document.querySelector(".cardList");
-//     const template = document.querySelector("template").content;
-
-//     document.querySelector("#square7").addEventListener("click", showModal);
-// }
-
 function showModal(){
-    console.log("hej")
-    // const popup = document.querySelectorAll("#popup");
     this.querySelector(".popup").classList.remove("hide");
 
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 1000);   
-}
+        
+      }, 1000); 
+    //   showForm();  
+}  
 
 const square2 = document.querySelectorAll(".square");
 square2.forEach((apple) => apple.addEventListener("click", showColor));
@@ -81,9 +61,58 @@ square2.forEach((apple) => apple.addEventListener("click", showColor));
 function showColor(){
    this.style.backgroundColor = "gray";
    this.style.border = "gray";
+//    showForm();
 //    this.style.opacity = "50%"; 
 //    document.querySelector(".popup").style.pointerEvents = "none";
   }
 
+// function showForm(){
+//     setTimeout(() => {
+//         const game3 = document.querySelector(".game_board");
+//         game3.style.display="none";
+//         game3.style.visibility="hidden";
+//         document.querySelector("#ui_dado").style.display="none";
+//         document.querySelector(".rollme").style.display = "none";
+//         document.querySelector(".formz").classList.remove("hide")
+         
+//        }, 7000); 
+// }
 
 
+// const form = document.querySelector(".formz");
+
+
+// form.addEventListener("submit", handleSubmit);
+    
+//   function handleSubmit(e){
+//     document.querySelector(".formz").classList.add("hide")
+//     // window.location.href ='endScreen.html'
+//     e.preventDefault();
+//    const payload = {
+//     content: form.elements.content.value,
+//    };
+//    document.querySelector("input[type=submit]").disabled = true;
+  
+//    console.log(payload);
+//    fetch(`https://portfolio-8a02.restdb.io/rest/final-exam-2`, {
+//       method: "POST",
+//       headers: {
+//         "x-apikey": "61753a458597142da1745988",
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(payload),
+//     })
+//     .then(res=>res.json())
+//     .then((data) => {
+  
+//       const template = document.querySelector("template.insightsTemplate").content;
+//       const copy = template.cloneNode(true);
+//       copy.querySelector(".line").textContent = data.content;
+//       document.querySelector(".mainContainer").appendChild(copy);
+    
+     
+//       document.querySelector("input[type=submit]").disabled = false;
+  
+//       form.elements.content.value = "";
+//     });
+//   } 
