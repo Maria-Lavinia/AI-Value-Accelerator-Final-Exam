@@ -72,8 +72,8 @@ function showModal(){
         this.querySelector(".popup").classList.add("hide");
       }, 10000);
 
-    document.querySelector(".hourglass").classList.add(".hourglass:before");
-    document.querySelector(".hourglass").classList.add(".hourglass:after");
-    document.querySelector(".hourglass").classList.remove(".hourglass:before");
-    document.querySelector(".hourglass").classList.remove(".hourglass:after");
+      console.log("fill");
+
+    document.querySelector(".hourglass").classList.add(".fillHourglass");
+    /* document.querySelector(".hourglass").classList.remove(".fillHourglass"); */
 }

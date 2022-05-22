@@ -539,7 +539,7 @@ width: 50rem;
 }
 .hourglass {
 	--polygonH: polygon(0% 0%,100% 0%,100% 5.55%,95% 5.55%,95% 28%,60% 46%,60% 54%,95% 72%,95% 94.45%,100% 94.45%,100% 100%,0% 100%,0% 94.45%,5% 94.45%,5% 72%,40% 54%,40% 46%,5% 28%,5% 5.55%,0% 5.55%);
-	animation-name: flip;
+	/* animation-name: flip; */
 	animation-timing-function: ease-in-out;
 	background-image: linear-gradient(var(--primary) 0.5em,#737a8c55 0.5em 8.5em,var(--primary) 8.5em);
 	clip-path: var(--polygonH);
@@ -564,7 +564,7 @@ width: 50rem;
 	--polygonB3: polygon(0% 24%,100% 24%,100% 24%,55% 45%,55% 80%,100% 100%,100% 100%,0% 100%,0% 100%,45% 80%,45% 45%,0% 24%);
 	--polygonB4: polygon(45% 45%,55% 45%,55% 45%,55% 45%,55% 58%,100% 76%,100% 100%,0% 100%,0% 76%,45% 58%,45% 45%,45% 45%);
 	--polygonB5: polygon(50% 53%,50% 53%,50% 53%,50% 53%,50% 53%,100% 76%,100% 100%,0% 100%,0% 76%,50% 53%,50% 53%,50% 53%);
-	animation-name: fill;
+	/* animation-name: fill; */
 	background-color: var(--fg);
 	background-size: 100% 3.6em;
 	clip-path: var(--polygonB1);
@@ -575,7 +575,8 @@ width: 50rem;
 	height: 8em;
 	z-index: 1;
 }
-.hourglass:after {
+
+/* .hourglass:after {
 	animation-name: glare;
 	background:
 		linear-gradient(90deg,#0000 0.5em,#0003 0.5em 1.5em,#0000 1.5em 3.5em,#fff3 3.5em 4.5em,#fff0 4.5em 6.5em,#0003 6.5em 7.5em,#0000 7.5em) 0 0 / 100% 0.5em,
@@ -587,6 +588,10 @@ width: 50rem;
 	width: 200%;
 	height: 100%;
 	z-index: 2;
+} */
+
+.fillHourglass {
+  animation-name: fill;
 }
 
 /* Animations */
