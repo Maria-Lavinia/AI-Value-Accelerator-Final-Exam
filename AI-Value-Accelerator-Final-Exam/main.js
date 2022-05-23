@@ -3,6 +3,8 @@
 
 window.addEventListener("DOMContentLoaded", start());
 
+//sounds
+let popupSound = document.querySelector("#popupSound")
 
 function start(){
     loading_anim(); 
@@ -46,6 +48,8 @@ function loading_anim(){
 
 function showModal(){
     this.querySelector(".popup").classList.remove("hide");
+    
+    popupSound.play();
 
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");

@@ -19,8 +19,8 @@
       <p class="titleScreenText">Discover a new & fun way <br>
         of learning about AI</p>
       <div class="buttonFlex">
-        <button class="titleScreenBtn" onclick="window.location.href ='instruction.html'">GUIDE</button>
-        <button class="titleScreenBtn" onclick="window.location.href ='game.html'">PLAY</button>
+        <button class="titleScreenBtn" id="titleBtn1" onclick="window.location.href ='instruction.html'">GUIDE</button>
+        <button class="titleScreenBtn" id="titleBtn2" onclick="window.location.href ='game.html'">PLAY</button>
         <audio id="buttonSound" src="public/assets/sounds/buttonClick.wav"></audio>
         <audio id="gameCountdownSound" src="public/assets/sounds/gameCountdown.wav"></audio>
       </div>
@@ -34,16 +34,21 @@
     <script src="main.js"></script>
     <script type="text/javascript">
       let buttonSound = document.querySelector("#buttonSound");
-      /* let gameCountdownSound = document.querySelector("#gameCountdownSound"); */
+      let gameCountdownSound = document.querySelector("#gameCountdownSound");
 
       window.addEventListener("load", start);
 
       function start() {
-        document.querySelector(".titleScreenBtn").addEventListener("click", clickButton)
+        document.querySelector("#titleBtn1").addEventListener("click", clickButton1);
+        document.querySelector("#titleBtn2").addEventListener("click", clickButton2)
       }
 
-      function clickButton() {
-        console.log("clicked button")
+      function clickButton1() {
+        buttonSound.play();
+
+      }
+
+      function clickButton2() {
         buttonSound.play();
         gameCountdownSound.play()
       }
