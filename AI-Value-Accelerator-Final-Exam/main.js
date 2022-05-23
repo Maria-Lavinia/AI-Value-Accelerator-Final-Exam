@@ -71,7 +71,11 @@ function showModal(){
 
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 1000);   
+      }, 2000);   
+
+    if (this.querySelector(".popup").hasClass('open') ) {
+          document.querySelector(".container").classList.add('blur');
+        }
 }
 
 const square2 = document.querySelectorAll(".square");

@@ -96,4 +96,43 @@
     margin-right: auto;
     margin-top: 2rem;
   }
-  
+
+.popup .open {
+      opacity:1;
+      visibility:visible;
+    }
+.popup .open{
+      transform: scale(1);
+    }
+.container .blur {
+        filter: blur(5px);
+      }
+      
+//   MOBIL 
+  @media screen and (max-width: 50rem){
+    #modal {
+        padding: 1rem 1rem;
+        border: solid 15px #FF822C;
+        width: 29rem;
+    }
+
+    #input{
+        width: 25rem;
+    }
+
+    .input-card .header {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .input-icon {
+        position: relative;
+        left: 0;
+        top: 2vw;
+        height: 5rem;
+    }
+    .input-card .green-Question {
+        margin-top: 2rem;
+
+    }
+  }
