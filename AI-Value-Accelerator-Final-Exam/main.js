@@ -66,3 +66,15 @@ function showModal(){
     document.querySelector(".hourglass").classList.add(".fillHourglass");
     /* document.querySelector(".hourglass").classList.remove(".fillHourglass"); */
 }
+
+const square2 = document.querySelectorAll(".square");
+square2.forEach((apple) => apple.addEventListener("click", showColor));
+
+
+function showColor(){
+   this.style.backgroundColor = "gray";
+   this.style.border = "gray";
+//    showForm();
+//    this.style.opacity = "50%"; 
+//    document.querySelector(".popup").style.pointerEvents = "none";
+  }
