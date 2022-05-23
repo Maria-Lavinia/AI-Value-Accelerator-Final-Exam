@@ -38,13 +38,15 @@
           <span class="error">Your password isn't long enough</span>
           </div>
           <div class="forms_buttons">
-            <input type="submit" value="SIGN IN" id="sign-in">
+            <input type="submit" value="SIGN IN" id="sign-in" onclick="buttonSound.play()">
+            <audio id="buttonSound" src="assets/sounds/buttonClick.wav"></audio>
           </div>
         <!-- </div> -->
       </fieldset>
       </form>
     </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
   

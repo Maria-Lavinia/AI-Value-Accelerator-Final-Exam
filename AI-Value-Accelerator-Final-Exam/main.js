@@ -2,12 +2,21 @@
 "use strict";
 // window.addEventListener("DOMContentLoaded", loading_anim());
 
+
+//sounds
+/* let buttonSound = document.querySelector("#buttonSound"); */
+let gameCountdownSound = document.querySelector("#gameCountdownSound");
+
 window.addEventListener("DOMContentLoaded", start());
 // let card;
 
+
+
 function start(){
+
     loading_anim(); 
     // hentData();
+
     const popup = document.querySelectorAll(".popup");
     const square = document.querySelectorAll(".square");
 
@@ -16,6 +25,8 @@ function start(){
 }
 
 function loading_anim(){
+
+    
     const number = document.querySelector(".number");
     const game = document.querySelector(".game_board");
     const dice = document.querySelector("#ui_dado");

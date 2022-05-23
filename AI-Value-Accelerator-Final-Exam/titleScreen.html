@@ -21,6 +21,8 @@
       <div class="buttonFlex">
         <button class="titleScreenBtn" onclick="window.location.href ='instruction.html'">GUIDE</button>
         <button class="titleScreenBtn" onclick="window.location.href ='game.html'">PLAY</button>
+        <audio id="buttonSound" src="public/assets/sounds/buttonClick.wav"></audio>
+        <audio id="gameCountdownSound" src="public/assets/sounds/gameCountdown.wav"></audio>
       </div>
     </div>
     <div class="imageContainer">
@@ -29,6 +31,22 @@
   </div>
   </main>
 
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+      let buttonSound = document.querySelector("#buttonSound");
+      /* let gameCountdownSound = document.querySelector("#gameCountdownSound"); */
+
+      window.addEventListener("load", start);
+
+      function start() {
+        document.querySelector(".titleScreenBtn").addEventListener("click", clickButton)
+      }
+
+      function clickButton() {
+        console.log("clicked button")
+        buttonSound.play();
+        gameCountdownSound.play()
+      }
+    </script>
   </body>
 </html>
