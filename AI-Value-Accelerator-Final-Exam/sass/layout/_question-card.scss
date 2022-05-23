@@ -121,3 +121,32 @@ textarea{
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
+
+  //   MOBIL 
+  @media screen and (max-width: 50rem){
+    #modal {
+        padding: 1rem 1rem;
+        border: solid 15px #FF822C;
+        width: 29rem;
+    }
+
+    #input{
+        width: 25rem;
+    }
+
+    .input-card .header {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .input-icon {
+        position: relative;
+        left: 0;
+        top: 2vw;
+        height: 5rem;
+    }
+    .input-card .green-Question {
+        margin-top: 2rem;
+
+    }
+  }
