@@ -153,20 +153,20 @@
 }
 .icon3{
   position: absolute;
-  top:40%;
+  top:27%;
   left:20%;
   width: 15rem;
 }
 
 .logo-white{
   position: absolute;
-  top: 50%;
-  left:30%;
+  top: 45%;
+  left: 25%;
 }
 .rollme{
   position: absolute;
-  top: 81%;
-  left:78%;
+  top: 77%;
+  left:48%;
   color: variables.$white;
   font-size: 20px;
 }
@@ -179,16 +179,16 @@
   padding: 5px;
   position: absolute;
   width: 50px;
-  bottom: 30%;
-  left: 59.5%;
+  bottom: 17%;
+  left: 61.5%;
   font-size: 3rem;
 }
 
 #ui_dado{
   margin: 0px auto;
   position: absolute;
-  top:58%;
-  left: 59.5%;
+  top:53%;
+  left: 29.5%;
   width: 40%;
   overflow: hidden;
   background-attachment: fixed;
@@ -333,34 +333,13 @@
 }
 
 
-@media only screen and (min-width: 114.375rem) {
-  #ui_dado {
-    left: 56%;
-  }
-
-  .rollme {
-    left: 74.5%;
-  }
-
-  .cell {
-    width: 2%;
-  }
-}
 
 
-@media only screen and (min-width: 102rem) {
-  .icon3 {
-    left: 17%;
-  }
 
-  .logo-white {
-    left: 28%;
-  }
 
-  .rollme {
-    top: 83%;
-  }
-}
+
+
+
 
 
 @media only screen and (max-width: 90rem)
@@ -388,10 +367,10 @@ width: 50rem;
   font-size: 1rem;
 }
 #ui_dado{
-  top:54%;
+  top:53%;
 }
 .rollme{
-  top: 80%
+  top: 82%
 }
 }
 

@@ -1,0 +1,53 @@
+@use "../base/variables";
+
+.insights{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1332px;
+    height: 827px;
+    padding: 15px 30px 28.4px 139.6px;
+    border-radius: 44px;
+    box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
+    background-color: variables.$white;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+opacity: 0;
+visibility: hidden;
+display: none;
+}
+.insTitle{
+padding-top: 20%;
+font-weight: 100;
+}
+
+.insText{
+    width: 1354px;
+    height: 287px;
+    // margin: 178.1px 4px 65.1px 56.6px;
+    padding: 32px 109px 155px 38px;
+    border-radius: 30px;
+    border: solid 9px variables.$dark-blue;
+}
+
+.insButton{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    width: 119px;
+  height: 43px;
+  padding: 10px 25px 7px;
+  border-radius: 11px;
+  box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
+ display: flex;
+ justify-content: center;
+ font-size: 19px;
+
+
+}
+
+// }

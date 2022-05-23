@@ -1,6 +1,5 @@
 
 "use strict";
-// window.addEventListener("DOMContentLoaded", loading_anim());
 
 
 //sounds
@@ -8,20 +7,19 @@
 let gameCountdownSound = document.querySelector("#gameCountdownSound");
 
 window.addEventListener("DOMContentLoaded", start());
-// let card;
+
 
 
 
 function start(){
 
     loading_anim(); 
-    // hentData();
-
     const popup = document.querySelectorAll(".popup");
     const square = document.querySelectorAll(".square");
-
+   
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
+  
 }
 
 function loading_anim(){
@@ -56,29 +54,9 @@ function loading_anim(){
     }, 3500);
 }
 
-// async function hentData(){
-//     console.log("hentData");
-//     const result = await fetch("secondCard.json");
-//     card = await result.json();
-//     console.log("card", card);
-//     visCard();
-// }
-
-// function visCard(){
-//     console.log("visCard", card);
-//     const cardList = document.querySelector(".cardList");
-//     const template = document.querySelector("template").content;
-
-//     document.querySelector("#square7").addEventListener("click", showModal);
-// }
-
-
-
 function showModal(){
-    console.log("hej")
-
-    // const popup = document.querySelectorAll("#popup");
     this.querySelector(".popup").classList.remove("hide");
+
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
       }, 10000);
