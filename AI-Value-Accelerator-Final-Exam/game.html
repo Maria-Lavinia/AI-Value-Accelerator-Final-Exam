@@ -535,6 +535,7 @@
 <!-- end of the game -->
     <!-- dice -->
     <div id="ui_dado">
+      <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
           <div id="dice" onclick="dice()">
@@ -597,6 +598,9 @@
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
       <script type="text/javascript">
        function dice(){
+
+        diceSound.play();
+
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
         setTimeout(function(){

@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", start());
 
 //sounds
 let popupSound = document.querySelector("#popupSound")
+let diceSound = document.querySelector("#diceSound")
 
 function start(){
     loading_anim(); 
