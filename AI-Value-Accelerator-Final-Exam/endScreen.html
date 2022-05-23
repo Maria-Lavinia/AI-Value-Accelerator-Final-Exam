@@ -11,42 +11,49 @@
 
 <div class = "endddScreenz">
 
-        <img class="sasLogo" src="public/assets/sass-logo.png"/>
-        <img class="sasLogoBlue2" src="public/assets/sasLogoBlue2.png"/>
-    
-      
-          <img class="endGraphic" src="public/assets/endGraphic2.png">
-    
-  
-      <img class="endMainHeading" src="public/assets/finalLogoBig2.png"/>
-      <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
-      <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
- 
-      <button class="insButton">WRITE YOUR INSIGHTS</button>
-      <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
-
-
-      
+  <main class="endScreenMain">
+    <img class="sasLogo" src="public/assets/sass-logo.png">
+    <img class="sasLogoBlue2" src="public/assets/sasLogoBlue2.png">
+  <div class="endTextImageContainer">
+    <div class="endImageContainer">
+      <img class="endGraphic" src="public/assets/endGraphic2.png">
     </div>
+<div class="endTextContainer">
+  <img class="endMainHeading" src="public/assets/finalLogoBig2.png">
+  <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
+  <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
+  <div class="endButtonFlex">
+    <button class=" endScreenBtn insButton">WRITE YOUR INSIGHTS</button>
+
+    <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
+  </div>
+</div>
+</div>
+</main>
+</div>
 
 
-<form class="formz hide">
-  <textarea id="input1" name="content" placeholder="Write down your answer here…"></textarea>
+<form class="formz hidden">
+  <h1 class="insTitle">Please write the key insights of this game!</h1>
+  <textarea id="input1" name="content" class="insText" placeholder="Write down your answer here…"></textarea>
   <input type="submit" class="button" value="Send">
 </form>
 
 
 <section id = "insightsId">
 <div class="mainContainer"></div>
-
 <template class="insightsTemplate">
+  <img class="logo" src="public/assets/sass-logo.png">
 <div class="insights">
 
   <h1>KEY INSIGHTS</h1>
-  <p class="line">
-
-  </p>
+  <ul>
+    <li class = "line"></li>
+  </ul>
+ 
+  
 </div>
+<button class="button insButton" onclick="window.location.href ='titleScreen.html'">HOME</button>
 </template>
 </section>
 
@@ -57,4 +64,3 @@
 </html>
 
 
-<button class="insButton">WRITE YOUR INSIGHTS</button>

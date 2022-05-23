@@ -1,5 +1,3 @@
-// document.querySelector(".formz").style.display="none";
-// document.querySelector(".formz").style.opacity = "0";
 "use strict";
 
 
@@ -8,8 +6,8 @@ document.querySelector(".insButton").addEventListener("click", showForm);
 
 
 function showForm(){
-    document.querySelector(".endddScreenz").classList.add("hide");
-    document.querySelector(".formz").classList.remove("hide")
+    document.querySelector(".endddScreenz").classList.add("hidden");
+    document.querySelector(".formz").classList.remove("hidden")
 }
 
 // const form = document.querySelector(".formz");
@@ -17,12 +15,12 @@ function showForm(){
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e){
-    
-    // window.location.href ='endScreen.html'
     e.preventDefault();
+    document.querySelector(".formz").classList.add("hidden")
    const payload = {
     content: form.elements.content.value,
    };
+
    document.querySelector("input[type=submit]").disabled = true;
   
    console.log(payload);
