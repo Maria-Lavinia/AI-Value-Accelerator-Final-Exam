@@ -12,6 +12,7 @@
   <!-- loading animation -->
   <div class="blur"></div>
   <div class="loading-animation">
+    <audio id="gameCountdownSound" src="public/assets/sounds/gameCountdown.wav"></audio>
     <div class="countdown">
         <div class="number">
           <h2>3</h2>
@@ -32,9 +33,10 @@
 <!-- the game -->
     <div class="game_board">
       <div class="logo-white">
-        <img src="public/assets/logo-white.png"/>
+        <img src="public/assets/finalLogoChangedWhite.png"/>
       </div>
 
+      <audio id="popupSound" src="public/assets/sounds/popup.wav"></audio>
 
       <div class="sas-white">
         <img src="./public/assets/sass-logo.png" class="icon3"/>
@@ -129,7 +131,7 @@
               <!-- <textarea id="input2" name="content" placeholder="Write down your answer here…"></textarea> -->
               <!-- <input type="submit" class="button" value="Send">
             </form> -->
-              <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
+              <img class="game-logo" src="public/assets/finalLogoChangedWhite.png" alt="game-logo" />
             </div>
           </div>
         </div>
@@ -537,6 +539,7 @@
 <!-- end of the game -->
     <!-- dice -->
     <div id="ui_dado">
+      <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
           <div id="dice" onclick="dice()">
@@ -599,6 +602,9 @@
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
       <script type="text/javascript">
        function dice(){
+
+        diceSound.play();
+
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
         setTimeout(function(){
