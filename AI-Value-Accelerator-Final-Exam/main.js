@@ -55,21 +55,50 @@ function showModal(){
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
         
-      }, 1000); 
+      }, 9000); 
     //   showForm();  
 }  
 
-const square2 = document.querySelectorAll(".square");
-square2.forEach((apple) => apple.addEventListener("click", showColor));
+const square2 = document.querySelector(".square");
+//square2.forEach((apple) => apple.addEventListener("click", showColor));
+
+/* const square3 = document.querySelectorAll(".square");
+square2.forEach((square) => square.addEventListener("click", showFocus)); */
+
+square2.addEventListener('focus', (event) => {
+    event.target.style.backgroundColor = 'pink';
+  }, true);
+
+  square2.addEventListener('blur', (event) => {
+    event.target.style.backgroundColor = 'rgba(180, 180, 180)';
+  }, true);
 
 
 function showColor(){
-   this.style.backgroundColor = "gray";
-   this.style.border = "gray";
+
+    document.querySelector(".square").addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+      });
+      
+   this.style.backgroundColor = "rgba(180, 180, 180)";
+
+//    this.style.border = "rgba(174, 174, 240)";
 //    showForm();
 //    this.style.opacity = "50%"; 
 //    document.querySelector(".popup").style.pointerEvents = "none";
   }
+
+
+  /* function showFocus() {
+
+    this.focus(); 
+
+    if (this.focus = true) {
+        this.style.backgroundColor = "white";
+       } else {
+        this.style.backgroundColor = "rgba(180, 180, 180)";
+  }
+} */
 
 // function showForm(){
 //     setTimeout(() => {

@@ -1,6 +1,5 @@
 @use "../base/variables";
 // loading animation
-
 .blur{
   background-image: url(/public/assets/game-background.jpeg);
   background-attachment: fixed;
@@ -130,6 +129,10 @@
   text-align: center;
 }
 
+/* .square:focus {
+  background-color: yellow !important;
+} */
+
 .square-name {
   font-weight: 600;
   color: variables.$white;
@@ -142,17 +145,45 @@
   outline: none;
 
 }
+#square14 .icon2{
+  margin-top: 2rem;
+}
+
+#square20 .icon2{
+  margin-top: 2rem;
+}
+
+#square24 .icon2{
+  margin-top: 2rem; 
+}
+#square23 .icon2{
+  margin-top: 1.5rem; 
+}
+
+#square16 .icon2{
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+}
+#square18 .icon{
+  margin-top: 1rem;
+}
+
+#square17 .icon2{
+  margin-bottom: 1rem;
+}
 
 .icon{
-  margin-top: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 5rem;
-  height: 5rem;
+  // height: 5rem;
   padding: 0;
 }
 .icon2{
-  margin-top: 1.8rem;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 5rem;
-  height: 5rem;
+  // height: 5rem;
   padding: 0;  
 }
 .icon3{
@@ -167,6 +198,26 @@
   top: 45%;
   left: 21%;
 }
+.finish-button, a {
+  position: absolute;
+  top: 20%;
+  left: 75%;
+  color: variables.$white;
+}
+
+.finishButton{  
+  width: 9rem;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .rollme{
   position: absolute;
   top: 77%;
@@ -217,6 +268,7 @@
     margin-left: calc(50% - 50px);
     margin-right: calc(50% - 50px);
     height:120px;
+    cursor: pointer;
   }
   #dice {
       position: absolute;
@@ -337,14 +389,37 @@
 }
 
 
+//MEDIA QUERIES
 
+@media only screen and (min-width: 112rem){
+  
+  .icon3 {
+    left: 21%;
+  }
+  
+  .logo-white{
+    left: 30%;
+  }
+  
+  .cell{
+    width: 2%;
+  }
 
+  .finish-button, a {
+    position: absolute;
+    top: 20%;
+    left: 78.8%;
+    color: variables.$white;
+  }
+  
+}
 
-
-
-
-
-
+@media only screen and (min-width: 100rem) and (max-width: 111rem){
+  .logo-white{
+    left: 26%;
+  }
+  
+}
 
 @media only screen and (max-width: 90rem)
 and (max-width: 102rem){
@@ -355,15 +430,17 @@ width: 50rem;
   height: 7rem;
 }
 .icon{
-  margin-top: 0.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 4rem;
-  height: 4rem;
+  // height: 4rem;
 }
 
 .icon2{
-  margin-top: 1.7rem;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 4rem;
-  height: 4rem;
+  // height: 4rem;
   // display: block;
   // margin: 0 auto;
 }
@@ -377,30 +454,6 @@ width: 50rem;
   top: 82%
 }
 }
-
-@media only screen and (min-width: 112rem){
-  
-.icon3 {
-  left: 21%;
-}
-
-  .logo-white{
-    left: 30%;
-  }
-  
-  .cell{
-    width: 2%;
-  }
-
-}
-
-@media only screen and (min-width: 100rem) and (max-width: 111rem){
-  .logo-white{
-    left: 26%;
-  }
-
-}
-
 
 @media only screen and (max-width: 102rem){
   .cell{
@@ -427,13 +480,15 @@ width: 50rem;
     }
     .icon{
       margin-top: 0 !important;
+      margin-bottom: auto;
       width: 2rem;
-      height: 2rem;
+      // height: 2rem;
     }
     .icon2{
-      margin-top: 2rem;
+      margin-top: auto;
+      margin-bottom: auto;
       width: 3rem;
-      height: 3rem;
+      // height: 3rem;
     }
     .square-name{
       font-size: 1rem !important;
@@ -572,5 +627,7 @@ width: 50rem;
 		--fg: #c7cad1;
 	}
 }
+
+
 
 
