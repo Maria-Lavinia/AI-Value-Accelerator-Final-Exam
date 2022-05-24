@@ -50,7 +50,7 @@ function showModal(){
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
         
-      }, 1000); 
+      }, 9000); 
     //   showForm();  
 }  
 
@@ -59,8 +59,8 @@ square2.forEach((apple) => apple.addEventListener("click", showColor));
 
 
 function showColor(){
-   this.style.backgroundColor = "gray";
-   this.style.border = "gray";
+   this.style.backgroundColor = "rgba(180, 180, 180)";
+//    this.style.border = "rgba(174, 174, 240)";
 //    showForm();
 //    this.style.opacity = "50%"; 
 //    document.querySelector(".popup").style.pointerEvents = "none";
