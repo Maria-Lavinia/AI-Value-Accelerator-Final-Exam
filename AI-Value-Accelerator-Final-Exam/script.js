@@ -1,6 +1,12 @@
 "use strict";
 
-document.querySelector(".endScreenBtn")
+document.querySelector(".endScreenBtn").addEventListener("click", showInsights);
+
+function showInsights (){
+  document.querySelector(".endddScreenz").classList.add("hidden");
+
+  
+}
 
 // const form = document.querySelector(".formz");
 // document.querySelector(".insButton").addEventListener("click", showForm);
