@@ -196,11 +196,24 @@
 }
 .finfish-button, a {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 75%;
   color: variables.$white;
-
 }
+
+.finishButton{  
+  width: 9rem;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .rollme{
   position: absolute;
   top: 77%;
@@ -251,6 +264,7 @@
     margin-left: calc(50% - 50px);
     margin-right: calc(50% - 50px);
     height:120px;
+    cursor: pointer;
   }
   #dice {
       position: absolute;
