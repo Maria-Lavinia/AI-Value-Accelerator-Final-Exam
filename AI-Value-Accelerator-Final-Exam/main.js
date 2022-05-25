@@ -60,18 +60,30 @@ function showModal(){
 }  
 
 const square2 = document.querySelector(".square");
+
+const squareArray = document.querySelectorAll(".square");
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+      }, true);
+
+    square.addEventListener('blur', (event) => {
+        event.target.style.backgroundColor = 'rgba(180, 180, 180)';
+        
+      }, true);
+    ;})
+    
 //square2.forEach((apple) => apple.addEventListener("click", showColor));
 
-/* const square3 = document.querySelectorAll(".square");
-square2.forEach((square) => square.addEventListener("click", showFocus)); */
 
-square2.addEventListener('focus', (event) => {
+/* square2.addEventListener('focus', (event) => {
     event.target.style.backgroundColor = 'pink';
-  }, true);
+  }, true); */
 
-  square2.addEventListener('blur', (event) => {
+/* square2.addEventListener('blur', (event) => {
     event.target.style.backgroundColor = 'rgba(180, 180, 180)';
-  }, true);
+    
+  }, true); */
 
 
 function showColor(){

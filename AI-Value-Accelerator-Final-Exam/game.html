@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="cell square" id="square8" tabindex="2" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square8" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/7.png" class="icon2"/>
           <p id="square8-name" class="square-name"></p>
 
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square9" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square9" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square9-name" class="square-name"></p>
 
@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square10" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square10" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/6.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
 
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC;height: 1rem;">
+        <div class="cell square" id="square11" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC;height: 1rem;">
           <img src="./public/assets/blue2-icon.png" class="icon"/>
           <p id="square11-name" class="square-name" style="font-size: 21px; padding:0; height: 1rem;">Refill your drink.</p>
         
@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square10" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square10" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
 
@@ -132,7 +132,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square12" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square12" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/green-icon.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
 
@@ -145,7 +145,7 @@
           </div>
         </div>
 
-        <div class="cell square" id="square13" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+        <div class="cell square" id="square13" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/blue-icon.png" class="icon"/>
           <p id="square10-name" class="square-name">Move to the next.</p>
 
@@ -160,7 +160,7 @@
       </div>
 
       <div class="row">
-        <div class="cell square" id="square14" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square14" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square6-name" class="square-name"></p>
 
@@ -534,11 +534,11 @@
   </section> -->
 <!-- end of the game -->
     <!-- dice -->
-    <div id="ui_dado">
+    <div id="ui_dado" tabindex="-1" disabled>
       <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
-          <div id="dice" onclick="dice()">
+          <div id="dice" tabindex="-1" disabled onclick="dice()">
             <div class="side front">
               <div class="dot center"></div>
             </div>
