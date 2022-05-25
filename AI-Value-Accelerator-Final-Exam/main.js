@@ -59,12 +59,17 @@ function showModal(){
     //   showForm();  
 }  
 
-const square2 = document.querySelector(".square");
+//const square2 = document.querySelector(".square");
 
 const squareArray = document.querySelectorAll(".square");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.style.width = "2rem"
+
 squareArray.forEach((square) => {
     square.addEventListener('focus', (event) => {
         event.target.style.backgroundColor = 'pink';
+        event.target.appendChild(gameFigure)
       }, true);
 
     square.addEventListener('blur', (event) => {
