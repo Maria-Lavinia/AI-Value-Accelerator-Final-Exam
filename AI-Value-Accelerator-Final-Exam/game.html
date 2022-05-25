@@ -543,7 +543,7 @@
       <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
-          <div id="dice" tabindex="-1" disabled onclick="dice()">
+          <div id="dice" tabindex="-1" disabled onmousedown="dice(event)">
             <div class="side front">
               <div class="dot center"></div>
             </div>
@@ -602,9 +602,11 @@
 
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
       <script type="text/javascript">
-       function dice(){
+       function dice(event){
 
         diceSound.play();
+
+        event.preventDefault();
 
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
