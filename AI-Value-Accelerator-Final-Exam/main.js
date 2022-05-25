@@ -46,11 +46,13 @@ function loading_anim(){
 
 function showModal(){
     this.querySelector(".popup").classList.remove("hide");
+    // document.querySelector(".board_game").classList.add("blur2");    
 
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
+        // document.querySelector(".game").classList.remove("blur2")
         
-      }, 1000); 
+      }, 9000); 
     //   showForm();  
 }  
 
