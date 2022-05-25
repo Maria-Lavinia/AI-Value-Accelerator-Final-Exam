@@ -68,11 +68,12 @@ squareArray.forEach((square) => {
       }, true);
 
     square.addEventListener('blur', (event) => {
-        event.target.style.backgroundColor = 'rgba(180, 180, 180)';
+        event.target.style.backgroundColor = '#04304A';
+        event.target.style.border = '6px solid black';
         
       }, true);
     ;})
-    
+
 //square2.forEach((apple) => apple.addEventListener("click", showColor));
 
 
