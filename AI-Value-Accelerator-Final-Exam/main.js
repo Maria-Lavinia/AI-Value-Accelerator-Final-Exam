@@ -59,17 +59,59 @@ function showModal(){
     //   showForm();  
 }  
 
-const square2 = document.querySelectorAll(".square");
-square2.forEach((apple) => apple.addEventListener("click", showColor));
+const square2 = document.querySelector(".square");
+
+const squareArray = document.querySelectorAll(".square");
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+      }, true);
+
+    square.addEventListener('blur', (event) => {
+        event.target.style.backgroundColor = '#04304A';
+        event.target.style.border = '6px solid black';
+        
+      }, true);
+    ;})
+
+//square2.forEach((apple) => apple.addEventListener("click", showColor));
 
 
-function showColor(){
+/* square2.addEventListener('focus', (event) => {
+    event.target.style.backgroundColor = 'pink';
+  }, true); */
+
+/* square2.addEventListener('blur', (event) => {
+    event.target.style.backgroundColor = 'rgba(180, 180, 180)';
+    
+  }, true); */
+
+
+/* function showColor(){
+
+    document.querySelector(".square").addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+      });
+      
    this.style.backgroundColor = "rgba(180, 180, 180)";
-//    this.style.border = "rgba(174, 174, 240)";
-//    showForm();
-//    this.style.opacity = "50%"; 
-//    document.querySelector(".popup").style.pointerEvents = "none";
+
+   this.style.border = "rgba(174, 174, 240)";
+   showForm();
+   this.style.opacity = "50%"; 
+   document.querySelector(".popup").style.pointerEvents = "none";
+  } */
+
+
+  /* function showFocus() {
+
+    this.focus(); 
+
+    if (this.focus = true) {
+        this.style.backgroundColor = "white";
+       } else {
+        this.style.backgroundColor = "rgba(180, 180, 180)";
   }
+} */
 
 // function showForm(){
 //     setTimeout(() => {

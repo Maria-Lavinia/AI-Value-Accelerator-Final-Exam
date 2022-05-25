@@ -129,6 +129,10 @@
   text-align: center;
 }
 
+/* .square:focus {
+  background-color: yellow !important;
+} */
+
 .square-name {
   font-weight: 600;
   color: variables.$white;
@@ -194,7 +198,7 @@
   top: 45%;
   left: 21%;
 }
-.finfish-button, a {
+.finish-button, a {
   position: absolute;
   top: 20%;
   left: 75%;
@@ -385,14 +389,37 @@
 }
 
 
+//MEDIA QUERIES
 
+@media only screen and (min-width: 112rem){
+  
+  .icon3 {
+    left: 21%;
+  }
+  
+  .logo-white{
+    left: 30%;
+  }
+  
+  .cell{
+    width: 2%;
+  }
 
+  .finish-button, a {
+    position: absolute;
+    top: 20%;
+    left: 78.8%;
+    color: variables.$white;
+  }
+  
+}
 
-
-
-
-
-
+@media only screen and (min-width: 100rem) and (max-width: 111rem){
+  .logo-white{
+    left: 26%;
+  }
+  
+}
 
 @media only screen and (max-width: 90rem)
 and (max-width: 102rem){
@@ -427,30 +454,6 @@ width: 50rem;
   top: 82%
 }
 }
-
-@media only screen and (min-width: 112rem){
-  
-.icon3 {
-  left: 21%;
-}
-
-  .logo-white{
-    left: 30%;
-  }
-  
-  .cell{
-    width: 2%;
-  }
-
-}
-
-@media only screen and (min-width: 100rem) and (max-width: 111rem){
-  .logo-white{
-    left: 26%;
-  }
-
-}
-
 
 @media only screen and (max-width: 102rem){
   .cell{
@@ -624,5 +627,7 @@ width: 50rem;
 		--fg: #c7cad1;
 	}
 }
+
+
 
 
