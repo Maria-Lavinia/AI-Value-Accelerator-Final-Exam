@@ -3,6 +3,9 @@
 
 window.addEventListener("DOMContentLoaded", start());
 
+//sounds
+let popupSound = document.querySelector("#popupSound")
+let diceSound = document.querySelector("#diceSound")
 
 function start(){
     loading_anim(); 
@@ -46,7 +49,8 @@ function loading_anim(){
 
 function showModal(){
     this.querySelector(".popup").classList.remove("hide");
-    // document.querySelector(".board_game").classList.add("blur2");    
+    
+    popupSound.play();
 
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
@@ -61,8 +65,8 @@ square2.forEach((apple) => apple.addEventListener("click", showColor));
 
 
 function showColor(){
-   this.style.backgroundColor = "gray";
-   this.style.border = "gray";
+   this.style.backgroundColor = "rgba(180, 180, 180)";
+//    this.style.border = "rgba(174, 174, 240)";
 //    showForm();
 //    this.style.opacity = "50%"; 
 //    document.querySelector(".popup").style.pointerEvents = "none";

@@ -41,7 +41,7 @@ height: 4rem;
     position: absolute;
     width: 72.875rem;
     top: 15.625rem;
-    left: 6%;
+    left: 3.5%;
     /* margin-bottom: -1.875rem;
     padding: 0rem */
 }
@@ -55,6 +55,7 @@ height: 4rem;
 
 .buttonFlex {
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .titleScreenBtn:first-child {
@@ -87,11 +88,10 @@ height: 4rem;
     max-width: 100%;
 }
 
-
 @media only screen and (max-width: 1700px) {
     
     .textContainer {
-        padding-top: 14.6rem;
+        padding-top: 15.6rem;
     }
     
     .mainHeading {
@@ -115,7 +115,7 @@ height: 4rem;
     
     .mainHeading {
         width: 55rem;
-        top: 16rem;
+        top: 16.5rem;
     }
 
     .titleScreenText {
@@ -124,7 +124,7 @@ height: 4rem;
 
     .titleScreenBtn {
         width: 13.063rem;
-        height: 3.75rem; 
+        height: 3.5rem; 
         font-size: 1.7rem;
     }
 } 

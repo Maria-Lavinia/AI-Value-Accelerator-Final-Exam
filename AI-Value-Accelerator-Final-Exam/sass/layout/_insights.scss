@@ -1,17 +1,18 @@
 @use "../base/variables";
 
-.insights{
+.insights {
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1332px;
-    height: 827px;
+    width: 1300px;
+    height: 630px;
     padding: 15px 30px 28.4px 139.6px;
     border-radius: 44px;
-    box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
-    background-color: variables.$white;
+    box-shadow: 15px 15px 17px 0 rgb(0 0 0 / 16%);
+    background-color: #ffffff;
 }
+
 .mainContainer{
     display: flex;
     justify-content: center;
@@ -21,14 +22,14 @@ opacity: 0;
 visibility: hidden;
 display: none;
 }
-.insTitle{
-padding-top: 20%;
-font-weight: 100;
+.insTitle {
+    padding-top: 5%;
+    font-weight: 100;
 }
 
 .insText{
-    width: 1354px;
-    height: 287px;
+    width: 1300px;
+    height: 530px;
     // margin: 178.1px 4px 65.1px 56.6px;
     padding: 32px 109px 155px 38px;
     border-radius: 30px;
@@ -49,6 +50,8 @@ font-weight: 100;
 
 
 }
-
-
+.mainContainer .insButton2{
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
 // }

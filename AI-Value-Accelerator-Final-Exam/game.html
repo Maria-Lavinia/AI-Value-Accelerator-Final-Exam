@@ -12,6 +12,7 @@
   <!-- loading animation -->
   <div class="blur"></div>
   <div class="loading-animation">
+    <audio id="gameCountdownSound" src="public/assets/sounds/gameCountdown.wav"></audio>
     <div class="countdown">
         <div class="number">
           <h2>3</h2>
@@ -32,19 +33,21 @@
 <!-- the game -->
     <div class="game_board">
       <div class="logo-white">
-        <img src="public/assets/logo-white.png"/>
+        <img src="public/assets/finalLogoChangedWhite.png"/>
       </div>
 
+      <audio id="popupSound" src="public/assets/sounds/popup.wav"></audio>
 
       <div class="sas-white">
         <img src="./public/assets/sass-logo.png" class="icon3"/>
       </div>
 
       <div class="finfish-button">
-        <a href="endScreen.html">finish</a>
+        <a href="endScreen.html"><img src="./public/assets/finishButton.png" class="finishButton" alt="finishButton"></a>
       </div>
+
       <div class="row">
-        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC;">
           <img src="./public/assets/blue3-icon.png" class="icon2"/>
           <p id="square11-name" class="square-name" style="font-size: 21px; padding: 0;">Roll the dice.</p>
 
@@ -57,7 +60,7 @@
             </div>
         </div>
 
-        <div class="cell square" id="square8" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square8" style="background-color: #C5ECDF; border: solid 6px #15B57E;">
           <img src="./public/assets/7.png" class="icon2"/>
           <p id="square8-name" class="square-name"></p>
 
@@ -130,7 +133,7 @@
               <!-- <textarea id="input2" name="content" placeholder="Write down your answer here…"></textarea> -->
               <!-- <input type="submit" class="button" value="Send">
             </form> -->
-              <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
+              <img class="game-logo" src="public/assets/finalLogoChangedWhite.png" alt="game-logo" />
             </div>
           </div>
         </div>
@@ -538,6 +541,7 @@
 <!-- end of the game -->
     <!-- dice -->
     <div id="ui_dado">
+      <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
           <div id="dice" onclick="dice()">
@@ -600,6 +604,9 @@
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
       <script type="text/javascript">
        function dice(){
+
+        diceSound.play();
+
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
         setTimeout(function(){

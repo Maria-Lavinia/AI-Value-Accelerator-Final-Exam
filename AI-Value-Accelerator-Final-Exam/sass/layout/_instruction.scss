@@ -76,7 +76,7 @@ h1 {
 
 .text {
   font-family: variables.$primary-font, sans-serif;
-  margin: 52px 0 151.3px 14px;
+  margin: 30px 0 151.3px 14px;
   font-size: 30px;
   text-align: center;
   color: variables.$black;
@@ -85,11 +85,14 @@ h1 {
 }
 .draw{
   width: 7rem;
-  height: 7rem;
+  // height: 7rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: -8rem;
+}
+#slide1 .draw{
+  margin-top: -3.4rem;
 }
 
 button {
@@ -122,7 +125,7 @@ button {
   }
 
   .game-title{
-    margin-top: 0;
+    margin-top: 1rem;
     width: 70%;
   }
 
