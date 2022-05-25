@@ -2,10 +2,35 @@
 
 document.querySelector(".endScreenBtn").addEventListener("click", showInsights);
 
+function submit() {
+  const insightsForm = document.querySelectorAll(".insightsForm");
+  // const insightsForm = document.querySelectorAll(".insightsForm textarea");
+
+  const inputArr = [
+    insightsForm.forEach((input) => {
+      // console.log(input.value);
+
+      const data = input.querySelector(".input").value;
+
+      // let inputArr = [...inputArr, input.value];
+      // console.log(inputArr);
+
+      // insightsForm.forEach((input) => {
+      //   console.log(input.value);
+
+      //   let inputArr = [...inputArr, input.value];
+      //   console.log(inputArr);
+      console.log(data);
+      return { data };
+    }),
+  ];
+  console.log(inputArr)
+}
+
 function showInsights (){
   document.querySelector(".endddScreenz").classList.add("hidden");
 
-  
+  submit();
 }
 
 // const form = document.querySelector(".formz");
