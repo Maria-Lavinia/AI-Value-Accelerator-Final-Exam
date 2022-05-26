@@ -74,10 +74,11 @@ function restartTimer(){
 
 function showModal(){
     this.querySelector(".popup").classList.remove("hide");
+    popupSound.play();
+    
     restartTimer();
     setInterval(updateCountdown, 1000);
     
-    popupSound.play();
     
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
@@ -112,10 +113,11 @@ squareArray.forEach((square) => {
         //event.target.style.backgroundColor = 'pink';
         event.target.insertBefore(gameFigure, event.target.children[0])
       }, true);
+    })
 
 const square2 = document.querySelectorAll(".square");
 square2.forEach((apple) => apple.addEventListener("click", showColor));
-    });
+    
 
 function showColor(){
    this.style.backgroundColor = "rgba(180, 180, 180)";
@@ -128,6 +130,7 @@ function showColor(){
                     
                   }, true);
   }
+
 
 
 
