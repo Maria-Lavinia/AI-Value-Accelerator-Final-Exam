@@ -87,7 +87,7 @@ gameFigure.style.width = "2rem"
 squareArray.forEach((square) => {
     square.addEventListener('focus', (event) => {
         //event.target.style.backgroundColor = 'pink';
-        event.target.appendChild(gameFigure)
+        event.target.insertBefore(gameFigure, event.target.children[0])
       }, true);
 
     square.addEventListener('blur', (event) => {
