@@ -89,6 +89,14 @@ square2.forEach((apple) => apple.addEventListener("click", showColor));
 
 function showColor(){
    this.style.backgroundColor = "rgba(180, 180, 180)";
+   this.addEventListener('focus', (event) => {
+            event.target.style.backgroundColor = 'pink';
+          }, true);
+          this.addEventListener('blur', (event) => {
+                    event.target.style.backgroundColor = '#04304A';
+                    event.target.style.border = '6px solid black';
+                    
+                  }, true);
 //    this.style.border = "rgba(174, 174, 240)";
 //    showForm();
 //    this.style.opacity = "50%"; 
@@ -97,18 +105,18 @@ function showColor(){
 
 
 
-const squareArray = document.querySelectorAll(".square");
-squareArray.forEach((square) => {
-    square.addEventListener('focus', (event) => {
-        event.target.style.backgroundColor = 'pink';
-      }, true);
+// const squareArray = document.querySelectorAll(".square");
+// squareArray.forEach((square) => {
+//     square.addEventListener('focus', (event) => {
+//         event.target.style.backgroundColor = 'pink';
+//       }, true);
 
-    square.addEventListener('blur', (event) => {
-        event.target.style.backgroundColor = '#04304A';
-        event.target.style.border = '6px solid black';
+//     square.addEventListener('blur', (event) => {
+//         event.target.style.backgroundColor = '#04304A';
+//         event.target.style.border = '6px solid black';
         
-      }, true);
-    ;})
+//       }, true);
+//     ;})
 
 //square2.forEach((apple) => apple.addEventListener("click", showColor));
 
