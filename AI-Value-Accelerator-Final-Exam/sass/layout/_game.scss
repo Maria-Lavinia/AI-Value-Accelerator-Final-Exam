@@ -218,6 +218,44 @@
   }
 }
 
+.mutedButton{  
+  height: 4.559rem;
+  width: 4.559rem;
+  cursor: pointer;
+  background-size: 100%;
+  position: absolute;
+  top: 20%;
+  left: 68%;
+
+  &:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+  &:active {
+    transform: translateY(-1px);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  }
+}
+
+.unmutedButton{  
+  height: 4.559rem;
+  width: 4.559rem;
+  cursor: pointer;
+  background-size: 100%;
+  position: absolute;
+  top: 20%;
+  left: 68%;
+
+  &:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+  &:active {
+    transform: translateY(-1px);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  }
+}
+
 .rollme{
   position: absolute;
   top: 77%;
@@ -403,6 +441,44 @@
   margin-right: -6rem;
  margin-top: -1rem;
   font-size: 2rem;
+}
+
+@media only screen and (min-width: 112rem){
+  
+  .icon3 {
+    left: 21%;
+  }
+  
+  .logo-white{
+    left: 30%;
+  }
+  
+  .cell{
+    width: 2%;
+  }
+
+  .rollme {
+    top: 80%;
+  }
+
+  .finish-button, a {
+    position: absolute;
+    top: 20%;
+    left: 78.8%;
+    color: variables.$white;
+  }
+
+  .unmutedButton, .mutedButton {
+    left: 73.8%;
+  }
+  
+}
+
+@media only screen and (min-width: 100rem) and (max-width: 111rem){
+  .logo-white{
+    left: 26%;
+  }
+  
 }
 
 @media only screen and (max-width: 90rem)

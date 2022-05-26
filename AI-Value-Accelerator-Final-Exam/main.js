@@ -15,6 +15,9 @@ function start(){
     
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
+
+    document.querySelector(".unmutedButton").addEventListener("click", muteSound)
+    document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
   
   
 }
@@ -82,10 +85,37 @@ function showModal(){
 }  
 
 
+function muteSound() {
+    document.querySelector(".unmutedButton").classList.add("hidden");
+    document.querySelector(".mutedButton").classList.remove("hidden");
+
+    popupSound.muted = true;
+    diceSound.muted = true;
+}
+
+function unmuteSound() {
+    document.querySelector(".mutedButton").classList.add("hidden");
+    document.querySelector(".unmutedButton").classList.remove("hidden");
+
+    popupSound.muted = false;
+    diceSound.muted = false;
+}
+
+
+const squareArray = document.querySelectorAll(".square");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.style.width = "2rem"
+
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        //event.target.style.backgroundColor = 'pink';
+        event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
 
 const square2 = document.querySelectorAll(".square");
 square2.forEach((apple) => apple.addEventListener("click", showColor));
-
+    });
 
 function showColor(){
    this.style.backgroundColor = "rgba(180, 180, 180)";
@@ -131,16 +161,6 @@ function showColor(){
   } */
 
 
-  /* function showFocus() {
-
-    this.focus(); 
-
-    if (this.focus = true) {
-        this.style.backgroundColor = "white";
-       } else {
-        this.style.backgroundColor = "rgba(180, 180, 180)";
-  }
-} */
 
 //   function showTime() {
 //     console.log("showTime");
