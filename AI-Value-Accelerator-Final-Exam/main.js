@@ -61,11 +61,9 @@ function updateCountdown(){
     let seconds = time % 60;
     
 countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
-// countDownEl.innerHTML = `${minutes}:${seconds}`;
 time--;
 }
 function restartTimer(){
-    // startingMinutes = 5;
     time = startingMinutes * 60;
 }
 
@@ -80,20 +78,24 @@ function showModal(){
     
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-
-        // setInterval(updateCountdown, 1000);
-        
-        // document.querySelector(".game").classList.remove("blur2")
-        // showTime();
-       ;
-      }, 300000); 
-    //   showForm();  
+      }, 300000);  
 }  
 
-// console.log(setInterval(updateCountdown, 1000));
+
 
 const square2 = document.querySelectorAll(".square");
 square2.forEach((apple) => apple.addEventListener("click", showColor));
+
+
+function showColor(){
+   this.style.backgroundColor = "rgba(180, 180, 180)";
+//    this.style.border = "rgba(174, 174, 240)";
+//    showForm();
+//    this.style.opacity = "50%"; 
+//    document.querySelector(".popup").style.pointerEvents = "none";
+  }
+
+
 
 const squareArray = document.querySelectorAll(".square");
 squareArray.forEach((square) => {
