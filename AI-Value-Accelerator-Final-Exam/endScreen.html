@@ -57,9 +57,33 @@
 </template>
 </section>
 
+<div class = "takess button insButton">
+<a href="#" onclick="capture()">Click for screenshot!</a>
+</div>
 
-    <script src="./script.js"></script>
-    <!-- <script src="./main.js"></script> -->
+<!-- <script>
+   function capture() {
+    // html2canvas(document.querySelector(".endScreen"), {
+      
+      const html2canvas = require('html2canvas');
+
+      html2canvas(document.querySelector(".endScreen")).then(canvas => {
+        document.body.appendChild(canvas)
+    });
+  }
+</script> -->
+    <!-- <script src="./script.js"></script>
+ 
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="./main.js"></script> -->
+
+    <!-- <script type='text/javascript'>
+      function capture() {
+          html2canvas(document.body).then(function(canvas) {
+              document.body.appendChild(canvas);
+          });
+      }
+    </script> -->
   </body>
 </html>
 

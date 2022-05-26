@@ -46,25 +46,33 @@
         <a href="endScreen.html"><img src="./public/assets/finishButton.png" class="finishButton" alt="finishButton"></a>
       </div>
 
+      <img src="public/assets/buttonUnmuted.svg" class="unmutedButton" tabindex="-1">
+      <img src="public/assets/buttonMuted.svg" class="mutedButton hidden" tabindex="-1">
+
       <div class="row">
-        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC;">
+        <div class="cell square" id="square11" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/blue3-icon.png" class="icon2"/>
           <p id="square11-name" class="square-name" style="font-size: 21px; padding: 0;">Roll the die</p>
 
-          <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
               <img class="input-icon" src="./public/assets/blue3-icon.png" alt="input-icon" />
               <div class="input-card">
                 <h2 class="blue-Question">Roll the die</h2>
                 <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
               </div>
-            </div>
+             
+            </div> -->
         </div>
 
-        <div class="cell square" id="square8" style="background-color: #C5ECDF; border: solid 6px #15B57E;">
+        <div class="cell square" id="square8" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/7.png" class="icon2"/>
           <p id="square8-name" class="square-name"></p>
 
           <div id="modal" class="popup" style="border: solid 20px #15B57E">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
+           
             <img class="input-icon" src="./public/assets/7.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="green-Question">How do you talk about AI at your workplace?</h2>
@@ -73,11 +81,14 @@
           </div>
         </div>
 
-        <div class="cell square" id="square9" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square9" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square9-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">State of knowledge</h1>
@@ -92,11 +103,14 @@
           </div>
         </div>
 
-        <div class="cell square" id="square10" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square10" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/6.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
 
           <div id="modal" class="popup" style="border: solid 20px #15B57E">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/6.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="green-Question">Do you think AI can replace your job? Do you feel threatened? Why / Why not?</h2>
@@ -105,24 +119,28 @@
           </div>
         </div>
 
-        <div class="cell square" id="square11" style="background-color: #C2E3FE; border: solid 6px #31A3FC;height: 1rem;">
+        <div class="cell square" id="square11" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC;height: 1rem;">
           <img src="./public/assets/blue2-icon.png" class="icon"/>
           <p id="square11-name" class="square-name" style="font-size: 21px; padding:0; height: 1rem;">Refill your drink</p>
         
-          <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          
             <img class="input-icon" src="./public/assets/blue2-icon.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="Qblue-Question">Refill your drink</h2>
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="cell square" id="square10" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square10" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">State of knowledge</h1>
@@ -132,16 +150,19 @@
               <!-- <textarea id="input2" name="content" placeholder="Write down your answer here…"></textarea> -->
               <!-- <input type="submit" class="button" value="Send">
             </form> -->
-              <img class="game-logo" src="public/assets/finalLogoChangedWhite.png" alt="game-logo" />
+            <img class="game-logo" src="public/assets/finalLogoChangedWhite.png" alt="game-logo" />
+          </div>  
             </div>
-          </div>
         </div>
 
-        <div class="cell square" id="square12" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square12" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/green-icon.png" class="icon2"/>
           <p id="square10-name" class="square-name"></p>
-
+          
           <div id="modal" class="popup" style="border: solid 20px #15B57E">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/green-icon.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="green-Question">Do you think AI can replace your job? Do you feel threatened? Why / Why not?</h2>
@@ -150,26 +171,30 @@
           </div>
         </div>
 
-        <div class="cell square" id="square13" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+        <div class="cell square" id="square13" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/blue-icon.png" class="icon"/>
           <p id="square10-name" class="square-name">Move one step</p>
 
-          <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
             <img class="input-icon" src="./public/assets/blue-icon.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="blue-Question">Move one step</h2>
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
-          </div>
+         
+          </div> -->
         </div>
       </div>
 
       <div class="row">
-        <div class="cell square" id="square14" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square14" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square6-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">State of knowledge</h1>
@@ -192,10 +217,13 @@
 
 
         
-        <div class="cell square" id="square15" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square15" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">State of knowledge</h1>
@@ -212,7 +240,7 @@
         </div>
       </div>
 <div class="row">
-  <div class="cell square" id="square16" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+  <div class="cell square" id="square16" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
     <img src="./public/assets/green2-icon.png" class="icon2"/>
     <p id="square6-name" class="square-name"></p>
 
@@ -222,6 +250,9 @@
         <h2 class="green-Question">What potential do you see for AI within your organisation?</h2>
         <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
       </div>
+      <div class="time_container">
+        <div id="countdown"></div>
+    </div>
     </div>
   </div>
   
@@ -235,11 +266,14 @@
 
 
   
-  <div class="cell square" id="square17" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+  <div class="cell square" id="square17" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
     <img src="./public/assets/2.png" class="icon2"/>
     <p id="square11-name" class="square-name"></p>
 
     <div id="modal" class="popup" style="border: solid 20px #15B57E">
+      <div class="time_container">
+        <div id="countdown"></div>
+    </div>
       <img class="input-icon" src="./public/assets/2.png" alt="input-icon" />
       <div class="input-card">
         <h2 class="green-Question">Do you see any ethical challenges related to AI development?</h2>
@@ -250,17 +284,17 @@
 </div>
 
 <div class="row">
-  <div class="cell square" id="square18" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
+  <div class="cell square" id="square18" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
     <img src="./public/assets/break.png" class="icon"/>
     <p id="square6-name" class="square-name" style="font-size: 21px; padding: 0;">2 min. break</p>
     
-    <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+    <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
       <img class="input-icon" src="./public/assets/break.png" alt="input-icon" />
       <div class="input-card">
         <h2 class="blue-Question">2 min. break</h2>
         <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
       </div>
-    </div>
+    </div> -->
   </div>
   
   
@@ -273,11 +307,14 @@
 
 
   
-        <div class="cell square" id="square19" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square19" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square11-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
           <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
           <div class="input-card">
             <h1 class="header">Leadership</h1>
@@ -294,11 +331,14 @@
       </div>
 
         <div class="row">
-          <div class="cell square" id="square20" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+          <div class="cell square" id="square20" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
             <img src="./public/assets/discussion.png" class="icon2"/>
             <p id="square6-name" class="square-name"></p>
 
             <div id="modal" class="popup">
+              <div class="time_container">
+                <div id="countdown"></div>
+            </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">Leadership</h1>
@@ -323,11 +363,14 @@
   
   
           
-          <div class="cell square" id="square21" style="background-color: #FFCDA9; border: solid 6px #FF822C;">
+          <div class="cell square" id="square21" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C;">
             <img src="./public/assets/discussion.png" class="icon2"/>
             <p id="square11-name" class="square-name"></p>
 
             <div id="modal" class="popup">
+              <div class="time_container">
+                <div id="countdown"></div>
+            </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">Leadership</h1>
@@ -344,11 +387,14 @@
       </div>
 
       <div class="row">
-        <div class="cell square" id="square22" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square22" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/green3-icon.png" class="icon2"/>
           <p id="square5-name" class="square-name"></p>
 
           <div id="modal" class="popup" style="border: solid 20px #15B57E">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/green3-icon.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="green-Question">How far have you come with AI within your organisation?</h2>
@@ -364,26 +410,32 @@
         <div class="cell middle"></div>
         <div class="cell middle"></div>
         
-        <div class="cell square" id="square23" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+        <div class="cell square" id="square23" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/1.png" class="icon2"/>
-          <p id="square12-name" class="square-name">Do some exercise</p>
-
-          <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          <p id="square12-name" class="square-name">Do some exercise.</p>
+          
+          <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/1.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="blue-Question">Do some exercise</h2>
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="row">
-        <div class="cell square" id="square24" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square24" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/green4-icon.png" class="icon2"/>
           <p id="square4-value"></p>
 
           <div id="modal" class="popup" style="border: solid 20px #15B57E">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/green4-icon.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="green-Question">When do you think your organisation can start making money from AI?</h2>
@@ -392,11 +444,14 @@
           </div>
         </div>
 
-        <div class="cell square" id="square25" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square25" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square3-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
           <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
           <div class="input-card">
             <h1 class="header">Business areas</h1>
@@ -408,10 +463,10 @@
               </form> -->
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
-          </div>
+        </div>
         </div>
 
-        <div class="cell square" id="square26" style="background-color: #C5ECDF; border: solid 6px #15B57E">
+        <div class="cell square" id="square26" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
           <img src="./public/assets/11.png" class="icon2"/>
           <p id="square2-name" class="square-name"></p>
 
@@ -421,14 +476,20 @@
               <h2 class="green-Question">Do you think there is a risk that AI will make people passive?</h2>
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
+            <div class="time_container">
+              <div id="countdown">05:00</div>
+          </div>
           </div>
         </div>
 
-        <div class="cell square" id="square27" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square27" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square2-name" class="square-name"></p>
 
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
           <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
           <div class="input-card">
             <h1 class="header">Business areas</h1>
@@ -443,37 +504,40 @@
           </div>
         </div>
 
-        <div class="cell square" id="square28" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
+        <div class="cell square" id="square28" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC;  height: 1rem;">
           <img src="./public/assets/grab a bite.png" class="icon"/>
           <p id="square3-name" class="square-name" style="font-size: 21px; height: 1rem;">Grab a bite</p>
 
-          <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+          <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
             <img class="input-icon" src="./public/assets/grab a bite.png" alt="input-icon" />
             <div class="input-card">
               <h2 class="blue-Question">Grab a bite.</h2>
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
-          </div>
+        </div> -->
         </div>
 
-        <div class="cell square" id="square29" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
+        <div class="cell square" id="square29" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/13.png" class="icon"/>
           <p id="square2-name" class="square-name" style="font-size: 21px;">Return to START</p>
           <!-- <div id="square2-value"></p> -->
-            <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
+            <!-- <div id="modal" class="popup" style="border: solid 20px #31A3FC;">
               <img class="input-icon" src="./public/assets/13.png" alt="input-icon" />
               <div class="input-card">
                 <h2 class="blue-Question">Return to START.</h2>
                 <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
               </div>
-            </div>
+          </div> -->
         </div>
 
-        <div class="cell square" id="square30" style="background-color: #FFCDA9; border: solid 6px #FF822C">
+        <div class="cell square" id="square30" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
           <img src="./public/assets/discussion.png" class="icon2"/>
           <p id="square2-name" class="square-name"></p>
           
           <div id="modal" class="popup">
+            <div class="time_container">
+              <div id="countdown"></div>
+          </div>
             <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
             <div class="input-card">
               <h1 class="header">Business areas</h1>
@@ -488,7 +552,7 @@
           </div>
         </div>
 
-        <div class="cell start" id="square31" style="background-color: #FFDBED; border: solid 6px #ff6fbb">
+        <div class="cell start" id="square31" tabindex="1" style="background-color: #FFDBED; border: solid 6px #ff6fbb">
           <img src="./public/assets/arrowup.png" class="icon"/>
           <p class="square-name">START</p>
         </div>
@@ -539,11 +603,11 @@
   </section> -->
 <!-- end of the game -->
     <!-- dice -->
-    <div id="ui_dado">
+    <div id="ui_dado" tabindex="-1" disabled>
       <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
         <div id="platform">
-          <div id="dice" onclick="dice()">
+          <div id="dice" tabindex="-1" disabled onmousedown="dice(event)">
             <div class="side front">
               <div class="dot center"></div>
             </div>
@@ -602,9 +666,11 @@
 
       <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
       <script type="text/javascript">
-       function dice(){
+       function dice(event){
 
         diceSound.play();
+
+        event.preventDefault();
 
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');

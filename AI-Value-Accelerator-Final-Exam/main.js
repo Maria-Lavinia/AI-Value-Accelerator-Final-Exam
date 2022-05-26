@@ -7,13 +7,18 @@ window.addEventListener("DOMContentLoaded", start());
 let popupSound = document.querySelector("#popupSound")
 let diceSound = document.querySelector("#diceSound")
 
+
 function start(){
     loading_anim(); 
     const popup = document.querySelectorAll(".popup");
     const square = document.querySelectorAll(".square");
-   
+    
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
+
+    document.querySelector(".unmutedButton").addEventListener("click", muteSound)
+    document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
+  
   
 }
 
@@ -47,77 +52,139 @@ function loading_anim(){
     }, 3500);
 }
 
+const startingMinutes = 5;
+let time = startingMinutes * 60;
+
+const countDownEl =  document.querySelectorAll("#countdown");
+
+
+
+function updateCountdown(){
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    
+countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
+time--;
+}
+function restartTimer(){
+    time = startingMinutes * 60;
+}
+
+// setInterval(updateCountdown, 1000);
+
 function showModal(){
     this.querySelector(".popup").classList.remove("hide");
-    
     popupSound.play();
-
+    
+    restartTimer();
+    setInterval(updateCountdown, 1000);
+    
+    
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-        
-      }, 9000); 
-    //   showForm();  
+      }, 300000);  
 }  
+
+
+function muteSound() {
+    document.querySelector(".unmutedButton").classList.add("hidden");
+    document.querySelector(".mutedButton").classList.remove("hidden");
+
+    popupSound.muted = true;
+    diceSound.muted = true;
+}
+
+function unmuteSound() {
+    document.querySelector(".mutedButton").classList.add("hidden");
+    document.querySelector(".unmutedButton").classList.remove("hidden");
+
+    popupSound.muted = false;
+    diceSound.muted = false;
+}
+
+
+const squareArray = document.querySelectorAll(".square");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.style.width = "2rem"
+
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        //event.target.style.backgroundColor = 'pink';
+        event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
 
 const square2 = document.querySelectorAll(".square");
 square2.forEach((apple) => apple.addEventListener("click", showColor));
-
+    
 
 function showColor(){
    this.style.backgroundColor = "rgba(180, 180, 180)";
-//    this.style.border = "rgba(174, 174, 240)";
-//    showForm();
-//    this.style.opacity = "50%"; 
-//    document.querySelector(".popup").style.pointerEvents = "none";
+   this.addEventListener('focus', (event) => {
+            event.target.style.backgroundColor = 'pink';
+          }, true);
+          this.addEventListener('blur', (event) => {
+                    event.target.style.backgroundColor = '#04304A';
+                    event.target.style.border = '6px solid black';
+                    
+                  }, true);
   }
 
-// function showForm(){
-//     setTimeout(() => {
-//         const game3 = document.querySelector(".game_board");
-//         game3.style.display="none";
-//         game3.style.visibility="hidden";
-//         document.querySelector("#ui_dado").style.display="none";
-//         document.querySelector(".rollme").style.display = "none";
-//         document.querySelector(".formz").classList.remove("hide")
-         
-//        }, 7000); 
+
+
+
+//     ;})
+
+//square2.forEach((apple) => apple.addEventListener("click", showColor));
+
+
+/* square2.addEventListener('focus', (event) => {
+    event.target.style.backgroundColor = 'pink';
+  }, true); */
+
+/* square2.addEventListener('blur', (event) => {
+    event.target.style.backgroundColor = 'rgba(180, 180, 180)';
+    
+  }, true); */
+
+
+/* function showColor(){
+
+    document.querySelector(".square").addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+      });
+      
+   this.style.backgroundColor = "rgba(180, 180, 180)";
+
+   this.style.border = "rgba(174, 174, 240)";
+   showForm();
+   this.style.opacity = "50%"; 
+   document.querySelector(".popup").style.pointerEvents = "none";
+  } */
+
+
+
+//   function showTime() {
+//     console.log("showTime");
+//     if (timeLeft > 0) {
+//         timeLeft--;
+//         startTimer();
+//         document.querySelector("#time").textContent = timeLeft;
+//     } else {
+//         youLost();
+//     }
 // }
 
+// function startTimer() {
+//     console.log("startTimer");
 
-// const form = document.querySelector(".formz");
+   
 
-
-// form.addEventListener("submit", handleSubmit);
+//     if (timeLeft == 0) {
+//         youLost();
+//     } else {
+//         setTimeout (showTime, 1000);
+//     }
     
-//   function handleSubmit(e){
-//     document.querySelector(".formz").classList.add("hide")
-//     // window.location.href ='endScreen.html'
-//     e.preventDefault();
-//    const payload = {
-//     content: form.elements.content.value,
-//    };
-//    document.querySelector("input[type=submit]").disabled = true;
-  
-//    console.log(payload);
-//    fetch(`https://portfolio-8a02.restdb.io/rest/final-exam-2`, {
-//       method: "POST",
-//       headers: {
-//         "x-apikey": "61753a458597142da1745988",
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(payload),
-//     })
-//     .then(res=>res.json())
-//     .then((data) => {
-  
-//       const template = document.querySelector("template.insightsTemplate").content;
-//       const copy = template.cloneNode(true);
-//       copy.querySelector(".line").textContent = data.content;
-//       document.querySelector(".mainContainer").appendChild(copy);
-    
-     
-//       document.querySelector("input[type=submit]").disabled = false;
-  
-//       form.elements.content.value = "";
-//     });
-//   } 
+// }

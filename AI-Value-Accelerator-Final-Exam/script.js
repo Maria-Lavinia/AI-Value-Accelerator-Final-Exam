@@ -46,4 +46,17 @@ function handleSubmit(e){
       form.elements.content.value = "";
     });
   } 
-  
+
+//   function capture() {
+//     html2canvas(document.querySelector(".endScreen"), {
+
+//       html2canvas(document.querySelector("#capture")).then(canvas => {
+//         document.body.appendChild(canvas)
+//     });   
+// //         onrendered: function (canvas) {                     
+// //             var imgString = canvas.toDataURL("image/png");
+// //             window.open(imgString);
+// //         }                  
+// //     }
+// // )};
+//   console.log(capture());

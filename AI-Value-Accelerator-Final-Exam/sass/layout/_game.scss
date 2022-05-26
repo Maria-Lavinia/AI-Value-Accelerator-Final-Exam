@@ -11,7 +11,7 @@
   height: 100vh;
   width: 100%;
   margin: 0;
-  z-index: -1000;
+  z-index: -8;
   
 }
 
@@ -129,6 +129,10 @@
   text-align: center;
 }
 
+/* .square:focus {
+  background-color: yellow !important;
+} */
+
 .square-name {
   font-weight: 600;
   color: variables.$white;
@@ -194,7 +198,7 @@
   top: 45%;
   left: 21%;
 }
-.finfish-button, a {
+.finish-button, a {
   position: absolute;
   top: 20%;
   left: 75%;
@@ -214,12 +218,56 @@
   }
 }
 
+.mutedButton{  
+  height: 4.559rem;
+  width: 4.559rem;
+  cursor: pointer;
+  background-size: 100%;
+  position: absolute;
+  top: 20%;
+  left: 68%;
+
+  &:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+  &:active {
+    transform: translateY(-1px);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  }
+}
+
+.unmutedButton{  
+  height: 4.559rem;
+  width: 4.559rem;
+  cursor: pointer;
+  background-size: 100%;
+  position: absolute;
+  top: 20%;
+  left: 68%;
+
+  &:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+  &:active {
+    transform: translateY(-1px);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  }
+}
+
 .rollme{
   position: absolute;
   top: 77%;
   left:48%;
   color: variables.$white;
   font-size: 20px;
+}
+
+#countdown{
+  display: inline-flex;
+  height: 70px;
+  width: 70px;
 }
 // dice
 
@@ -385,14 +433,53 @@
 }
 
 
+//MEDIA QUERIES
 
+// timer
+.time_container{
+  float: right;
+  margin-right: -6rem;
+ margin-top: -1rem;
+  font-size: 2rem;
+}
 
+@media only screen and (min-width: 112rem){
+  
+  .icon3 {
+    left: 21%;
+  }
+  
+  .logo-white{
+    left: 30%;
+  }
+  
+  .cell{
+    width: 2%;
+  }
 
+  .rollme {
+    top: 80%;
+  }
 
+  .finish-button, a {
+    position: absolute;
+    top: 20%;
+    left: 78.8%;
+    color: variables.$white;
+  }
 
+  .unmutedButton, .mutedButton {
+    left: 73.8%;
+  }
+  
+}
 
-
-
+@media only screen and (min-width: 100rem) and (max-width: 111rem){
+  .logo-white{
+    left: 26%;
+  }
+  
+}
 
 @media only screen and (max-width: 90rem)
 and (max-width: 102rem){
@@ -427,30 +514,6 @@ width: 50rem;
   top: 82%
 }
 }
-
-@media only screen and (min-width: 112rem){
-  
-.icon3 {
-  left: 21%;
-}
-
-  .logo-white{
-    left: 30%;
-  }
-  
-  .cell{
-    width: 2%;
-  }
-
-}
-
-@media only screen and (min-width: 100rem) and (max-width: 111rem){
-  .logo-white{
-    left: 26%;
-  }
-
-}
-
 
 @media only screen and (max-width: 102rem){
   .cell{
@@ -624,5 +687,7 @@ width: 50rem;
 		--fg: #c7cad1;
 	}
 }
+
+
 
 
