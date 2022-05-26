@@ -14,6 +14,9 @@ function start(){
    
     popup.forEach((each) => each.classList.add("hide"));
     square.forEach((button) => button.addEventListener("click", showModal));
+
+    document.querySelector(".unmutedButton").addEventListener("click", muteSound)
+    document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
   
 }
 
@@ -59,7 +62,22 @@ function showModal(){
     //   showForm();  
 }  
 
-//const square2 = document.querySelector(".square");
+function muteSound() {
+    document.querySelector(".unmutedButton").classList.add("hidden");
+    document.querySelector(".mutedButton").classList.remove("hidden");
+
+    popupSound.muted = true;
+    diceSound.muted = true;
+}
+
+function unmuteSound() {
+    document.querySelector(".mutedButton").classList.add("hidden");
+    document.querySelector(".unmutedButton").classList.remove("hidden");
+
+    popupSound.muted = false;
+    diceSound.muted = false;
+}
+
 
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
@@ -68,7 +86,7 @@ gameFigure.style.width = "2rem"
 
 squareArray.forEach((square) => {
     square.addEventListener('focus', (event) => {
-        event.target.style.backgroundColor = 'pink';
+        //event.target.style.backgroundColor = 'pink';
         event.target.appendChild(gameFigure)
       }, true);
 
@@ -107,16 +125,6 @@ squareArray.forEach((square) => {
   } */
 
 
-  /* function showFocus() {
-
-    this.focus(); 
-
-    if (this.focus = true) {
-        this.style.backgroundColor = "white";
-       } else {
-        this.style.backgroundColor = "rgba(180, 180, 180)";
-  }
-} */
 
 // function showForm(){
 //     setTimeout(() => {
