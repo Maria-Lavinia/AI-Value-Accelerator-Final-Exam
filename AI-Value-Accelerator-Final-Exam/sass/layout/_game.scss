@@ -221,6 +221,12 @@
   color: variables.$white;
   font-size: 20px;
 }
+
+#countdown{
+  display: inline-flex;
+  height: 70px;
+  width: 70px;
+}
 // dice
 
 #result{
@@ -386,13 +392,13 @@
 
 
 
-
-
-
-
-
-
-
+// timer
+.time_container{
+  float: right;
+  margin-right: -6rem;
+ margin-top: -1rem;
+  font-size: 2rem;
+}
 
 @media only screen and (max-width: 90rem)
 and (max-width: 102rem){
