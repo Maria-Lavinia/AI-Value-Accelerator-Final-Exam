@@ -220,12 +220,12 @@
 
 .mutedButton{  
   height: 4.559rem;
-  width: 4.559rem;
+  width: 2.6rem;
   cursor: pointer;
   background-size: 100%;
   position: absolute;
   top: 20%;
-  left: 68%;
+  left: 70%;
 
   &:hover {
     transform: translateY(-3px);
@@ -239,12 +239,12 @@
 
 .unmutedButton{  
   height: 4.559rem;
-  width: 4.559rem;
+  width: 2.6rem;
   cursor: pointer;
   background-size: 100%;
   position: absolute;
   top: 20%;
-  left: 68%;
+  left: 70%;
 
   &:hover {
     transform: translateY(-3px);
@@ -469,7 +469,7 @@
   }
 
   .unmutedButton, .mutedButton {
-    left: 73.8%;
+    left: 75%;
   }
   
 }
