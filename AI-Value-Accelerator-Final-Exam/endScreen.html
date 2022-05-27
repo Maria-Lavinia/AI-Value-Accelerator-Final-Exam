@@ -30,6 +30,17 @@
   </div>
 </div>
 </div>
+
+<h1>KEY INSIGHTS</h1>
+<div class="insights"></div>
+
+
+
+  
+  <p class="line">
+
+  </p>
+
 </main>
 </div>
 
@@ -60,6 +71,28 @@
 
 
     <script src="./script.js"></script>
+
+
+
+    <script>
+
+// document.querySelector(".insButton").addEventListener("click", showiNSHIGHT);
+
+// function showiNSHIGHT(){
+
+
+
+      const asArray = JSON.parse(localStorage.getItem("insights"));
+      asArray.forEach(item=>{
+      
+      const newItem= document.createElement("p");
+      newItem.classList.add("line")
+      newItem.textContent = item
+      document.querySelector(".insights").appendChild(newItem)
+      })
+      
+
+          </script>
     <!-- <script src="./main.js"></script> -->
   </body>
 </html>

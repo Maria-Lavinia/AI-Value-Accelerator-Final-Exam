@@ -71,6 +71,18 @@ function showColor(){
 //    document.querySelector(".popup").style.pointerEvents = "none";
   }
 
+
+
+  document.querySelector(".finfish-button").addEventListener("click", e =>{
+    e.preventDefault();
+    const textareas = document.querySelectorAll("textarea");
+    console.log(textareas);
+ 
+    const newArray = [...textareas].map(area=>area.value)
+   localStorage.setItem("insights", JSON.stringify(newArray))
+   window.location = "endScreen.html"
+    
+  })
 // function showForm(){
 //     setTimeout(() => {
 //         const game3 = document.querySelector(".game_board");

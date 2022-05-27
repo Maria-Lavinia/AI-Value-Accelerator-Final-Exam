@@ -34,11 +34,15 @@ function showInsights (){
 }
 
 
- document.querySelector(".finfish-button").addEventListener("click", e =>{
-   e.preventDefault();
-   const textareas = document.querySelectorAll("textarea");
+//  document.querySelector(".finfish-button").addEventListener("click", e =>{
+//    e.preventDefault();
+//    const textareas = document.querySelectorAll("textarea");
+
+//    const newArray = [...textareas.map(area=>area.value)]
+//   localStorage.setItem("insights", JSON.stringify(newArray))
+//   window.location = "endScreen.html"
    
- })
+//  })
 // const form = document.querySelector(".formz");
 // document.querySelector(".insButton").addEventListener("click", showForm);
 
