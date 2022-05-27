@@ -67,6 +67,7 @@ countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}
 time--;
 }
 function restartTimer(){
+    
     time = startingMinutes * 60;
 }
 
