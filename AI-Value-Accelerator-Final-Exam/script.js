@@ -33,6 +33,12 @@ function showInsights (){
   submit();
 }
 
+
+ document.querySelector(".finfish-button").addEventListener("click", e =>{
+   e.preventDefault();
+   const textareas = document.querySelectorAll("textarea");
+   
+ })
 // const form = document.querySelector(".formz");
 // document.querySelector(".insButton").addEventListener("click", showForm);
 
