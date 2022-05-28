@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", start());
 //sounds
 let popupSound = document.querySelector("#popupSound")
 let diceSound = document.querySelector("#diceSound")
+let isModalOpen = false;
 
 
 function start(){
@@ -52,37 +53,53 @@ function loading_anim(){
     }, 3500);
 }
 
+
 const startingMinutes = 5;
 let time = startingMinutes * 60;
 
 const countDownEl =  document.querySelectorAll("#countdown");
 
 
+function restartTimer(){
+    time = startingMinutes * 60;
+}
 
 function updateCountdown(){
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
+
+    console.log(minutes+ ":"+ seconds);
+    
     
 countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
 time--;
+if(minutes==0 && seconds == 0){
+  restartTimer();
 }
-function restartTimer(){
-    time = startingMinutes * 60;
 }
 
 // setInterval(updateCountdown, 1000);
 
 function showModal(){
+  if(!isModalOpen){
+    isModalOpen = true;
+    restartTimer();
     this.querySelector(".popup").classList.remove("hide");
     popupSound.play();
     
-    restartTimer();
-    setInterval(updateCountdown, 1000);
+    let clickedSquare = this.querySelector('.popup').parentNode;
+    const refreshIntervalId = setInterval(updateCountdown, 1000);
     
     
     setTimeout(() => {
         this.querySelector(".popup").classList.add("hide");
-      }, 300000);  
+        clearInterval(refreshIntervalId);
+        isModalOpen = false;
+        clickedSquare.style.backgroundColor = '#04304A';
+        clickedSquare.style.border = '6px solid black';
+        changeColor();
+      }, 301000); 
+    } 
 }  
 
 
@@ -108,28 +125,30 @@ const gameFigure = document.createElement("img");
 gameFigure.src = "public/assets/gameFigure.png"
 gameFigure.style.width = "2rem"
 
-squareArray.forEach((square) => {
-    square.addEventListener('focus', (event) => {
-        //event.target.style.backgroundColor = 'pink';
-        event.target.insertBefore(gameFigure, event.target.children[0])
-      }, true);
-    })
+// function changeColor(){
+// squareArray.forEach((square) => {
+//     square.addEventListener('focus', (event) => {
+//         //event.target.style.backgroundColor = 'pink';
+//         event.target.insertBefore(gameFigure, event.target.children[0])
+//       }, true);
+//     })
 
-const square2 = document.querySelectorAll(".square");
-square2.forEach((apple) => apple.addEventListener("click", showColor));
+// const square2 = document.querySelectorAll(".square");
+// square2.forEach((apple) => apple.addEventListener("click", showColor));
+//   }
     
 
-function showColor(){
-   //this.style.backgroundColor = "rgba(180, 180, 180)";
-   this.addEventListener('focus', (event) => {
-            //event.target.style.backgroundColor = 'pink';
-          }, true);
-          this.addEventListener('blur', (event) => {
-                    event.target.style.backgroundColor = '#04304A';
-                    event.target.style.border = '6px solid black';
+// function showColor(){
+//    //this.style.backgroundColor = "rgba(180, 180, 180)";
+//    this.addEventListener('focus', (event) => {
+//             //event.target.style.backgroundColor = 'pink';
+//           }, true);
+//           this.addEventListener('blur', (event) => {
+//                     event.target.style.backgroundColor = '#04304A';
+//                     event.target.style.border = '6px solid black';
                     
-                  }, true);
-  }
+//                   }, true);
+//   }
 
 
 
