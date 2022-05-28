@@ -20,8 +20,8 @@ function start(){
     document.querySelector(".unmutedButton").addEventListener("click", muteSound)
     document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
   
+  
 }
-
 
 function loading_anim(){
     const number = document.querySelector(".number");
@@ -76,11 +76,8 @@ time--;
 if(minutes==0 && seconds == 0){
   restartTimer();
 }
-function restartTimer(){
-    
-    time = startingMinutes * 60;
 }
-}
+
 // setInterval(updateCountdown, 1000);
 
 function showModal(){
@@ -125,7 +122,7 @@ function unmuteSound() {
 
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure2.png"
+gameFigure.src = "public/assets/gameFigure.png"
 gameFigure.style.width = "2rem"
 
 // function changeColor(){
