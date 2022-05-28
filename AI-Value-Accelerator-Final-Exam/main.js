@@ -20,8 +20,8 @@ function start(){
     document.querySelector(".unmutedButton").addEventListener("click", muteSound)
     document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
   
-  
 }
+
 
 function loading_anim(){
     const number = document.querySelector(".number");
@@ -80,7 +80,7 @@ function restartTimer(){
     
     time = startingMinutes * 60;
 }
-
+}
 // setInterval(updateCountdown, 1000);
 
 function showModal(){
@@ -210,4 +210,3 @@ gameFigure.style.width = "2rem"
 //     }
     
 // }
-}
