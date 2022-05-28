@@ -11,7 +11,7 @@
   height: 100vh;
   width: 100%;
   margin: 0;
-  z-index: -8;
+  z-index: -1000;
   
 }
 
@@ -263,12 +263,6 @@
   color: variables.$white;
   font-size: 20px;
 }
-
-#countdown{
-  display: inline-flex;
-  height: 70px;
-  width: 70px;
-}
 // dice
 
 #result{
@@ -435,14 +429,6 @@
 
 //MEDIA QUERIES
 
-// timer
-.time_container{
-  float: right;
-  margin-right: -6rem;
- margin-top: -1rem;
-  font-size: 2rem;
-}
-
 @media only screen and (min-width: 112rem){
   
   .icon3 {
@@ -469,7 +455,7 @@
   }
 
   .unmutedButton, .mutedButton {
-    left: 75.5%;
+    left: 75%;
   }
   
 }

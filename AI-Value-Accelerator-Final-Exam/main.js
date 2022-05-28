@@ -125,7 +125,7 @@ function unmuteSound() {
 
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.src = "public/assets/gameFigure2.png"
 gameFigure.style.width = "2rem"
 
 // function changeColor(){
