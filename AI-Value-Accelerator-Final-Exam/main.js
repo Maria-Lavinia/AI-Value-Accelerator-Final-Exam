@@ -77,12 +77,15 @@ function showColor(){
     e.preventDefault();
     const textareas = document.querySelectorAll("textarea");
     console.log(textareas);
- 
+ document.querySelector(".insButton").addEventListener("click", showInsights);
+})
+
+ function showInsights (){
     const newArray = [...textareas].map(area=>area.value)
    localStorage.setItem("insights", JSON.stringify(newArray))
-   window.location = "endScreen.html"
+   window.location = "insights.html"
     
-  })
+}
 // function showForm(){
 //     setTimeout(() => {
 //         const game3 = document.querySelector(".game_board");

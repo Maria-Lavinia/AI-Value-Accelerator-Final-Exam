@@ -7,22 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="insightsScreen">
 
-    <div class="mainContainer"></div>
+        <h1>KEY INSIGHTS</h1>
+      <div class="insights">
+        <p class="line"></p>
+      </div>
+      </div>
 
-    <!-- <template class="insightsTemplate">
-    <div class="insights">
+      <script src="./main.js"></script>
+      <!-- <script src="./script.js"></script> -->
+
+
+    <script>
+        const asArray = JSON.parse(localStorage.getItem("insights"));
+        asArray.forEach(item=>{
+        
+        const newItem= document.createElement("p");
+        newItem.classList.add("line")
+        newItem.textContent = item
+        document.querySelector(".insights").appendChild(newItem)
+        })
+        
   
-      <h1>KEY INSIGHTS</h1>
-      <p class="line">
-  
-      </p>
-    </div>
-  </template> -->
-
-
-
-  <script src="./main.js"></script>
-    
+    </script>
 </body>
+
 </html>
