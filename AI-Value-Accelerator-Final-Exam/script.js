@@ -6,7 +6,7 @@ document.querySelector(".insButton").addEventListener("click", showForm);
 
 
 function showForm(){
-    document.querySelector(".endddScreenz").classList.add("hidden");
+    document.querySelector(".endScreenMain").classList.add("hidden");
     document.querySelector(".formz").classList.remove("hidden")
 }
 

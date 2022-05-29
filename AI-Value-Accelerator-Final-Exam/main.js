@@ -125,8 +125,8 @@ function showColor(){
             //event.target.style.backgroundColor = 'pink';
           }, true);
           this.addEventListener('blur', (event) => {
-                    event.target.style.backgroundColor = '#04304A';
-                    event.target.style.border = '6px solid black';
+                    event.target.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
+                    event.target.style.border = '6px solid rgba(255, 255, 255, 0.6)';
                     
                   }, true);
   }
