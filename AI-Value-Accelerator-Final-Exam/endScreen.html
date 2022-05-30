@@ -23,8 +23,9 @@
   <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
   <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
   <div class="endButtonFlex">
-    <button class=" endScreenBtn insButton" style="font-size: 1.4rem;">WRITE INSIGHTS</button>
+  
 
+    <button class="endScreenBtn insButton" onclick="window.location.href='insights.html'" style="font-size: 1.4rem;">INSIGHTS</button>
     <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
   </div>
 </div>
@@ -32,30 +33,6 @@
 </main>
 </div>
 
-
-<form class="formz hidden">
-  <h1 class="insTitle">Please write the key insights of this game!</h1>
-  <textarea id="input1" name="content" class="insText" placeholder="Write down your insights here…"></textarea>
-  <input type="submit" class="button" value="Send">
-</form>
-
-
-<section id = "insightsId">
-<div class="mainContainer"></div>
-<template class="insightsTemplate">
-  <img class="logo" src="public/assets/sass-logo.png">
-<div class="insights">
-
-  <h1>KEY INSIGHTS</h1>
-  <ul>
-    <li class = "line"></li>
-  </ul>
- 
-  
-</div>
-<button class="button insButton2" onclick="window.location.href ='titleScreen.html'">HOME</button>
-</template>
-</section>
 
 
 

@@ -141,6 +141,19 @@ squareArray.forEach((square) => {
     })
   }
 
+  document.querySelector(".finfish-button").addEventListener("click", e =>{
+    e.preventDefault();
+    const textareas = document.querySelectorAll("textarea");
+    const header = document.querySelectorAll("header");
+    console.log(textareas);
+
+    const newArray = [...textareas].map(area => area.value)
+   localStorage.setItem("insights", JSON.stringify(newArray))
+   window.location = "endScreen.html"
+    
+  })
+
+
 // const square2 = document.querySelectorAll(".square");
 // square2.forEach((apple) => apple.addEventListener("click", showColor));
 //   }
