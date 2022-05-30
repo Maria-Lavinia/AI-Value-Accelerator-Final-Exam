@@ -67,14 +67,10 @@ function restartTimer(){
 function updateCountdown(){
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
-    console.log(minutes+ ":"+ seconds);
-    
-    
-countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
-time--;
-if(minutes == 0 && seconds == 0){
-  restartTimer();
+    countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
+    time--;
+    if(minutes == 0 && seconds == 0){
+      restartTimer();
 }
 }
 
@@ -101,7 +97,7 @@ function showModal(){
       isModalOpen = false;
       clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
       clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
-      }, 3000); 
+      }, 301000); 
     } 
 }  
 
