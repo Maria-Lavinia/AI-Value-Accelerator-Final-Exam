@@ -126,7 +126,12 @@ textarea{
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
   }
-
+.time-container, #countdown{
+  float: right;
+  font-size: 1.7rem;
+  margin-right: -7rem;
+  margin-top: -1rem;
+}
   //   MOBIL 
   @media screen and (max-width: 50rem){
     #modal {

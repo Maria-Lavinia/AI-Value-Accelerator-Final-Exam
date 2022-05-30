@@ -77,7 +77,7 @@ function updateCountdown(){
 // setInterval(updateCountdown, 1000);
 
 function showModal(){
-  if(!isModalOpen){
+
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
@@ -97,8 +97,8 @@ function showModal(){
       isModalOpen = false;
       clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
       clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
-      }, 301000); 
-    } 
+      }, 3000); 
+    
 }  
 
 const squareArray = document.querySelectorAll(".square");
@@ -140,7 +140,7 @@ function unmuteSound() {
 
   // displaying the answers to the questions
 
-  document.querySelector(".finfish-button").addEventListener("click", e =>{
+  document.querySelector(".finish-button").addEventListener("click", e =>{
     e.preventDefault();
     const textareas = document.querySelectorAll("textarea");
     console.log(textareas);
