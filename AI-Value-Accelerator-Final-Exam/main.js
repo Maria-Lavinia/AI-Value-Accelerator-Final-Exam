@@ -89,9 +89,7 @@ function showModal(){
     // gameFigure.src = "public/assets/gameFigure.png"
     // gameFigure.style.width = "2rem";
     let clickedSquare = this.querySelector('.popup').parentNode;
-    popupSound.play();
-    changeColor();
-    
+    popupSound.play();    
     const refreshIntervalId = setInterval(updateCountdown, 1000);
     
     
@@ -101,12 +99,6 @@ function showModal(){
       isModalOpen = false;
       clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
       clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
-
-    //   if (isModalOpen = true){
-    //  clickedSquare.appendChild(gameFigure);
-    //   }
-     
-        
       }, 3000); 
     } 
 }  
@@ -130,12 +122,6 @@ function unmuteSound() {
 }
 
 
-// const squareArray = document.querySelectorAll(".square");
-// const gameFigure = document.createElement("img");
-// gameFigure.src = "public/assets/gameFigure.png"
-// gameFigure.style.width = "2rem"
-
-
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
 gameFigure.src = "public/assets/gameFigure.png"
@@ -151,7 +137,7 @@ squareArray.forEach((square) => {
       }, true);
     })
   }
-  console.log(changeColor());
+ changeColor();
 
   // displaying the answers to the questions
 
