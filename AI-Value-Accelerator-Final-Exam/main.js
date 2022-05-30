@@ -97,7 +97,7 @@ function showModal(){
         isModalOpen = false;
         clickedSquare.style.backgroundColor = '#04304A';
         clickedSquare.style.border = '6px solid black';
-        // changeColor();
+        changeColor();
       }, 301000); 
     } 
 }  
