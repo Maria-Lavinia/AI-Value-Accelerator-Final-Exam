@@ -13,7 +13,7 @@
 
   <main class="endScreenMain">
     <img class="sasLogo" src="public/assets/sass-logo.png">
-    <img class="sasLogoBlue2" src="public/assets/sasLogoBlue2.png">
+    <img class="sasLogoBlue2" src="public/assets/sasLogoBlue.png">
   <div class="endTextImageContainer">
     <div class="endImageContainer">
       <img class="endGraphic" src="public/assets/endGraphic2.png">
@@ -23,8 +23,9 @@
   <h2 class="endSecondHeading">Congratulations! You have finished the game</h2>
   <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
   <div class="endButtonFlex">
-    <button class=" endScreenBtn insButton" style="font-size: 1.4rem;">WRITE INSIGHTS</button>
+  
 
+    <button class="endScreenBtn insButton" onclick="window.location.href='insights.html'" style="font-size: 1.4rem;">INSIGHTS</button>
     <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
   </div>
 </div>
@@ -32,58 +33,6 @@
 </main>
 </div>
 
-
-<form class="formz hidden">
-  <h1 class="insTitle">Please write the key insights of this game!</h1>
-  <textarea id="input1" name="content" class="insText" placeholder="Write down your insights here…"></textarea>
-  <input type="submit" class="button" value="Send">
-</form>
-
-
-<section id = "insightsId">
-<div class="mainContainer"></div>
-<template class="insightsTemplate">
-  <img class="logo" src="public/assets/sass-logo.png">
-<div class="insights">
-
-  <h1>KEY INSIGHTS</h1>
-  <ul>
-    <li class = "line"></li>
-  </ul>
- 
-  
-</div>
-<button class="button insButton2" onclick="window.location.href ='titleScreen.html'">HOME</button>
-</template>
-</section>
-
-
-
-
-
-<!-- <script>
-   function capture() {
-    // html2canvas(document.querySelector(".endScreen"), {
-      
-      const html2canvas = require('html2canvas');
-
-      html2canvas(document.querySelector(".endScreen")).then(canvas => {
-        document.body.appendChild(canvas)
-    });
-  }
-</script> -->
-    <!-- <script src="./script.js"></script>
- 
-    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-    <script src="./main.js"></script> -->
-
-    <!-- <script type='text/javascript'>
-      function capture() {
-          html2canvas(document.body).then(function(canvas) {
-              document.body.appendChild(canvas);
-          });
-      }
-    </script> -->
     <script src="script.js"></script>
   </body>
 </html>
