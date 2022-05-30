@@ -1,37 +1,37 @@
-"use strict";
+// "use strict";
 
-document.querySelector(".endScreenBtn").addEventListener("click", showInsights);
+// document.querySelector(".endScreenBtn").addEventListener("click", showInsights);
 
-function submit() {
-  const insightsForm = document.querySelectorAll(".insightsForm");
-  // const insightsForm = document.querySelectorAll(".insightsForm textarea");
+// function submit() {
+//   const insightsForm = document.querySelectorAll(".insightsForm");
+//   // const insightsForm = document.querySelectorAll(".insightsForm textarea");
 
-  const inputArr = [
-    insightsForm.forEach((input) => {
-      // console.log(input.value);
+//   const inputArr = [
+//     insightsForm.forEach((input) => {
+//       // console.log(input.value);
 
-      const data = input.querySelector(".input").value;
+//       const data = input.querySelector(".input").value;
 
-      // let inputArr = [...inputArr, input.value];
-      // console.log(inputArr);
+//       // let inputArr = [...inputArr, input.value];
+//       // console.log(inputArr);
 
-      // insightsForm.forEach((input) => {
-      //   console.log(input.value);
+//       // insightsForm.forEach((input) => {
+//       //   console.log(input.value);
 
-      //   let inputArr = [...inputArr, input.value];
-      //   console.log(inputArr);
-      console.log(data);
-      return { data };
-    }),
-  ];
-  console.log(inputArr)
-}
+//       //   let inputArr = [...inputArr, input.value];
+//       //   console.log(inputArr);
+//       console.log(data);
+//       return { data };
+//     }),
+//   ];
+//   console.log(inputArr)
+// }
 
-function showInsights (){
-  document.querySelector(".endddScreenz").classList.add("hidden");
+// function showInsights (){
+//   document.querySelector(".endddScreenz").classList.add("hidden");
 
-  submit();
-}
+//   submit();
+// }
 
 
 //  document.querySelector(".finfish-button").addEventListener("click", e =>{

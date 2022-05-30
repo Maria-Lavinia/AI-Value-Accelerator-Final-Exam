@@ -71,65 +71,14 @@ function showColor(){
 //    document.querySelector(".popup").style.pointerEvents = "none";
   }
 
-
-
   document.querySelector(".finfish-button").addEventListener("click", e =>{
     e.preventDefault();
     const textareas = document.querySelectorAll("textarea");
+    const header = document.querySelectorAll("header");
     console.log(textareas);
- 
+
     const newArray = [...textareas].map(area=>area.value)
    localStorage.setItem("insights", JSON.stringify(newArray))
    window.location = "endScreen.html"
     
   })
-// function showForm(){
-//     setTimeout(() => {
-//         const game3 = document.querySelector(".game_board");
-//         game3.style.display="none";
-//         game3.style.visibility="hidden";
-//         document.querySelector("#ui_dado").style.display="none";
-//         document.querySelector(".rollme").style.display = "none";
-//         document.querySelector(".formz").classList.remove("hide")
-         
-//        }, 7000); 
-// }
-
-
-// const form = document.querySelector(".formz");
-
-
-// form.addEventListener("submit", handleSubmit);
-    
-//   function handleSubmit(e){
-//     document.querySelector(".formz").classList.add("hide")
-//     // window.location.href ='endScreen.html'
-//     e.preventDefault();
-//    const payload = {
-//     content: form.elements.content.value,
-//    };
-//    document.querySelector("input[type=submit]").disabled = true;
-  
-//    console.log(payload);
-//    fetch(`https://portfolio-8a02.restdb.io/rest/final-exam-2`, {
-//       method: "POST",
-//       headers: {
-//         "x-apikey": "61753a458597142da1745988",
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(payload),
-//     })
-//     .then(res=>res.json())
-//     .then((data) => {
-  
-//       const template = document.querySelector("template.insightsTemplate").content;
-//       const copy = template.cloneNode(true);
-//       copy.querySelector(".line").textContent = data.content;
-//       document.querySelector(".mainContainer").appendChild(copy);
-    
-     
-//       document.querySelector("input[type=submit]").disabled = false;
-  
-//       form.elements.content.value = "";
-//     });
-//   } 

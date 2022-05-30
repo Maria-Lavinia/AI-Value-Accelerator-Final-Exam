@@ -24,7 +24,7 @@
   <p class="endScreenText">We hope you learned more about AI and how it could benefit your company.</p>
   <div class="endButtonFlex">
 
-    <button class=" endScreenBtn insButton" style="font-size: 1.4rem;">INSIGHTS</button>
+    <button class="endScreenBtn insButton" onclick="window.location.href='insights.html'" style="font-size: 1.4rem;">INSIGHTS</button>
     <button class="endScreenBtn" onclick="window.location.href ='titleScreen.html'">HOME</button>
 
   </div>
@@ -32,7 +32,7 @@
 </div>
 
 <h1>KEY INSIGHTS</h1>
-<div class="insights"></div>
+
 
 
 
@@ -82,14 +82,7 @@
 
 
 
-      const asArray = JSON.parse(localStorage.getItem("insights"));
-      asArray.forEach(item=>{
       
-      const newItem= document.createElement("p");
-      newItem.classList.add("line")
-      newItem.textContent = item
-      document.querySelector(".insights").appendChild(newItem)
-      })
       
 
           </script>
