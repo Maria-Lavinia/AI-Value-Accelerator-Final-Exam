@@ -73,7 +73,7 @@ function updateCountdown(){
     
 countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
 time--;
-if(minutes==0 && seconds == 0){
+if(minutes == 0 && seconds == 0){
   restartTimer();
 }
 }
@@ -97,7 +97,7 @@ function showModal(){
         isModalOpen = false;
         clickedSquare.style.backgroundColor = '#04304A';
         clickedSquare.style.border = '6px solid black';
-        changeColor();
+        // changeColor();
       }, 301000); 
     } 
 }  
