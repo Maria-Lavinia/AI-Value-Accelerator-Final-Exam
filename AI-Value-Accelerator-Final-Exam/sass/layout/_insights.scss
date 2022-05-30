@@ -41,6 +41,7 @@
 .line{
     overflow-wrap: break-word;
     text-align: left;
+    list-style-type: circle;
 }
 .hidden{
     opacity: 0;
@@ -81,7 +82,7 @@
 
 @media screen and (max-width: 50rem){
     .insights{
-        width: 360px;
+        width: 461px;
         height: 636px;
         border-radius: 2rem;
     }
@@ -89,8 +90,8 @@
         font-size: 2rem;
     }
     .insigthButton {
-        width: 104px;
-        height: 38px;
+        width: 130px;
+        height: 45px;
         font-size: 1.2rem;
     }
 }
