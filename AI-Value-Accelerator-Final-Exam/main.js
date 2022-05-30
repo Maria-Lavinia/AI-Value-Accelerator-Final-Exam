@@ -85,9 +85,13 @@ function showModal(){
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
+    const gameFigure = document.createElement("img");
+    gameFigure.src = "public/assets/gameFigure.png"
+    gameFigure.style.width = "2rem";
+    let clickedSquare = this.querySelector('.popup').parentNode;
+    clickedSquare.appendChild(gameFigure)
     popupSound.play();
     
-    let clickedSquare = this.querySelector('.popup').parentNode;
     const refreshIntervalId = setInterval(updateCountdown, 1000);
     
     
@@ -97,7 +101,8 @@ function showModal(){
         isModalOpen = false;
         clickedSquare.style.backgroundColor = '#04304A';
         clickedSquare.style.border = '6px solid black';
-        createPawn();
+        clickedSquare.removeChild(gameFigure);
+       
             }, 301000); 
     } 
 }  
@@ -119,22 +124,22 @@ function unmuteSound() {
     diceSound.muted = false;
 }
 
-function createPawn(){
+
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
 gameFigure.src = "public/assets/gameFigure.png"
 gameFigure.style.width = "2rem"
-}
 
 
-// function changeColor(){
-// squareArray.forEach((square) => {
-//     square.addEventListener('focus', (event) => {
-//         //event.target.style.backgroundColor = 'pink';
-//         event.target.insertBefore(gameFigure, event.target.children[0])
-//       }, true);
-//     })
-//   }
+
+function changeColor(){
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        //event.target.style.backgroundColor = 'pink';
+        event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
+  }
 
 // const square2 = document.querySelectorAll(".square");
 // square2.forEach((apple) => apple.addEventListener("click", showColor));
