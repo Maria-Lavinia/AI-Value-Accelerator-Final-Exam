@@ -589,7 +589,12 @@
       <script src="main.js"></script>
       <script type="text/javascript">
 
-function dice(){
+
+  function dice(event){
+
+diceSound.play();
+
+event.preventDefault();
 	  $('#platform').removeClass('stop').addClass('playing');
 	  $('#dice');
 	  setTimeout(function(){
