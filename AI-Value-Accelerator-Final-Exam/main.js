@@ -91,6 +91,8 @@ function showModal(){
     let clickedSquare = this.querySelector('.popup').parentNode;
     popupSound.play();    
     const refreshIntervalId = setInterval(updateCountdown, 1000);
+
+    
     
     
     setTimeout(() => {
@@ -102,6 +104,21 @@ function showModal(){
       }, 3000); 
     } 
 }  
+
+const squareArray = document.querySelectorAll(".square");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.style.width = "2rem"
+
+
+
+
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
+
 
 
 
@@ -122,22 +139,8 @@ function unmuteSound() {
 }
 
 
-const squareArray = document.querySelectorAll(".square");
-const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
-gameFigure.style.width = "2rem"
-
-function changeColor(){
 
 
-squareArray.forEach((square) => {
-    square.addEventListener('focus', (event) => {
-        //event.target.style.backgroundColor = 'pink';
-        event.target.insertBefore(gameFigure, event.target.children[0])
-      }, true);
-    })
-  }
- changeColor();
 
   // displaying the answers to the questions
 
