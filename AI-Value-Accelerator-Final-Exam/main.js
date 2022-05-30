@@ -85,11 +85,11 @@ function showModal(){
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
-    const gameFigure = document.createElement("img");
-    gameFigure.src = "public/assets/gameFigure.png"
-    gameFigure.style.width = "2rem";
+    // const gameFigure = document.createElement("img");
+    // gameFigure.src = "public/assets/gameFigure.png"
+    // gameFigure.style.width = "2rem";
     let clickedSquare = this.querySelector('.popup').parentNode;
-    clickedSquare.appendChild(gameFigure)
+    // clickedSquare.appendChild(gameFigure)
     popupSound.play();
     
     const refreshIntervalId = setInterval(updateCountdown, 1000);
@@ -99,13 +99,15 @@ function showModal(){
         this.querySelector(".popup").classList.add("hide");
         clearInterval(refreshIntervalId);
         isModalOpen = false;
-        clickedSquare.style.backgroundColor = '#04304A';
-        clickedSquare.style.border = '6px solid black';
-        clickedSquare.removeChild(gameFigure);
-       
-            }, 301000); 
+        clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
+        clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
+        showPawn();
+        
+      }, 301000); 
     } 
+    // clickedSquare.removeChild(gameFigure);
 }  
+
 
 
 function muteSound() {
@@ -140,6 +142,8 @@ squareArray.forEach((square) => {
       }, true);
     })
   }
+
+  // displaying the answers to the questions
 
   document.querySelector(".finfish-button").addEventListener("click", e =>{
     e.preventDefault();
