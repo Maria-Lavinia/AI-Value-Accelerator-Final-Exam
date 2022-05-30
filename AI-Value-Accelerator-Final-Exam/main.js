@@ -103,14 +103,14 @@ function showModal(){
 
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.src = "public/assets/gameFigure2.png"
 gameFigure.style.width = "2rem"
 
 
 
 
 squareArray.forEach((square) => {
-    square.addEventListener('focus', (event) => {
+    square.addEventListener('click', (event) => {
         event.target.insertBefore(gameFigure, event.target.children[0])
       }, true);
     })

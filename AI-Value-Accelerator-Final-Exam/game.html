@@ -531,7 +531,7 @@
 
     <!-- dice -->
     <div id="ui_dado" tabindex="-1" disabled>
-      <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
+      <!-- <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio> -->
       <p id="result"></p>
         <div id="platform">
           <div id="dice" tabindex="-1" disabled onmousedown="dice(event)">
@@ -581,17 +581,17 @@
         </div>
       </div>
 
-      <div class="rollme">Roll Me!</div>
+      <div class="rollme" onclick="dice()">Roll Me!</div>
 
  
       
       <script src="main.js"></script>
       <script type="text/javascript">
-       function dice(event){
+       function dice(){
 
-        diceSound.play();
+        // diceSound.play();
 
-        event.preventDefault();
+        // event.preventDefault();
 
         $('#platform').removeClass('stop').addClass('playing');
         $('#dice');
