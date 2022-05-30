@@ -97,8 +97,8 @@ function showModal(){
         isModalOpen = false;
         clickedSquare.style.backgroundColor = '#04304A';
         clickedSquare.style.border = '6px solid black';
-        changeColor();
-      }, 301000); 
+        createPawn();
+            }, 301000); 
     } 
 }  
 
@@ -119,11 +119,13 @@ function unmuteSound() {
     diceSound.muted = false;
 }
 
-
+function createPawn(){
 const squareArray = document.querySelectorAll(".square");
 const gameFigure = document.createElement("img");
 gameFigure.src = "public/assets/gameFigure.png"
 gameFigure.style.width = "2rem"
+}
+
 
 // function changeColor(){
 // squareArray.forEach((square) => {
@@ -132,6 +134,7 @@ gameFigure.style.width = "2rem"
 //         event.target.insertBefore(gameFigure, event.target.children[0])
 //       }, true);
 //     })
+//   }
 
 // const square2 = document.querySelectorAll(".square");
 // square2.forEach((apple) => apple.addEventListener("click", showColor));
