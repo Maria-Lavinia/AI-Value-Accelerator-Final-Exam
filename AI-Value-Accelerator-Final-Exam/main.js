@@ -8,6 +8,12 @@ let popupSound = document.querySelector("#popupSound")
 let diceSound = document.querySelector("#diceSound")
 let isModalOpen = false;
 
+//game figure
+const squareArray = document.querySelectorAll(".square");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure2.png"
+gameFigure.style.width = "2rem"
+
 
 function start(){
     loading_anim(); 
@@ -85,21 +91,26 @@ function showModal(){
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
-    const gameFigure = document.createElement("img");
-    gameFigure.src = "public/assets/gameFigure.png"
-    gameFigure.style.width = "2rem";
+    
     let clickedSquare = this.querySelector('.popup').parentNode;
     popupSound.play();
     
     const refreshIntervalId = setInterval(updateCountdown, 1000);
     
+    squareArray.forEach((square) => {
+      square.addEventListener('focus', (event) => {
+          event.target.insertBefore(gameFigure, event.target.children[0])
+        }, true);
+      })
     
     setTimeout(() => {
+      
       this.querySelector(".popup").classList.add("hide");
       clearInterval(refreshIntervalId);
       isModalOpen = false;
       clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
       clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
+
 
     //   if (isModalOpen = true){
     //  clickedSquare.appendChild(gameFigure);
@@ -129,21 +140,13 @@ function unmuteSound() {
 }
 
 
-const squareArray = document.querySelectorAll(".square");
-const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
-gameFigure.style.width = "2rem"
-
-
-
-function changeColor(){
+/* function changeColor(){
 squareArray.forEach((square) => {
     square.addEventListener('focus', (event) => {
-        //event.target.style.backgroundColor = 'pink';
         event.target.insertBefore(gameFigure, event.target.children[0])
       }, true);
     })
-  }
+  } */
 
   // displaying the answers to the questions
 
@@ -166,9 +169,7 @@ squareArray.forEach((square) => {
     
 
 function showColor(){
-   //this.style.backgroundColor = "rgba(180, 180, 180)";
    this.addEventListener('focus', (event) => {
-            //event.target.style.backgroundColor = 'pink';
           }, true);
           this.addEventListener('blur', (event) => {
                     event.target.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
