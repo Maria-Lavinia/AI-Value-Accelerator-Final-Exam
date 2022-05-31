@@ -1,57 +1,98 @@
 @use "../base/variables";
 
+.insightScreen{
+    background-image: url("./assets/log-in–background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .insights {
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 9rem;
     width: 1300px;
-    height: 630px;
-    padding: 15px 30px 28.4px 139.6px;
-    border-radius: 44px;
+    height: 700px;
+    padding: 2rem 4rem;
+    border-radius: 4rem;
     box-shadow: 15px 15px 17px 0 rgb(0 0 0 / 16%);
     background-color: #ffffff;
+    border: 0;
+    overflow-y: scroll;
 }
 
-.mainContainer{
-    display: flex;
-    justify-content: center;
+.key-insights{
+    color: #04304a;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+// .mainContainer{
+//     display: flex;
+//     justify-content: center;
+// }
+.line{
+    overflow-wrap: break-word;
+    text-align: left;
+    list-style-type: circle;
 }
 .hidden{
-opacity: 0;
-visibility: hidden;
-display: none;
-}
-.insTitle {
-    padding-top: 5%;
-    font-weight: 100;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
 }
 
-.insText{
-    width: 1300px;
-    height: 530px;
-    // margin: 178.1px 4px 65.1px 56.6px;
-    padding: 32px 109px 155px 38px;
-    border-radius: 30px;
-    border: solid 9px variables.$dark-blue;
-}
-
-.insButton2{
-    margin-top: 1rem;
+.insigthButton{
+    width: 180px;
+    height: 54px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 15px 15px 17px 0 rgb(0 0 0 / 16%);
+    background-color: #04304a;
+    color: #ffffff;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    border: 0;
+    margin-bottom: 2rem;
+    float: right;
     margin-right: 2rem;
-    width: 119px;
-  height: 43px;
-  padding: 10px 25px 7px;
-  border-radius: 11px;
-  box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
- display: flex;
- justify-content: center;
- font-size: 19px;
-
-
-}
-.mainContainer .insButton2{
-    margin-top: 3rem;
-    margin-right: 3rem;
-}
+    margin-top: 2rem;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+// .mainContainer .insButton2{
+//     margin-top: 3rem;
+//     margin-right: 3rem;
 // }
+
+@media screen and (max-width: 50rem){
+    .insights{
+        width: 461px;
+        height: 636px;
+        border-radius: 2rem;
+    }
+    .key-insights {
+        font-size: 2rem;
+    }
+    .insigthButton {
+        width: 130px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+

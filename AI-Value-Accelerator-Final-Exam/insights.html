@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.scss" />
 </head>
-<body>
-
-    <div class="mainContainer"></div>
-
-    <template class="insightsTemplate">
+<body class="insightScreen">
+    <img class="logo-login" src="./assets/sass-logo.png" alt="SASS LOGO"/>
+    <!-- <div class="mainContainer"></div> -->
     <div class="insights">
-  
-      <h1>KEY INSIGHTS</h1>
-      <p class="line">
-  
-      </p>
+        <h2 class="key-insights">KEY INSIGHTS</h2>
     </div>
-  </template>
+    <button class="insigthButton" onclick="window.location.href='titleScreen.html'">HOME</button>
+  <script>
+
+      const asArray = JSON.parse(localStorage.getItem("insights"));
+      asArray.forEach(item=>{
+          
+          const newItem= document.createElement("li");
+
+          newItem.classList.add("line")
+          newItem.textContent = item
+          document.querySelector(".insights").appendChild(newItem)
+        })
+        </script>
+        
+
 
   <script src="./main.js"></script>
     
