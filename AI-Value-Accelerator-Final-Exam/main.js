@@ -77,7 +77,7 @@ function updateCountdown(){
 // setInterval(updateCountdown, 1000);
 
 function showModal(){
-
+ 
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
@@ -110,7 +110,7 @@ gameFigure.style.width = "2rem"
 
 
 squareArray.forEach((square) => {
-    square.addEventListener('click', (event) => {
+    square.addEventListener('focus', (event) => {
         event.target.insertBefore(gameFigure, event.target.children[0])
       }, true);
     })
