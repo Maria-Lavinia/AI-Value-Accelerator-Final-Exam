@@ -85,22 +85,31 @@ function showModal(){
     isModalOpen = true;
     restartTimer();
     this.querySelector(".popup").classList.remove("hide");
+    const gameFigure = document.createElement("img");
+    gameFigure.src = "public/assets/gameFigure.png"
+    gameFigure.style.width = "2rem";
+    let clickedSquare = this.querySelector('.popup').parentNode;
     popupSound.play();
     
-    let clickedSquare = this.querySelector('.popup').parentNode;
     const refreshIntervalId = setInterval(updateCountdown, 1000);
     
     
     setTimeout(() => {
-        this.querySelector(".popup").classList.add("hide");
-        clearInterval(refreshIntervalId);
-        isModalOpen = false;
-        clickedSquare.style.backgroundColor = '#04304A';
-        clickedSquare.style.border = '6px solid black';
-        changeColor();
-      }, 301000); 
+      this.querySelector(".popup").classList.add("hide");
+      clearInterval(refreshIntervalId);
+      isModalOpen = false;
+      clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
+      clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
+
+    //   if (isModalOpen = true){
+    //  clickedSquare.appendChild(gameFigure);
+    //   }
+     
+        
+      }, 3000); 
     } 
 }  
+
 
 
 function muteSound() {
@@ -125,13 +134,31 @@ const gameFigure = document.createElement("img");
 gameFigure.src = "public/assets/gameFigure.png"
 gameFigure.style.width = "2rem"
 
-// function changeColor(){
-// squareArray.forEach((square) => {
-//     square.addEventListener('focus', (event) => {
-//         //event.target.style.backgroundColor = 'pink';
-//         event.target.insertBefore(gameFigure, event.target.children[0])
-//       }, true);
-//     })
+
+
+function changeColor(){
+squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+        //event.target.style.backgroundColor = 'pink';
+        event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
+  }
+
+  // displaying the answers to the questions
+
+  document.querySelector(".finfish-button").addEventListener("click", e =>{
+    e.preventDefault();
+    const textareas = document.querySelectorAll("textarea");
+    const header = document.querySelectorAll("header");
+    console.log(textareas);
+
+    const newArray = [...textareas].map(area => area.value)
+   localStorage.setItem("insights", JSON.stringify(newArray))
+   window.location = "endScreen.html"
+    
+  })
+
 
 // const square2 = document.querySelectorAll(".square");
 // square2.forEach((apple) => apple.addEventListener("click", showColor));
