@@ -177,6 +177,8 @@ function notModal(){
     gameDetails2.style.visibility = "visible";
     roll2.style.visibility = "visible";
     game2.style.display = "grid";
+    clearInterval(refreshIntervalId);
+    isModalOpen = false;
   }
   }
 
