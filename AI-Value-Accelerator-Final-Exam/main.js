@@ -23,8 +23,8 @@ function loading_anim() {
   const gameDetails = document.querySelector(".game_details");
   blur.style.visibility = "visible";
   number.style.display = "visible";
-    game.style.display = "none";
-    game.style.visibility = "hidden";
+  game.style.display = "none";
+  game.style.visibility = "hidden";
   dice.style.display = "none";
   dice.style.visibility = "hidden";
   roll.style.display = "none";
@@ -45,7 +45,7 @@ function loading_anim() {
     gameDetails.style.visibility = "visible";
   }, 3500);
 }
-const startingMinutes = 5;
+const startingMinutes = 1;
 let time = startingMinutes * 60;
 
 const countDownEl =  document.querySelectorAll("#countdown");
@@ -89,8 +89,8 @@ function visCard() {
     klon.querySelector(".icon").src = card.icon;
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
-      
-
+      // const blur = document.querySelector(".blur");
+      // blur.style.visibility = "visible";
       
         isModalOpen = true;
 
@@ -117,17 +117,36 @@ function visCard() {
           elCreated.remove();
           currentAnswers.push(newEl2.value)
           localStorage.setItem('answers', JSON.stringify(currentAnswers));
-        },301000)
+        },60000)
        
        } 
       document.querySelector(".modal-game-logo").src = card.gameLogo;
 
+      const blur2 = document.querySelector(".blur");
+      const gameDetails2 = document.querySelector(".game_details");
+      const dice2 = document.querySelector("#ui_dado");
+      const roll2 = document.querySelector(".rollme");
+      const game2 = document.querySelector(".cardList");
+      blur2.style.visibility = "visible";
+      blur2.style.display="block";
+      dice2.style.visibility = "hidden";
+      dice2.style.display = "none";
+      gameDetails2.style.visibility = "hidden";
+      roll2.style.visibility = "hidden";
+      game2.style.display = "none";
       setTimeout(() => {
       
         document.querySelector(".modal").classList.add("hide");
         clearInterval(refreshIntervalId);
         isModalOpen = false;
-      }, 301000);
+        blur2.style.visibility = "hidden";
+        blur2.style.display="none";
+        dice2.style.visibility = "visible";
+        dice2.style.display = "block";
+        gameDetails2.style.visibility = "visible";
+        roll2.style.visibility = "visible";
+        game2.style.display = "grid";
+      }, 60000);
     })
     
     klon.querySelector("article").addEventListener("click", showColor);
@@ -144,12 +163,25 @@ function showColor(){
   
 
 function notModal(){
-  if(card.id === 0 || card.id === 4 || card.id === 7 || card.id === 12 || card.id === 17 || card.id === 26){
-  
+  if(card.id === 0 || card.id === 4 || card.id === 7 || card.id === 12 || card.id === 17 || card.id === 23 || card.id === 24 || card.id === 26){
     document.querySelector(".modal").classList.add("hide");
+    const blur2 = document.querySelector(".blur");
+    const gameDetails2 = document.querySelector(".game_details");
+    const dice2 = document.querySelector("#ui_dado");
+    const roll2 = document.querySelector(".rollme");
+    const game2 = document.querySelector(".cardList");
+    blur2.style.visibility = "hidden";
+    blur2.style.display="none";
+    dice2.style.visibility = "visible";
+    dice2.style.display = "block";
+    gameDetails2.style.visibility = "visible";
+    roll2.style.visibility = "visible";
+    game2.style.display = "grid";
   }
   }
-      console.log(card.id);
+
+
+   
   cardList.appendChild(klon);
   });
 }

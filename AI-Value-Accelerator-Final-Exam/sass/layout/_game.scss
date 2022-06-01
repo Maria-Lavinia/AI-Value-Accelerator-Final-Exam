@@ -178,18 +178,19 @@ html {
 
 .icon{
   margin-top: 1rem;
-  width: 4rem;
+  width: 5rem;
   height: auto;
-  margin-left: 4.3rem;
+  margin-left: 3.7rem;
 }
 
 .card_text{
-  font-size: 1rem;
-  font-weight: 600;
-  color: variables.$white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: variables.$blue;
   padding: 0;
   margin: 0;
 }
+
 .card:nth-child(1), .card:nth-child(5), .card:nth-child(8), .card:nth-child(13),.card:nth-child(18), .card:nth-child(23), .card:nth-child(24){
   background-color: #C2E3FE;
    border: solid 6px #31A3FC
@@ -201,6 +202,10 @@ html {
 .card:nth-child(26){
   background-color: #FFDBED; 
   border: solid 6px #ff6fbb;
+  
+}
+.card:nth-child(26):nth-child(1){
+color: pink;
 }
 
 .icon3{
@@ -217,7 +222,7 @@ html {
 }
 .rollme{
   position: absolute;
-  top: 81%;
+  top: 77%;
   left:48.5%;
   color: variables.$white;
   font-size: 20px;
@@ -284,7 +289,7 @@ html {
 #ui_dado{
   margin: 0px auto;
   position: absolute;
-  top:57%;
+  top:50%;
   left: 30%;
   width: 40%;
   overflow: hidden;
