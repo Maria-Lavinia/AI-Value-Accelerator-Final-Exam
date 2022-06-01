@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI - Insights</title>
     <link rel="stylesheet" href="/style.scss" />
 </head>
 <body class="insightScreen">
@@ -15,16 +15,16 @@
     </div>
     <button class="insigthButton" onclick="window.location.href='titleScreen.html'">HOME</button>
   <script>
+ const array = JSON.parse(localStorage.getItem('answers'));
+    array.forEach(item => {
 
-      const asArray = JSON.parse(localStorage.getItem("insights"));
-      asArray.forEach(item=>{
-          
-          const newItem= document.createElement("li");
+      const newItem = document.createElement("li");
 
-          newItem.classList.add("line")
-          newItem.textContent = item
-          document.querySelector(".insights").appendChild(newItem)
-        })
+      newItem.classList.add("line")
+      newItem.textContent = item
+      document.querySelector(".insights").appendChild(newItem)
+    })  
+      
         </script>
         
 

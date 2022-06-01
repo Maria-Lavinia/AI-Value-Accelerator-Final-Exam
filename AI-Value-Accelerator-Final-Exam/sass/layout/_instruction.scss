@@ -38,9 +38,10 @@ h1 {
   column-gap: 3rem;
   justify-content: center;
   padding-bottom: 1.5rem;
+  
 }
 .instruction-card {
-  width: 341px;
+  width: 20rem;
   height: 417px;
   padding: 0 13px 37.7px 0;
   border-radius: 68px;
@@ -50,10 +51,6 @@ h1 {
   transform-style: preserve-3d;
   transform: rotatey(0deg) translatex(0px) translatey(0px);
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  &:hover {
-    transform: rotatey(45deg) translatex(0px) translatey(0px);
-    box-shadow: rgba(4, 48, 74, 0.199) -10px 10px, rgba(4, 48, 70, 0.19) -20px 20px ;
-  }
 }
 
 .step {
@@ -77,7 +74,7 @@ h1 {
 .text {
   font-family: variables.$primary-font, sans-serif;
   margin: 30px 0 151.3px 14px;
-  font-size: 30px;
+  font-size: 27px;
   text-align: center;
   color: variables.$black;
   display: flex;
@@ -85,15 +82,13 @@ h1 {
 }
 .draw{
   width: 7rem;
-  // height: 7rem;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: -8rem;
 }
-// #slide1 .draw{
-//   margin-top: -3.4rem;
-// }
+
 
 button {
   width: 228px;
@@ -145,7 +140,7 @@ button {
   }
   .draw{
     width: 5rem;
-    height: 5rem;
+    height: auto;
   }
   .button{
     font-size: 1rem ;

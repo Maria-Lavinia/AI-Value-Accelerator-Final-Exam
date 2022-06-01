@@ -1,4 +1,6 @@
 @use "../base/variables";
+
+
 html {
   height: 100%;
 }
@@ -8,20 +10,18 @@ html {
   padding:0;
   width:100%;
   height: 100%;
-  min-height: 100%;
-
+  overflow-y: auto;
 }
 
-
-.game_board{
+.cardList{
   width: 100%;
-  min-height:100%;
-  position:relative;
-height:100%;
+  height: 100%;
 }
+
 // loading animation
+
 .blur{
-  background-image: url(/public/assets/game-background.jpeg);
+  background-image: url(/public/assets/game-background.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ height:100%;
   width: 100%;
   margin: 0;
   z-index: -1000;
-  
+  overflow: hidden;
 }
 
 .countdown{
@@ -61,7 +61,6 @@ height:100%;
   left: 0;
   width: 100%;
   height: 10px;
-  
 }
 
 .countdown .number
@@ -126,92 +125,25 @@ height:100%;
 .game_board {
   background-color: variables.$dark-blue;
 }
-
-.logo-white img {
-  max-width: 57.625rem;
+.cardList{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 1fr;
 }
 
-.row {
-  background-color: transparent;
-  display: table-row;
-  table-layout: fixed;
+.cardList::before{
+  content: "";
+  grid-row: 2/7;
+  grid-column: 2/8;
 }
-.middle{
-  background-color: variables.$dark-blue;
-  outline: none;
-  height: 0;
-}
+.card{
 
-.cell {
-  display: table-cell;
-  table-layout: fixed;
-  width: 100vw;
-  max-height: 100vh;
-  text-align: center;
-}
-
-/* .square:focus {
-  background-color: yellow !important;
-} */
-
-.square-name {
-  font-weight: 600;
-  color: variables.$white;
-  padding: 0;
-  margin: 0;
-}
-
-.middle, .info {
-  background-color: transparent;
-  outline: none;
-
-}
-#square14 .icon2{
-  margin-top: 2rem;
-}
-
-#square20 .icon2{
-  margin-top: 2rem;
-}
-
-#square24 .icon2{
-  margin-top: 2rem; 
-}
-#square23 .icon2{
-  margin-top: 1.5rem; 
-}
-
-#square16 .icon2{
-  margin-top: 1rem; 
-  margin-bottom: 1rem; 
-}
-#square18 .icon{
-  margin-top: 1rem;
-}
-
-#square17 .icon2{
-  margin-bottom: 1rem;
-}
-
-.icon{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 5rem;
-  // height: 5rem;
-  padding: 0;
-}
-.icon2{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 5rem;
-  // height: 5rem;
-  padding: 0;  
-}
-.icon3{
-  position: absolute;
-  top:27%;
-  left:17%;
-  width: 15rem;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #C5ECDF;
+  border: solid 6px #15B57E;
 }
 
 .logo-white{
@@ -219,6 +151,11 @@ height:100%;
   top: 45%;
   left: 21%;
 }
+
+.logo-white img {
+  max-width: 50.625rem;
+}
+
 .finish-button, a {
   position: absolute;
   top: 20%;
@@ -239,6 +176,63 @@ height:100%;
   }
 }
 
+.icon{
+  margin-top: 1rem;
+  width: 4rem;
+  height: auto;
+  margin-left: 4.3rem;
+}
+
+.card_text{
+  font-size: 1rem;
+  font-weight: 600;
+  color: variables.$white;
+  padding: 0;
+  margin: 0;
+}
+.card:nth-child(1), .card:nth-child(5), .card:nth-child(8), .card:nth-child(13),.card:nth-child(18), .card:nth-child(23), .card:nth-child(24){
+  background-color: #C2E3FE;
+   border: solid 6px #31A3FC
+}
+.card:nth-child(3), .card:nth-child(6), .card:nth-child(9),.card:nth-child(10), .card:nth-child(14), .card:nth-child(15), .card:nth-child(16), .card:nth-child(20), .card:nth-child(22), .card:nth-child(25) {
+  background-color: #FFCDA9; 
+  border: solid 6px #FF822C;
+} 
+.card:nth-child(26){
+  background-color: #FFDBED; 
+  border: solid 6px #ff6fbb;
+}
+
+.icon3{
+  position: absolute;
+  top:30%;
+  left:20%;
+  width: 15rem;
+}
+
+.logo-white{
+  position: absolute;
+  top: 45%;
+  left:25%;
+}
+.rollme{
+  position: absolute;
+  top: 81%;
+  left:48.5%;
+  color: variables.$white;
+  font-size: 20px;
+}
+
+// timer
+.time_container{
+  float: right;
+  margin-right: -3rem;
+ margin-top: -1rem;
+  font-size: 2rem;
+  color: variables.$white;
+}
+
+// mute button
 .mutedButton{  
   height: 4.559rem;
   width: 2.6rem;
@@ -250,11 +244,9 @@ height:100%;
 
   &:hover {
     transform: translateY(-3px);
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   }
   &:active {
     transform: translateY(-1px);
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   }
 }
 
@@ -269,21 +261,12 @@ height:100%;
 
   &:hover {
     transform: translateY(-3px);
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   }
   &:active {
     transform: translateY(-1px);
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   }
 }
 
-.rollme{
-  position: absolute;
-  top: 70%;
-  left:48%;
-  color: variables.$white;
-  font-size: 20px;
-}
 // dice
 
 #result{
@@ -293,16 +276,16 @@ height:100%;
   padding: 5px;
   position: absolute;
   width: 50px;
-  bottom: 17%;
-  left: 61.5%;
+  bottom: 30%;
+  left: 60%;
   font-size: 3rem;
 }
 
 #ui_dado{
   margin: 0px auto;
   position: absolute;
-  top:53%;
-  left: 29.5%;
+  top:57%;
+  left: 30%;
   width: 40%;
   overflow: hidden;
   background-attachment: fixed;
@@ -327,7 +310,6 @@ height:100%;
     margin-left: calc(50% - 50px);
     margin-right: calc(50% - 50px);
     height:120px;
-    cursor: pointer;
   }
   #dice {
       position: absolute;
@@ -420,8 +402,7 @@ height:100%;
         margin-left:67px;
     }
     &.dright {
-        margin-left:10px
-        
+        margin-left:10px;
     }
     &.dbottom {
         margin-top:67px;
@@ -448,122 +429,49 @@ height:100%;
     100% { transform: translate3d(0px,0px,0px) }
 }
 
-
-//MEDIA QUERIES
-
-@media only screen and (min-width: 112rem){
-  
-  .icon3 {
-    left: 21%;
-  }
-  
-  .logo-white{
-    left: 30%;
-  }
-  
-  .cell{
-    width: 2%;
-  }
-
-  .rollme {
-    top: 76%;
-  }
-
-  .finish-button, a {
-    position: absolute;
-    top: 20%;
-    left: 78.8%;
-    color: variables.$white;
-  }
-
-  .unmutedButton, .mutedButton {
-    left: 75%;
-  }
-  
+.hide{
+  visibility: hidden;
+  display: none;
+}
+.show {
+  display: none;
 }
 
-@media only screen and (min-width: 100rem) and (max-width: 111rem){
-  .logo-white{
-    left: 26%;
-  }
-  
-}
 
-@media only screen and (max-width: 90rem)
-and (max-width: 102rem){
-.logo-white img{
-width: 50rem;
-}
-// .cell{
-//   height: 7rem;
-// }
-.icon{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 4rem;
-  // height: 4rem;
-}
-
-.icon2{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 4rem;
-  // height: 4rem;
-  // display: block;
-  // margin: 0 auto;
-}
-.square-name{
-  font-size: 1rem;
-}
-#ui_dado{
-  top:53%;
-}
-.rollme{
-  top: 77%
-}
-}
-
-@media only screen and (max-width: 102rem){
-  .cell{
-    height: 2rem;
-  }
-
-}
 
 @media screen and (max-width: 50rem){
-  // .cell{
-  //   height: 8.7rem;
-  //   width: 2rem;
-  // }
-  // .cell{
-  //   // overflow-x: auto;
-  //       display: block;
-  // }
+  .cardList{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    max-width: 20rem;
+  }
+  .cardList::before{
+    content: "";
+    grid-row: 2/10;
+    grid-column: 2/5;
+  }
   .logo-white img{
     width: 18rem;
     
     }
     .logo-white{
-      left: 22.5%;
+      left: 27%;
+   
     }
     .icon3{
       width: 10rem;
-      left: 36%;
+      left: 40%;
     }
     .icon{
       margin-top: 0 !important;
-      margin-bottom: auto;
       width: 2rem;
-      // height: 2rem;
+      height: auto;
     }
-    .icon2{
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 3rem;
-      // height: 3rem;
+    .finish-button{
+     left: 63%;
     }
-    .square-name{
-      font-size: 1rem !important;
+    .unmutedButton {
+    left:30%;
     }
     #ui_dado{
       top:54%;
@@ -578,12 +486,16 @@ width: 50rem;
     }
     .number{
       font-size: 0.7rem;
+    }   
+    .time_container{
+      margin-right: 0;
+      margin-top: 0;
+    } 
+    .finishButton{
+      width: 5rem;
     }
+    .icon{
+      margin-left: 1rem;
+    }
+    
 }
-
-
-
-
-
-
-
