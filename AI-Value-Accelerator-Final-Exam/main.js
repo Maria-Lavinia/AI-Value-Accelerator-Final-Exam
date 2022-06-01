@@ -92,22 +92,10 @@ function visCard() {
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
 
-    //game pawn
-    let squareArray = document.querySelectorAll(".square");
-    const gameFigure = document.createElement("img");
-    gameFigure.src = "public/assets/gameFigure.png"
-    gameFigure.style.width = "2rem"
-
     //console.log(squareArray)
       // const blur = document.querySelector(".blur");
       // blur.style.visibility = "visible";
 
-    squareArray.forEach((square) => {
-      square.addEventListener('focus', (event) => {
-        console.log(event.target);
-        event.target.insertBefore(gameFigure, event.target.children[0])
-        }, true);
-      })
       
         isModalOpen = true;
 
@@ -189,6 +177,19 @@ function notModal(){
       console.log(card.id);
   cardList.appendChild(klon);
   });
+
+  //game pawn
+  let squareArray = document.querySelectorAll(".square");
+  const gameFigure = document.createElement("img");
+  gameFigure.src = "public/assets/gameFigure2.png"
+  gameFigure.style.width = "2rem"
+
+  squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+      console.log(event.target);
+      event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
 }
 
 document.querySelector(".unmutedButton").addEventListener("click", muteSound);
