@@ -5,10 +5,18 @@ let card;
 let popupSound = document.querySelector("#popupSound");
 let diceSound = document.querySelector("#diceSound");
 let isModalOpen = false;
+
+//game pawn
+let squareArray = document.querySelectorAll(".card");
+const gameFigure = document.createElement("img");
+gameFigure.src = "public/assets/gameFigure.png"
+gameFigure.style.width = "2rem"
+
 function start() {
   loading_anim();
   hentData();
 }
+
 
 let currentAnswers = [];
 localStorage.setItem('answers', JSON.stringify(currentAnswers));
@@ -83,14 +91,22 @@ function visCard() {
   const cardList = document.querySelector(".cardList");
   const template = document.querySelector("template").content;
 
-
   card.forEach((card) => {
     const klon = template.cloneNode(true);
     klon.querySelector(".icon").src = card.icon;
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
+
+    console.log(squareArray)
       // const blur = document.querySelector(".blur");
       // blur.style.visibility = "visible";
+
+    /* squareArray.forEach((square) => {
+      square.addEventListener('focus', (event) => {
+        console.log(event.target);
+        event.target.insertBefore(gameFigure, event.target.children[0])
+        }, true);
+      }) */
       
         isModalOpen = true;
 
@@ -117,7 +133,7 @@ function visCard() {
           elCreated.remove();
           currentAnswers.push(newEl2.value)
           localStorage.setItem('answers', JSON.stringify(currentAnswers));
-        },301000)
+        },/* 301000 */1000)
        
        } 
       document.querySelector(".modal-game-logo").src = card.gameLogo;
@@ -146,13 +162,14 @@ function visCard() {
         gameDetails2.style.visibility = "visible";
         roll2.style.visibility = "visible";
         game2.style.display = "grid";
-      }, 301000);
+      }, /* 301000 */1000);
     })
     
     klon.querySelector("article").addEventListener("click", showColor);
 
 
 function showColor(){
+
     this.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
     this.style.border = '6px solid rgba(255, 255, 255, 0.6)';
    };
