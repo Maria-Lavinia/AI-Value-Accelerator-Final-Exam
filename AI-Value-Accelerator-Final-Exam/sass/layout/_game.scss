@@ -142,8 +142,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #C5ECDF;
   border: solid 6px #15B57E;
+  position: relative;
 }
 
 .logo-white{
@@ -176,11 +178,16 @@ html {
   }
 }
 
+.gamePawn {
+  position: absolute;
+  top: 2rem;
+}
+
 .icon{
-  margin-top: 1rem;
+  //margin-top: 1rem;
   width: 4rem;
   height: auto;
-  margin-left: 4.3rem;
+  //margin-left: 4.3rem;
 }
 
 .card_text{

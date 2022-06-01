@@ -181,6 +181,7 @@ function notModal(){
   //game pawn
   let squareArray = document.querySelectorAll(".square");
   const gameFigure = document.createElement("img");
+  gameFigure.className = "gamePawn";
   gameFigure.src = "public/assets/gameFigure2.png"
   gameFigure.style.width = "2rem"
 
