@@ -89,8 +89,8 @@ function visCard() {
     klon.querySelector(".icon").src = card.icon;
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
-      
-
+      // const blur = document.querySelector(".blur");
+      // blur.style.visibility = "visible";
       
         isModalOpen = true;
 
@@ -122,11 +122,19 @@ function visCard() {
        } 
       document.querySelector(".modal-game-logo").src = card.gameLogo;
 
+      const blur2 = document.querySelector(".blur");
+      const gameDetails2 = document.querySelector(".game_details");
+      blur2.style.visibility = "visible";
+      blur2.style.display="block";
+      gameDetails2.style.visibility = "hidden";
       setTimeout(() => {
       
         document.querySelector(".modal").classList.add("hide");
         clearInterval(refreshIntervalId);
         isModalOpen = false;
+        blur2.style.visibility = "hidden";
+        blur2.style.display="none";
+        gameDetails2.style.visibility = "visible";
       }, 301000);
     })
     
