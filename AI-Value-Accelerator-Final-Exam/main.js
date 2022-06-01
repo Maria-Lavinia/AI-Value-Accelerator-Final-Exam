@@ -6,12 +6,6 @@ let popupSound = document.querySelector("#popupSound");
 let diceSound = document.querySelector("#diceSound");
 let isModalOpen = false;
 
-//game pawn
-let squareArray = document.querySelectorAll(".card");
-const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
-gameFigure.style.width = "2rem"
-
 function start() {
   loading_anim();
   hentData();
@@ -87,6 +81,7 @@ async function hentData() {
 }
 
 function visCard() {
+
   console.log("visCard", card);
   const cardList = document.querySelector(".cardList");
   const template = document.querySelector("template").content;
@@ -97,16 +92,22 @@ function visCard() {
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
 
-    console.log(squareArray)
+    //game pawn
+    let squareArray = document.querySelectorAll(".square");
+    const gameFigure = document.createElement("img");
+    gameFigure.src = "public/assets/gameFigure.png"
+    gameFigure.style.width = "2rem"
+
+    //console.log(squareArray)
       // const blur = document.querySelector(".blur");
       // blur.style.visibility = "visible";
 
-    /* squareArray.forEach((square) => {
+    squareArray.forEach((square) => {
       square.addEventListener('focus', (event) => {
         console.log(event.target);
         event.target.insertBefore(gameFigure, event.target.children[0])
         }, true);
-      }) */
+      })
       
         isModalOpen = true;
 
