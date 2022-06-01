@@ -124,9 +124,14 @@ function visCard() {
 
       const blur2 = document.querySelector(".blur");
       const gameDetails2 = document.querySelector(".game_details");
+      const dice2 = document.querySelector("#ui_dado");
+      const roll2 = document.querySelector(".rollme");
       blur2.style.visibility = "visible";
       blur2.style.display="block";
+      dice2.style.visibility = "hidden";
+      dice2.style.display = "none";
       gameDetails2.style.visibility = "hidden";
+      roll2.style.visibility = "hidden";
       setTimeout(() => {
       
         document.querySelector(".modal").classList.add("hide");
@@ -134,7 +139,10 @@ function visCard() {
         isModalOpen = false;
         blur2.style.visibility = "hidden";
         blur2.style.display="none";
+        dice2.style.visibility = "visible";
+        dice2.style.display = "block";
         gameDetails2.style.visibility = "visible";
+        roll2.style.visibility = "visible";
       }, 301000);
     })
     
