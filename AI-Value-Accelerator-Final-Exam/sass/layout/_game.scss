@@ -1,7 +1,27 @@
 @use "../base/variables";
+
+
+html {
+  height: 100%;
+}
+
+.game {
+  margin:0;
+  padding:0;
+  width:100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.cardList{
+  width: 100%;
+  height: 100%;
+}
+
 // loading animation
+
 .blur{
-  background-image: url(/public/assets/game-background.jpeg);
+  background-image: url(/public/assets/game-background.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,7 +32,7 @@
   width: 100%;
   margin: 0;
   z-index: -1000;
-  
+  overflow: hidden;
 }
 
 .countdown{
@@ -41,7 +61,6 @@
   left: 0;
   width: 100%;
   height: 10px;
-  
 }
 
 .countdown .number
@@ -106,91 +125,25 @@
 .game_board {
   background-color: variables.$dark-blue;
 }
-
-.logo-white img {
-  max-width: 57.625rem;
+.cardList{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 1fr;
 }
 
-.row {
-  background-color: transparent;
-  display: table-row;
-  table-layout: fixed;
+.cardList::before{
+  content: "";
+  grid-row: 2/7;
+  grid-column: 2/8;
 }
-.middle{
-  background-color: variables.$dark-blue;
-  outline: none;
-}
+.card{
 
-.cell {
-  display: table-cell;
-  table-layout: fixed;
-  width: 14rem;
-  height: 7.5rem;
-  text-align: center;
-}
-
-/* .square:focus {
-  background-color: yellow !important;
-} */
-
-.square-name {
-  font-weight: 600;
-  color: variables.$white;
-  padding: 0;
-  margin: 0;
-}
-
-.middle, .info {
-  background-color: transparent;
-  outline: none;
-
-}
-#square14 .icon2{
-  margin-top: 2rem;
-}
-
-#square20 .icon2{
-  margin-top: 2rem;
-}
-
-#square24 .icon2{
-  margin-top: 2rem; 
-}
-#square23 .icon2{
-  margin-top: 1.5rem; 
-}
-
-#square16 .icon2{
-  margin-top: 1rem; 
-  margin-bottom: 1rem; 
-}
-#square18 .icon{
-  margin-top: 1rem;
-}
-
-#square17 .icon2{
-  margin-bottom: 1rem;
-}
-
-.icon{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 5rem;
-  // height: 5rem;
-  padding: 0;
-}
-.icon2{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 5rem;
-  // height: 5rem;
-  padding: 0;  
-}
-.icon3{
-  position: absolute;
-  top:27%;
-  left:17%;
-  width: 15rem;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #C5ECDF;
+  border: solid 6px #15B57E;
 }
 
 .logo-white{
@@ -198,6 +151,11 @@
   top: 45%;
   left: 21%;
 }
+
+.logo-white img {
+  max-width: 50.625rem;
+}
+
 .finish-button, a {
   position: absolute;
   top: 20%;
@@ -218,6 +176,63 @@
   }
 }
 
+.icon{
+  margin-top: 1rem;
+  width: 4rem;
+  height: auto;
+  margin-left: 4.3rem;
+}
+
+.card_text{
+  font-size: 1rem;
+  font-weight: 600;
+  color: variables.$white;
+  padding: 0;
+  margin: 0;
+}
+.card:nth-child(1), .card:nth-child(5), .card:nth-child(8), .card:nth-child(13),.card:nth-child(18), .card:nth-child(23), .card:nth-child(24){
+  background-color: #C2E3FE;
+   border: solid 6px #31A3FC
+}
+.card:nth-child(3), .card:nth-child(6), .card:nth-child(9),.card:nth-child(10), .card:nth-child(14), .card:nth-child(15), .card:nth-child(16), .card:nth-child(20), .card:nth-child(22), .card:nth-child(25) {
+  background-color: #FFCDA9; 
+  border: solid 6px #FF822C;
+} 
+.card:nth-child(26){
+  background-color: #FFDBED; 
+  border: solid 6px #ff6fbb;
+}
+
+.icon3{
+  position: absolute;
+  top:30%;
+  left:20%;
+  width: 15rem;
+}
+
+.logo-white{
+  position: absolute;
+  top: 45%;
+  left:25%;
+}
+.rollme{
+  position: absolute;
+  top: 81%;
+  left:48.5%;
+  color: variables.$white;
+  font-size: 20px;
+}
+
+// timer
+.time_container{
+  float: right;
+  margin-right: -3rem;
+ margin-top: -1rem;
+  font-size: 2rem;
+  color: variables.$white;
+}
+
+// mute button
 .mutedButton{  
   height: 4.559rem;
   width: 2.6rem;
@@ -229,11 +244,9 @@
 
   &:hover {
     transform: translateY(-3px);
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   }
   &:active {
     transform: translateY(-1px);
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   }
 }
 
@@ -248,21 +261,12 @@
 
   &:hover {
     transform: translateY(-3px);
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   }
   &:active {
     transform: translateY(-1px);
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   }
 }
 
-.rollme{
-  position: absolute;
-  top: 77%;
-  left:48%;
-  color: variables.$white;
-  font-size: 20px;
-}
 // dice
 
 #result{
@@ -272,16 +276,16 @@
   padding: 5px;
   position: absolute;
   width: 50px;
-  bottom: 17%;
-  left: 61.5%;
+  bottom: 30%;
+  left: 60%;
   font-size: 3rem;
 }
 
 #ui_dado{
   margin: 0px auto;
   position: absolute;
-  top:53%;
-  left: 29.5%;
+  top:57%;
+  left: 30%;
   width: 40%;
   overflow: hidden;
   background-attachment: fixed;
@@ -306,7 +310,6 @@
     margin-left: calc(50% - 50px);
     margin-right: calc(50% - 50px);
     height:120px;
-    cursor: pointer;
   }
   #dice {
       position: absolute;
@@ -426,118 +429,49 @@
     100% { transform: translate3d(0px,0px,0px) }
 }
 
-
-//MEDIA QUERIES
-
-@media only screen and (min-width: 112rem){
-  
-  .icon3 {
-    left: 21%;
-  }
-  
-  .logo-white{
-    left: 30%;
-  }
-  
-  .cell{
-    width: 2%;
-  }
-
-  .rollme {
-    top: 80%;
-  }
-
-  .finish-button, a {
-    position: absolute;
-    top: 20%;
-    left: 78.8%;
-    color: variables.$white;
-  }
-
-  .unmutedButton, .mutedButton {
-    left: 75%;
-  }
-  
+.hide{
+  visibility: hidden;
+  display: none;
+}
+.show {
+  display: none;
 }
 
-@media only screen and (min-width: 100rem) and (max-width: 111rem){
-  .logo-white{
-    left: 26%;
-  }
-  
-}
 
-@media only screen and (max-width: 90rem)
-and (max-width: 102rem){
-.logo-white img{
-width: 50rem;
-}
-.cell{
-  height: 7rem;
-}
-.icon{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 4rem;
-  // height: 4rem;
-}
-
-.icon2{
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 4rem;
-  // height: 4rem;
-  // display: block;
-  // margin: 0 auto;
-}
-.square-name{
-  font-size: 1rem;
-}
-#ui_dado{
-  top:53%;
-}
-.rollme{
-  top: 82%
-}
-}
-
-@media only screen and (max-width: 102rem){
-  .cell{
-    height: 7.2rem;
-  }
-
-}
 
 @media screen and (max-width: 50rem){
-  .cell{
-    height: 8.7rem;
-    width: 2rem;
+  .cardList{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    max-width: 20rem;
+  }
+  .cardList::before{
+    content: "";
+    grid-row: 2/10;
+    grid-column: 2/5;
   }
   .logo-white img{
     width: 18rem;
     
     }
     .logo-white{
-      left: 22.5%;
+      left: 27%;
+   
     }
     .icon3{
       width: 10rem;
-      left: 36%;
+      left: 40%;
     }
     .icon{
       margin-top: 0 !important;
-      margin-bottom: auto;
       width: 2rem;
-      // height: 2rem;
+      height: auto;
     }
-    .icon2{
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 3rem;
-      // height: 3rem;
+    .finish-button{
+     left: 63%;
     }
-    .square-name{
-      font-size: 1rem !important;
+    .unmutedButton {
+    left:30%;
     }
     #ui_dado{
       top:54%;
@@ -552,128 +486,16 @@ width: 50rem;
     }
     .number{
       font-size: 0.7rem;
+    }   
+    .time_container{
+      margin-right: 0;
+      margin-top: 0;
+    } 
+    .finishButton{
+      width: 5rem;
     }
+    .icon{
+      margin-left: 1rem;
+    }
+    
 }
-
-
-// POPUP HOURGLASS
-
-:root {
-	--bg: #e3e4e8;
-	--fg: #2e3138;
-	--primary: #255ff4;
-	
-}
-
-.hourglass, .hourglass:before, .hourglass:after {
-	animation-duration: 13s;
-	animation-iteration-count: 1;
-}
-.hourglass {
-	--polygonH: polygon(0% 0%,100% 0%,100% 5.55%,95% 5.55%,95% 28%,60% 46%,60% 54%,95% 72%,95% 94.45%,100% 94.45%,100% 100%,0% 100%,0% 94.45%,5% 94.45%,5% 72%,40% 54%,40% 46%,5% 28%,5% 5.55%,0% 5.55%);
-	/* animation-name: flip; */
-	animation-timing-function: ease-in-out;
-	background-image: linear-gradient(var(--primary) 0.5em,#737a8c55 0.5em 8.5em,var(--primary) 8.5em);
-	clip-path: var(--polygonH);
-	-webkit-clip-path: var(--polygonH);
-	overflow: hidden;
-	position: absolute;
-  right: 2vw;
-  bottom: 2vw;
-	width: 5em;
-	height: 9em;
-	z-index: 0;
-}
-.hourglass:before, .hourglass:after {
-	animation-timing-function: linear;
-	content: "";
-	display: block;
-	position: absolute;
-}
-.hourglass:before {
-	--polygonB1: polygon(0% 0%,100% 0%,100% 24%,50% 47%,50% 47%,50% 47%,50% 47%,50% 47%,50% 47%,50% 47%,50% 47%,0% 24%);
-	--polygonB2: polygon(0% 4%,100% 4%,100% 24%,55% 45%,55% 100%,55% 100%,55% 100%,45% 100%,45% 100%,45% 100%,45% 45%,0% 24%);
-	--polygonB3: polygon(0% 24%,100% 24%,100% 24%,55% 45%,55% 80%,100% 100%,100% 100%,0% 100%,0% 100%,45% 80%,45% 45%,0% 24%);
-	--polygonB4: polygon(45% 45%,55% 45%,55% 45%,55% 45%,55% 58%,100% 76%,100% 100%,0% 100%,0% 76%,45% 58%,45% 45%,45% 45%);
-	--polygonB5: polygon(50% 53%,50% 53%,50% 53%,50% 53%,50% 53%,100% 76%,100% 100%,0% 100%,0% 76%,50% 53%,50% 53%,50% 53%);
-	/* animation-name: fill; */
-	background-color: var(--fg);
-	background-size: 100% 3.6em;
-	clip-path: var(--polygonB1);
-	-webkit-clip-path: var(--polygonB1);
-	top: 0.5em;
-	left: 0.5em;
-	width: 4em;
-	height: 8em;
-	z-index: 1;
-}
-
-/* .hourglass:after {
-	animation-name: glare;
-	background:
-		linear-gradient(90deg,#0000 0.5em,#0003 0.5em 1.5em,#0000 1.5em 3.5em,#fff3 3.5em 4.5em,#fff0 4.5em 6.5em,#0003 6.5em 7.5em,#0000 7.5em) 0 0 / 100% 0.5em,
-		linear-gradient(90deg,#0000 0.75em,#0003 0.75em 1.25em,#0000 1.25em 3.75em,#fff3 3.75em 4.25em,#fff0 4.25em 6.75em,#0003 6.75em 7.25em,#0000 7.25em) 0 0.5em / 100% 8em,
-		linear-gradient(90deg,#0000 0.5em,#0003 0.5em 1.5em,#0000 1.5em 3.5em,#fff3 3.5em 4.5em,#fff0 4.5em 6.5em,#0003 6.5em 7.5em,#0000 7.5em) 0 100% / 100% 0.5em;
-	background-repeat: repeat-x;
-	top: 0;
-	left: -3em;
-	width: 200%;
-	height: 100%;
-	z-index: 2;
-} */
-
-.fillHourglass {
-  animation-name: fill;
-}
-
-/* Animations */
-@keyframes fill {
-	from {
-		clip-path: var(--polygonB1);
-		-webkit-clip-path: var(--polygonB1);
-	}
-	10% {
-		clip-path: var(--polygonB2);
-		-webkit-clip-path: var(--polygonB2);
-	}
-	45% {
-		clip-path: var(--polygonB3);
-		-webkit-clip-path: var(--polygonB3);
-	}
-	80% {
-		clip-path: var(--polygonB4);
-		-webkit-clip-path: var(--polygonB4);
-	}
-	85%, to {
-		clip-path: var(--polygonB5);
-		-webkit-clip-path: var(--polygonB5);
-	}
-}
-@keyframes glare {
-	from, 90% {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(3em);
-	}
-}
-@keyframes flip {
-	from, 90% {
-		transform: rotate(0);
-	}
-	to {
-		transform: rotate(180deg);
-	}
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #17181c;
-		--fg: #c7cad1;
-	}
-}
-
-
-
-

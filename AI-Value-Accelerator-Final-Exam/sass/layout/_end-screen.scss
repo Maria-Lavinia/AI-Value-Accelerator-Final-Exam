@@ -8,11 +8,7 @@
 .endScreenMain {
     height: 100%;
 }
-.hide{
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-}
+
 .sasLogo {
 position: absolute;
 margin-top: 2.5rem;
@@ -51,15 +47,15 @@ display: none;
 .endMainHeading {
     width: 63.563rem;
     position: absolute;
-    top: 8rem;
-    right: 3%;
+    top: 10rem;
+    right: 6%;
 }
 
 .endSecondHeading {
     font-size: 4rem;
     color: variables.$dark-blue;
     text-align: center;
-    margin-top: -1rem;
+    margin-top: 2rem;
 }
 
 .endScreenText {
@@ -74,7 +70,7 @@ display: none;
 
 .endButtonFlex {
     display: flex;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .endScreenBtn:first-child {

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.scss" />
     <title>AI Value Accelerator</title>
-</head>
-<body class="game">
-
-  <!-- loading animation -->
-  <div class="blur"></div>
-  <div class="loading-animation">
-    <audio id="gameCountdownSound" src="public/assets/sounds/gameCountdown.wav"></audio>
-    <div class="countdown">
+  </head>
+  <body class="game">
+    <!-- loading animation -->
+    <div class="blur"></div>
+    <div class="loading-animation">
+      <div class="countdown">
         <div class="number">
           <h2>3</h2>
         </div>
@@ -24,6 +22,7 @@
           <h2>1</h2>
         </div>
         <div class="number">
+<<<<<<< HEAD
             <h2>GO</h2>
           </div>
       </div> 
@@ -226,49 +225,24 @@
               <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
             </div>
           </div>
+=======
+          <h2>GO</h2>
+>>>>>>> main
         </div>
       </div>
-<div class="row">
-  <div class="cell square" id="square16" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
-    <img src="./public/assets/green2-icon.png" class="icon2"/>
-    <p id="square6-name" class="square-name"></p>
-
-    <div id="modal" class="popup" style="border: solid 20px #15B57E">
-      <img class="input-icon" src="./public/assets/green2-icon.png" alt="input-icon" />
-      <div class="input-card">
-        <h2 class="green-Question">What potential do you see for AI within your organisation?</h2>
-        <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-      </div>
-      <div class="time_container">
-        <div id="countdown"></div>
     </div>
+    <!-- end of loading animation -->
+<div class = "game_details">
+    <div class="logo-white">
+      <img src="public/assets/finalLogoChangedWhite.png"/>
     </div>
-  </div>
-  
-  
-  <div class="cell middle"></div>
-  <div class="cell middle"></div>
-  <div class="cell middle"></div>
-  <div class="cell middle"></div>
-  <div class="cell middle"></div>
-  <div class="cell middle"></div>
 
+    <audio id="popupSound" src="public/assets/sounds/popup.wav"></audio>
 
-  
-  <div class="cell square" id="square17" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
-    <img src="./public/assets/2.png" class="icon2"/>
-    <p id="square11-name" class="square-name"></p>
-
-    <div id="modal" class="popup" style="border: solid 20px #15B57E">
-      <div class="time_container">
-        <div id="countdown"></div>
+    <div class="sas-white">
+      <img src="./public/assets/sass-logo.png" class="icon3"/>
     </div>
-      <img class="input-icon" src="./public/assets/2.png" alt="input-icon" />
-      <div class="input-card">
-        <h2 class="green-Question">Do you see any ethical challenges related to AI development?</h2>
-        <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-      </div>
-    </div>
+<<<<<<< HEAD
   </div>
 </div>
 
@@ -317,86 +291,23 @@
           </div>
         </div>
       </div>
+=======
+>>>>>>> main
 
-        <div class="row">
-          <div class="cell square" id="square20" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
-            <img src="./public/assets/discussion.png" class="icon2"/>
-            <p id="square6-name" class="square-name"></p>
+    <div class="finish-button">
+      <a href="endScreen.html"><img src="./public/assets/finishButton.png" class="finishButton" alt="finishButton"></a>
+    </div>
 
-            <div id="modal" class="popup">
-              <div class="time_container">
-                <div id="countdown"></div>
-            </div>
-            <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
-            <div class="input-card">
-              <h1 class="header">Leadership</h1>
-              <h2 class="Question1">What new demands do AI put on leaders of today and tomorrow?</h2>
-              <h2 class="Question2">Name the biggest change?</h2>
-           <form class="insightsForm"> 
-              <textarea id="input6" name="input6" placeholder="Write down your answer here…"></textarea> 
-            </form> 
-                <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-              </div>
-            </div>
-          </div>
-          
-          
-          <div class="cell middle"></div>
-          <div class="cell middle"></div>
-          <div class="cell middle"></div>
-          <div class="cell middle"></div>
-          <div class="cell middle"></div>
-          <div class="cell middle"></div>
-  
-  
-          
-          <div class="cell square" id="square21" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C;">
-            <img src="./public/assets/discussion.png" class="icon2"/>
-            <p id="square11-name" class="square-name"></p>
+    <img src="public/assets/buttonUnmuted.svg" class="unmutedButton">
+    <img src="public/assets/buttonMuted.svg" class="mutedButton hidden">
+</div>
 
-            <div id="modal" class="popup">
-              <div class="time_container">
-                <div id="countdown"></div>
-            </div>
-            <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
-            <div class="input-card">
-              <h1 class="header">Leadership</h1>
-              <h2 class="Question1">How will the role of the leader change as AI is increasingly implemented?</h2>
-              <h2 class="Question2">Name the most important role.</h2>
-               <form class="insightsForm"> 
-               <textarea id="input7" name="input7" placeholder="Write down your answer here…"></textarea> 
+    <section class="cardList"></section>
 
-                </form> 
-                <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="row">
-        <div class="cell square" id="square22" tabindex="1" style="background-color: #C5ECDF; border: solid 6px #15B57E">
-          <img src="./public/assets/green3-icon.png" class="icon2"/>
-          <p id="square5-name" class="square-name"></p>
-
-          <div id="modal" class="popup" style="border: solid 20px #15B57E">
-            <div class="time_container">
-              <div id="countdown"></div>
-          </div>
-            <img class="input-icon" src="./public/assets/green3-icon.png" alt="input-icon" />
-            <div class="input-card">
-              <h2 class="green-Question">How far have you come with AI within your organisation?</h2>
-              <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-            </div>
-          </div>
-        </div>
+    <template>
+      <article class="card">
         
-        <div class="cell middle"></div>
-        <div class="cell middle"></div>
-        <div class="cell middle"></div>
-        <div class="cell middle"></div>
-        <div class="cell middle"></div>
-        <div class="cell middle"></div>
-        
+<<<<<<< HEAD
         <div class="cell square" id="square23" tabindex="1" style="background-color: #C2E3FE; border: solid 6px #31A3FC">
           <img src="./public/assets/1.png" class="icon2"/>
           <p id="square12-name" class="square-name">Do some exercise.</p>
@@ -499,144 +410,147 @@
           <img src="./public/assets/13.png" class="icon"/>
           <p id="square2-name" class="square-name" style="font-size: 21px;">Return to START.</p>
         </div>
+=======
+            <img class="icon" src="" alt="icon" />
+            <p class="card_text"></p>
+            <!-- <p class="modal"></p>if i don't remove this, is was not possible to toggle -->
+      
+      </article>
+    </template>
+>>>>>>> main
 
-        <div class="cell square" id="square30" tabindex="1" style="background-color: #FFCDA9; border: solid 6px #FF822C">
-          <img src="./public/assets/discussion.png" class="icon2"/>
-          <p id="square2-name" class="square-name"></p>
-          
-          <div id="modal" class="popup">
-            <div class="time_container">
-              <div id="countdown"></div>
-          </div>
-            <img class="input-icon" src="./public/assets/discussion.png" alt="input-icon" />
-            <div class="input-card">
-              <h1 class="header">Business areas</h1>
-              <h2 class="Question1">AI offers a new toolbox for decision support where machine learning techniques can be used for e.g. image recognition, text analytics and prediction / forecasting. In what areas do you see that such tools can be applied within your organisation?</h2>
-              <h2 class="Question2">Name the most important area?</h2>
-              <form class="insightsForm">
-              <textarea id="input10" name="input10" placeholder="Write down your answer here…"></textarea>      
-            </form> -->
-              <img class="game-logo" src="public/assets/logo-white.png" alt="game-logo" />
-            </div>
-          </div>
-        </div>
+    <div class="popup"></div>
 
-        <div class="cell start" id="square31" tabindex="1" style="background-color: #FFDBED; border: solid 6px #ff6fbb">
-          <img src="./public/assets/arrowup.png" class="icon"/>
-          <p class="square-name">START</p>
-        </div>
-        
-      </div>
+    <article class="modal hide">
+      <div class="time_container">
+        <div id="countdown"></div>
     </div>
+      <img class="modal-icon" src="" alt="" />
+      <div class="input-card">
+        <h1 class="modal-header"></h1>
+        <!-- <h1 class="modal-header-two"></h1> -->
+        <p class="modal-discussionQuestion"></p>
+        <p class="modal-questionAnswer"></p>
+        <!-- <input type="text"> -->
+        <img class="modal-game-logo" src="" alt="" />
+      </div>
+    </article>
 
+    <!-- end of the game -->
     <!-- dice -->
     <div id="ui_dado" tabindex="-1" disabled>
       <audio id="diceSound" preload="auto" src="public/assets/sounds/diceSound.wav"></audio>
       <p id="result"></p>
-        <div id="platform">
-          <div id="dice" tabindex="-1" disabled onmousedown="dice(event)">
-            <div class="side front">
-              <div class="dot center"></div>
-            </div>
-            <div class="side front inner"></div>
-            <div class="side top">
-              <div class="dot dtop dleft"></div>
-              <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side top inner"></div>
-            <div class="side right">
-              <div class="dot dtop dleft"></div>
-              <div class="dot center"></div>
-              <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side right inner"></div>
-            <div class="side left">
-              <div class="dot dtop dleft"></div>
-              <div class="dot dtop dright"></div>
-              <div class="dot dbottom dleft"></div>
-              <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side left inner"></div>
-            <div class="side bottom">
-              <div class="dot center"></div>
-              <div class="dot dtop dleft"></div>
-              <div class="dot dtop dright"></div>
-              <div class="dot dbottom dleft"></div>
-              <div class="dot dbottom dright"></div>
-            </div>
-            <div class="side bottom inner"></div>
-            <div class="side back">
-              <div class="dot dtop dleft"></div>
-              <div class="dot dtop dright"></div>
-              <div class="dot dbottom dleft"></div>
-              <div class="dot dbottom dright"></div>
-              <div class="dot center dleft"></div>
-              <div class="dot center dright"></div>
-            </div>
-            <div class="side back inner"></div>
-            <div class="side cover x"></div>
-            <div class="side cover y"></div>
-            <div class="side cover z"></div>
+      <div id="platform">
+        <div id="dice" tabindex="-1" disabled onmousedown="dice(event)">
+          <div class="side front">
+            <div class="dot center"></div>
           </div>
+          <div class="side front inner"></div>
+          <div class="side top">
+            <div class="dot dtop dleft"></div>
+            <div class="dot dbottom dright"></div>
+          </div>
+          <div class="side top inner"></div>
+          <div class="side right">
+            <div class="dot dtop dleft"></div>
+            <div class="dot center"></div>
+            <div class="dot dbottom dright"></div>
+          </div>
+          <div class="side right inner"></div>
+          <div class="side left">
+            <div class="dot dtop dleft"></div>
+            <div class="dot dtop dright"></div>
+            <div class="dot dbottom dleft"></div>
+            <div class="dot dbottom dright"></div>
+          </div>
+          <div class="side left inner"></div>
+          <div class="side bottom">
+            <div class="dot center"></div>
+            <div class="dot dtop dleft"></div>
+            <div class="dot dtop dright"></div>
+            <div class="dot dbottom dleft"></div>
+            <div class="dot dbottom dright"></div>
+          </div>
+          <div class="side bottom inner"></div>
+          <div class="side back">
+            <div class="dot dtop dleft"></div>
+            <div class="dot dtop dright"></div>
+            <div class="dot dbottom dleft"></div>
+            <div class="dot dbottom dright"></div>
+            <div class="dot center dleft"></div>
+            <div class="dot center dright"></div>
+          </div>
+          <div class="side back inner"></div>
+          <div class="side cover x"></div>
+          <div class="side cover y"></div>
+          <div class="side cover z"></div>
         </div>
       </div>
+    </div>
 
-      <div class="rollme">Roll Me!</div>
+    <div class="rollme">Roll Me!</div>
 
- 
-      
-      <script src="main.js"></script>
-      <script type="text/javascript">
-       function dice(event){
+    <script src="main.js"></script>
 
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      function dice(event) {
         diceSound.play();
-
         event.preventDefault();
-
-        $('#platform').removeClass('stop').addClass('playing');
-        $('#dice');
-        setTimeout(function(){
-          $('#platform').removeClass('playing').addClass('stop');
+        $("#platform").removeClass("stop").addClass("playing");
+        $("#dice");
+        setTimeout(function () {
+          $("#platform").removeClass("playing").addClass("stop");
           var number = Math.floor(Math.random() * 6) + 1;
-          var x = 0, y = 20, z = -20;
-          switch(number){
-              case 1:
-                x = 0; y = 20; z = -20;
-                break;
-              case 2:
-                x = -100; y = -150; z = 10;
-                break;
-              case 3:
-                x = 0; y = -100; z = -10;
-                break;
-              case 4:
-                x = 0; y = 100; z = -10;
-                break;
-              case 5:
-                x = 80; y = 120; z = -10;
-                break;
-              case 6:
-                x = 0; y = 200; x = 10;
-                break;
+          var x = 0,
+            y = 20,
+            z = -20;
+          switch (number) {
+            case 1:
+              x = 0;
+              y = 20;
+              z = -20;
+              break;
+            case 2:
+              x = -100;
+              y = -150;
+              z = 10;
+              break;
+            case 3:
+              x = 0;
+              y = -100;
+              z = -10;
+              break;
+            case 4:
+              x = 0;
+              y = 100;
+              z = -10;
+              break;
+            case 5:
+              x = 80;
+              y = 120;
+              z = -10;
+              break;
+            case 6:
+              x = 0;
+              y = 200;
+              x = 10;
+              break;
           }
-          
-          $('#dice').css({
-            'transform': 'rotateX(' + x + 'deg) rotateY(' + y + 'deg) rotateZ(' + z + 'deg)'
+
+          $("#dice").css({
+            transform: "rotateX(" + x + "deg) rotateY(" + y + "deg) rotateZ(" + z + "deg)",
           });
-          
-          $('#platform').css({
-            'transform': 'translate3d(0,0, 0px)'
+
+          $("#platform").css({
+            transform: "translate3d(0,0, 0px)",
           });
-          
-          $('#result').html(number);
-          
+
+          $("#result").html(number);
         }, 1120);
-      };
-
-      </script>
-
-
+      }
+    </script>
   </body>
-  
   <!-- dice over -->
-  </html>
+</html>

@@ -1,75 +1,62 @@
-
 "use strict";
 
 window.addEventListener("DOMContentLoaded", start());
-
-//sounds
-let popupSound = document.querySelector("#popupSound")
-let diceSound = document.querySelector("#diceSound")
+let card;
+let popupSound = document.querySelector("#popupSound");
+let diceSound = document.querySelector("#diceSound");
 let isModalOpen = false;
-
-
-function start(){
-    loading_anim(); 
-    const popup = document.querySelectorAll(".popup");
-    const square = document.querySelectorAll(".square");
-    
-    popup.forEach((each) => each.classList.add("hide"));
-    square.forEach((button) => button.addEventListener("click", showModal));
-
-    document.querySelector(".unmutedButton").addEventListener("click", muteSound)
-    document.querySelector(".mutedButton").addEventListener("click", unmuteSound)
-  
-  
+function start() {
+  loading_anim();
+  hentData();
 }
 
-function loading_anim(){
-    const number = document.querySelector(".number");
-    const game = document.querySelector(".game_board");
-    const dice = document.querySelector("#ui_dado");
-    const roll = document.querySelector(".rollme");
-    const loader = document.querySelector(".loading-animation");
-    const blur = document.querySelector(".blur");
-    blur.style.visibility="visible";
-    number.style.display="visible";
-    game.style.display="none";
-    game.style.visibility="hidden";
-    dice.style.display="none"
-    dice.style.visibility="hidden";
-    roll.style.display="none";
-    roll.style.visibility="hidden";
-    setTimeout(() => {
-        blur.style.visibility="hidden";
-        blur.style.display="none"
-        number.style.display="none";
-        loader.style.display="none"
-        number.style.visibility="hidden"
-        game.style.display="block";
-        game.style.visibility="visible";
-        dice.style.display="block";
-        dice.style.visibility="visible";
-        roll.style.display="block";
-        roll.style.visibility="visible";
-    }, 3500);
+let currentAnswers = [];
+localStorage.setItem('answers', JSON.stringify(currentAnswers));
+
+function loading_anim() {
+  const number = document.querySelector(".number");
+  const game = document.querySelector(".cardList");
+  const dice = document.querySelector("#ui_dado");
+  const roll = document.querySelector(".rollme");
+  const loader = document.querySelector(".loading-animation");
+  const blur = document.querySelector(".blur");
+  const gameDetails = document.querySelector(".game_details");
+  blur.style.visibility = "visible";
+  number.style.display = "visible";
+    game.style.display = "none";
+    game.style.visibility = "hidden";
+  dice.style.display = "none";
+  dice.style.visibility = "hidden";
+  roll.style.display = "none";
+  roll.style.visibility = "hidden";
+  gameDetails.style.visibility = "hidden";
+  setTimeout(() => {
+    blur.style.visibility = "hidden";
+    blur.style.display = "none";
+    number.style.display = "none";
+    loader.style.display = "none";
+    number.style.visibility = "hidden";
+    game.style.display = "grid";
+    game.style.visibility = "visible";
+    dice.style.display = "block";
+    dice.style.visibility = "visible";
+    roll.style.display = "block";
+    roll.style.visibility = "visible";
+    gameDetails.style.visibility = "visible";
+  }, 3500);
 }
-
-
 const startingMinutes = 5;
 let time = startingMinutes * 60;
 
 const countDownEl =  document.querySelectorAll("#countdown");
 
 
-function restartTimer(){
-    time = startingMinutes * 60;
-}
+
+
 
 function updateCountdown(){
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
-    console.log(minutes+ ":"+ seconds);
-    
     
 countDownEl.forEach((e) => e.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`);
 time--;
@@ -77,77 +64,119 @@ if(minutes==0 && seconds == 0){
   restartTimer();
 }
 }
+function restartTimer(){
+    time = startingMinutes * 60;
+}
 
-// setInterval(updateCountdown, 1000);
 
-function showModal(){
-  if(!isModalOpen){
-    isModalOpen = true;
-    restartTimer();
-    this.querySelector(".popup").classList.remove("hide");
-    const gameFigure = document.createElement("img");
-    gameFigure.src = "public/assets/gameFigure.png"
-    gameFigure.style.width = "2rem";
-    let clickedSquare = this.querySelector('.popup').parentNode;
-    popupSound.play();
+
+
+async function hentData() {
+  console.log("hentData");
+  const result = await fetch("cardQuestions.json");
+  card = await result.json();
+  visCard();
+}
+
+function visCard() {
+  console.log("visCard", card);
+  const cardList = document.querySelector(".cardList");
+  const template = document.querySelector("template").content;
+
+
+  card.forEach((card) => {
+    const klon = template.cloneNode(true);
+    klon.querySelector(".icon").src = card.icon;
+    klon.querySelector(".card_text").textContent = card.takeActionCard;
+    klon.querySelector("article").addEventListener("click", function () {
+      
+
+      
+        isModalOpen = true;
+
+        const newEl = document.createElement("form");
+
+        restartTimer();
+      document.querySelector(".modal").classList.remove("hide");
+      popupSound.play(); 
+      const refreshIntervalId = setInterval(updateCountdown, 1000); 
+      
+      document.querySelector(".modal-icon").src = card.icon;
+      document.querySelector(".modal-header").textContent = card.header;
+      document.querySelector(".modal-discussionQuestion").textContent = card.discussionQuestion;
+      document.querySelector(".modal-questionAnswer").textContent = card.questionAnswer;
+      if (card.id === 2 || card.id === 5 || card.id === 8 || card.id === 9 || card.id === 13 || card.id === 14 || card.id === 15 || card.id === 19 || card.id === 21 || card.id === 25){
+        const newEl = document.createElement("form");
+        document.querySelector(".input-card").appendChild(newEl);
+        const newEl2 = document.createElement("textarea");
+        newEl2.placeholder = "Write down your answer here...";
+        newEl.appendChild(newEl2);
+        newEl.classList.add("insightsForm");
+        setTimeout(() => {
+          const elCreated = document.querySelector("form");
+          elCreated.remove();
+          currentAnswers.push(newEl2.value)
+          localStorage.setItem('answers', JSON.stringify(currentAnswers));
+        },301000)
+       
+       } 
+      document.querySelector(".modal-game-logo").src = card.gameLogo;
+
+      setTimeout(() => {
+      
+        document.querySelector(".modal").classList.add("hide");
+        clearInterval(refreshIntervalId);
+        isModalOpen = false;
+      }, 301000);
+    })
     
-    const refreshIntervalId = setInterval(updateCountdown, 1000);
-    
-    
-    setTimeout(() => {
-      this.querySelector(".popup").classList.add("hide");
-      clearInterval(refreshIntervalId);
-      isModalOpen = false;
-      clickedSquare.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
-      clickedSquare.style.border = '6px solid rgba(255, 255, 255, 0.6)';
+    klon.querySelector("article").addEventListener("click", showColor);
 
-    //   if (isModalOpen = true){
-    //  clickedSquare.appendChild(gameFigure);
-    //   }
-     
-        
-      }, 3000); 
-    } 
-}  
 
+function showColor(){
+    this.style.backgroundColor = 'rgba(145, 145, 145, 0.4)';
+    this.style.border = '6px solid rgba(255, 255, 255, 0.6)';
+   };
+ 
+
+  klon.querySelector("article").addEventListener("click", notModal);
+
+  
+
+function notModal(){
+  if(card.id === 0 || card.id === 4 || card.id === 7 || card.id === 12 || card.id === 17 || card.id === 26){
+  
+    document.querySelector(".modal").classList.add("hide");
+  }
+  }
+      console.log(card.id);
+  cardList.appendChild(klon);
+  });
+}
+
+document.querySelector(".unmutedButton").addEventListener("click", muteSound);
+document.querySelector(".mutedButton").addEventListener("click", unmuteSound);
 
 
 function muteSound() {
-    document.querySelector(".unmutedButton").classList.add("hidden");
-    document.querySelector(".mutedButton").classList.remove("hidden");
+  document.querySelector(".unmutedButton").classList.add("hidden");
+  document.querySelector(".mutedButton").classList.remove("hidden");
 
-    popupSound.muted = true;
-    diceSound.muted = true;
+  popupSound.muted = true;
+  diceSound.muted = true;
 }
 
 function unmuteSound() {
-    document.querySelector(".mutedButton").classList.add("hidden");
-    document.querySelector(".unmutedButton").classList.remove("hidden");
+  document.querySelector(".mutedButton").classList.add("hidden");
+  document.querySelector(".unmutedButton").classList.remove("hidden");
 
-    popupSound.muted = false;
-    diceSound.muted = false;
+  popupSound.muted = false;
+  diceSound.muted = false;
 }
 
 
-const squareArray = document.querySelectorAll(".square");
-const gameFigure = document.createElement("img");
-gameFigure.src = "public/assets/gameFigure.png"
-gameFigure.style.width = "2rem"
 
-
-
-function changeColor(){
-squareArray.forEach((square) => {
-    square.addEventListener('focus', (event) => {
-        //event.target.style.backgroundColor = 'pink';
-        event.target.insertBefore(gameFigure, event.target.children[0])
-      }, true);
-    })
-  }
-
-  // displaying the answers to the questions
-
-  document.querySelector(".finfish-button").addEventListener("click", e =>{
+  /* document.querySelector(".finfish-button").addEventListener("click", e =>{
     e.preventDefault();
     const textareas = document.querySelectorAll("textarea");
     const header = document.querySelectorAll("header");
@@ -157,80 +186,4 @@ squareArray.forEach((square) => {
    localStorage.setItem("insights", JSON.stringify(newArray))
    window.location = "endScreen.html"
     
-  })
-
-
-// const square2 = document.querySelectorAll(".square");
-// square2.forEach((apple) => apple.addEventListener("click", showColor));
-//   }
-    
-
-// function showColor(){
-//    //this.style.backgroundColor = "rgba(180, 180, 180)";
-//    this.addEventListener('focus', (event) => {
-//             //event.target.style.backgroundColor = 'pink';
-//           }, true);
-//           this.addEventListener('blur', (event) => {
-//                     event.target.style.backgroundColor = '#04304A';
-//                     event.target.style.border = '6px solid black';
-                    
-//                   }, true);
-//   }
-
-
-
-
-//     ;})
-
-//square2.forEach((apple) => apple.addEventListener("click", showColor));
-
-
-/* square2.addEventListener('focus', (event) => {
-    event.target.style.backgroundColor = 'pink';
-  }, true); */
-
-/* square2.addEventListener('blur', (event) => {
-    event.target.style.backgroundColor = 'rgba(180, 180, 180)';
-    
-  }, true); */
-
-
-/* function showColor(){
-
-    document.querySelector(".square").addEventListener('focus', (event) => {
-        event.target.style.backgroundColor = 'pink';
-      });
-      
-   this.style.backgroundColor = "rgba(180, 180, 180)";
-
-   this.style.border = "rgba(174, 174, 240)";
-   showForm();
-   this.style.opacity = "50%"; 
-   document.querySelector(".popup").style.pointerEvents = "none";
-  } */
-
-
-
-//   function showTime() {
-//     console.log("showTime");
-//     if (timeLeft > 0) {
-//         timeLeft--;
-//         startTimer();
-//         document.querySelector("#time").textContent = timeLeft;
-//     } else {
-//         youLost();
-//     }
-// }
-
-// function startTimer() {
-//     console.log("startTimer");
-
-   
-
-//     if (timeLeft == 0) {
-//         youLost();
-//     } else {
-//         setTimeout (showTime, 1000);
-//     }
-    
-// }
+  }) */

@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "Inter-Bolds";
-    src: url("./public/assets/inter-Black.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-$primary-font: "Inter-Black";
+  font-family: "avenir-next";
+  src: url("./public/assets/Avenir\ Next.ttc") format("ttc");
+  font-weight: normal;
+  font-style: normal;
+}
+$primary-font: "avenir-next";
 
 $white: #ffffff;
 $black: #000000;
