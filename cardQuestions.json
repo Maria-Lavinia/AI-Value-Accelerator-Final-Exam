@@ -1,19 +1,19 @@
 [
     {
         "id":0,
-        "icon": "public/icon/0.png",
+        "icon": "/icon/0.png",
         "takeActionCard":"Roll the dice again."
     },
 
     {
         "id":1,
-        "icon": "./icon/1.png",
+        "icon": "/icon/1.png",
         "discussionQuestion":"How do you talk about AI at your workplace?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
     {
         "id": 2,
-        "icon": "./icon/discussion.png",
+        "icon": "/icon/discussion.png",
         "header": "State of Knowledge",
         "discussionQuestion": "Is training / education enough or do you also need to recruit new competence in order to speed up your AI development? Where would you look to find that competence?",
         "questionAnswer": "Which area / company should we embark on a dialogue with?",

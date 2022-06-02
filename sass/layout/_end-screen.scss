@@ -2,7 +2,7 @@
 
 .endScreen {
     height: 100vh;
-    background-image: url("/public/assets/endBackground2.png");
+    background-image: url("/staticAssets/endBackground2.png");
 }
 
 .endScreenMain {
@@ -211,7 +211,7 @@ display: none;
     
     .endScreen {
         background-color: white;
-        background-image: url("/public/assets/endMobileBackground.svg");
+        background-image: url("/staticAassets/endMobileBackground.svg");
         background-repeat: no-repeat;
         background-position-y: 29.6rem;
         background-position-x: center;
