@@ -72,7 +72,7 @@ do0cument.querySelector("#form").addEventListener("submit", validateForm);
 
 function validateForm(e){
   e.preventDefault();
-  window.location = "titlescreen.html"
+  window.location = "/titlescreen.html"
 }
 
 
