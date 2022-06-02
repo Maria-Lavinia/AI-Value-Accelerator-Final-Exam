@@ -176,7 +176,7 @@ html {
   }
 }
 .card {
-  padding: 0 !important;
+padding: 0 !important;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -185,12 +185,12 @@ background-color: #C5ECDF;
 border: solid 6px #15B57E;
 position: relative;
 }
-.icon{
-  margin-top: 1rem;
-  width: 4rem;
-  height: auto;
-  margin-left: 3.8rem;
-}
+// .icon{
+//   margin-top: 1rem;
+//   width: 4rem;
+//   height: auto;
+//   margin-left: 3.8rem;
+// }
 
 .card_text{
   font-size: 1.1rem;
