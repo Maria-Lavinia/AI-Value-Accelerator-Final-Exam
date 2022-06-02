@@ -175,22 +175,13 @@ html {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
 }
-.icon {
-padding: 0 !important;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: #C5ECDF;
-border: solid 6px #15B57E;
-position: relative;
+
+.icon{
+  margin-top: 1rem;
+  width: 4rem;
+  height: auto;
+  margin-left: 3.8rem;
 }
-// .icon{
-//   margin-top: 1rem;
-//   width: 4rem;
-//   height: auto;
-//   margin-left: 3.8rem;
-// }
 
 .card_text{
   font-size: 1.1rem;
