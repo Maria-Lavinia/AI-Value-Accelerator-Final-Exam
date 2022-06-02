@@ -5,6 +5,7 @@ let card;
 let popupSound = document.querySelector("#popupSound");
 let diceSound = document.querySelector("#diceSound");
 let isModalOpen = false;
+
 function start() {
   loading_anim();
   hentData();
