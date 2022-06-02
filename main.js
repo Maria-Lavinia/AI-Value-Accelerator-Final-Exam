@@ -68,7 +68,12 @@ function restartTimer(){
     time = startingMinutes * 60;
 }
 
+do0cument.querySelector("#form").addEventListener("submit", validateForm);
 
+function validateForm(e){
+  e.preventDefault();
+  window.location = "titlescreen.html"
+}
 
 
 async function hentData() {
