@@ -21,14 +21,14 @@
     },
     {
         "id":3,
-        "icon": "./staticAssets/3.png",
+        "icon": "/staticAssets/3.png",
         "discussionQuestion":"Do you think AI can replace your job? Do you feel threatened? Why yes / why not?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
 
     {
         "id":4,
-        "icon": "./staticAssets/refill-your-drink.png",
+        "icon": "/staticAssets/refill-your-drink.png",
         "takeActionCard":"Refill your drink.",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
@@ -36,7 +36,7 @@
 
     {
         "id": 5,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Leadership",
         "discussionQuestion": "What new demands do AI put on leaders of today and tomorrow?",
         "questionAnswer": "Name the biggest change?",
@@ -47,14 +47,14 @@
 
     {
         "id":6,
-        "icon": "./staticAssets/6.png",
+        "icon": "/staticAssets/6.png",
         "discussionQuestion":"How do you increase competence to benefit from new technology?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
 
     {
         "id":7,
-        "icon": "./staticAssets/move-to-the-next.png",
+        "icon": "/staticAssets/move-to-the-next.png",
         "takeActionCard":"Move to the next."  
     },
 
@@ -62,7 +62,7 @@
 
     {
         "id": 8,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Business Areas",
         "discussionQuestion": "Within what business areas do you see the greatest potential for AI to deliver rapid improvements / efficiency improvements / profits?",
         "questionAnswer": "Select the most important area.",
@@ -70,7 +70,7 @@
     },
     {
         "id": 9,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Business Areas",
         "discussionQuestion": "AI offers a new toolbox for decision support where machine learning techniques can be used for e.g. image recognition, text analytics and prediction / forecasting. In what areas do you see that such tools can be applied within your organisation?",
         "questionAnswer": "Name the most important area?",
@@ -79,7 +79,7 @@
  
     {
         "id":10,
-        "icon": "./staticAssets/10.png",
+        "icon": "/staticAssets/10.png",
         "discussionQuestion":"What potential do you see for AI within your organisation?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
@@ -87,7 +87,7 @@
 
     {
         "id":11,
-        "icon": "./staticAssets/11.png",
+        "icon": "/staticAssets/11.png",
         "discussionQuestion":"Do you see any ethical challenges related to AI development?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
@@ -95,7 +95,7 @@
 
     {
         "id":12,
-        "icon": "./staticAssets/2-min-break.png",
+        "icon": "/staticAssets/2-min-break.png",
         "takeActionCard":"2 min. break" 
     },
  
@@ -103,7 +103,7 @@
     
     {
         "id": 13,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Leadership",
         "discussionQuestion": "How will the role of the leader change as AI is increasingly implemented?",
         "questionAnswer": "Name the most important role.",
@@ -112,7 +112,7 @@
 
     {
         "id": 14,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Business Areas",
         "discussionQuestion": "How could you measure the benefit and value of an AI application in production?",
         "questionAnswer": "Select one KPI that you want to measure?",
@@ -122,7 +122,7 @@
    
     {   
         "id": 15,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "State of Knowledge",
         "discussionQuestion": "Some organisations focus primarily on increasing management's competence in AI, while others raise the competence broadly among multiple or all employees. Which strategy do you think is best for your organisation and why? Are there other ways?",
         "questionAnswer": "Which strategy is the best for your organisation?",
@@ -131,7 +131,7 @@
 
     {
         "id":16,
-        "icon": "./staticAssets/16.png",
+        "icon": "/staticAssets/16.png",
         "discussionQuestion":"How far have you come with AI within your organisation?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
@@ -139,19 +139,19 @@
 
     {
         "id":17,
-        "icon": "./staticAssets/do-some-exercise.png",
+        "icon": "/staticAssets/do-some-exercise.png",
         "takeActionCard":"Do some exercise.",
         "gameLogo": "./staticAssets/white-game-logo.png"    
     },
     {
         "id":18,
-        "icon": "./staticAssets/18.png",
+        "icon": "/staticAssets/18.png",
         "discussionQuestion":"When do you think your organisation can start making money from AI?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"
     },
     {
         "id": 19,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Business Areas",
         "discussionQuestion": "AI is not only used to replace / automate processes, but more and more often to augment employees in their professional roles. Do you see that your skills and abilities can benefit from AI augmentation, and if so - in what way?",
         "questionAnswer": "Which one augmented AI area / initiative should we implement?",
@@ -159,7 +159,7 @@
     },
     {
         "id":20,
-        "icon": "./staticAssets/20.png",
+        "icon": "/staticAssets/20.png",
         "discussionQuestion":"Do you think there is a risk that AI will make people passive and incompetent?",
         "gameLogo": "/staticAssets/finalLogoChangedWhite.png"   
     },
@@ -169,7 +169,7 @@
  
     {
         "id": 21,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Business Areas ",
         "discussionQuestion": "AI can create value by automating work tasks and thereby changing business logic and business models. In what areas within your organisation could this be relevant?",
         "questionAnswer": "Which area is the most important?",
@@ -180,20 +180,20 @@
 
     {
         "id":23,
-        "icon": "public/staticAssets/grab-a-bite.png",
+        "icon": "/staticAssets/grab-a-bite.png",
         "takeActionCard":"Grab a bite."
     },
 
     {
         "id":24,
-        "icon": "public/staticAssets/return-to-start.png",
+        "icon": "/staticAssets/return-to-start.png",
         "takeActionCard":"Return to START."
     },
 
 
     {
         "id": 25,
-        "icon": "./staticAssets/discussion.png",
+        "icon": "/staticAssets/discussion.png",
         "header": "Leadership",
         "discussionQuestion": "It has been proved challenging to go from small scale projects to actual deployment of AI. Are such attempts in progress within your organisation? What challenges do you face?",
         "questionAnswer": "What is the biggest challenge in scaling AI projects?",
@@ -202,7 +202,7 @@
 
     {
         "id":26,
-        "icon": "./staticAssets/arrowup.png"
+        "icon": "/staticAssets/arrowup.png"
     }
 
 ]
