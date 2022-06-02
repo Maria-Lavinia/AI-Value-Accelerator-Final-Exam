@@ -72,7 +72,9 @@ document.querySelector("#form").addEventListener("submit", validateForm);
 
 function validateForm(e){
   e.preventDefault();
+  console.log("i'M HERE")
   window.location.replace("/titlescreen.html")
+  
 }
 
 
