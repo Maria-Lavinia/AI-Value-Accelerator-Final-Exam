@@ -1,7 +1,7 @@
 const { resolve } = require("path");
  
 module.exports = {
-  base: "./", //set base here or in the build command
+  base: "/", //set base here or in the build command
   build: {
     rollupOptions: {
       input: {
