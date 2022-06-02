@@ -1,6 +1,6 @@
 "use strict";
 
-window.addEventListener("DOMContentLoaded", start());
+window.addEventListener("DOMContentLoaded", start);
 let card;
 let popupSound = document.querySelector("#popupSound");
 let diceSound = document.querySelector("#diceSound");
@@ -68,14 +68,7 @@ function restartTimer(){
     time = startingMinutes * 60;
 }
 
-document.querySelector("#sign-in").addEventListener("click", validateForm);
 
-function validateForm(e){
-  e.preventDefault();
-  console.log("i'M HERE")
-  window.location = "/titlescreen.html";
-  
-}
 
 
 async function hentData() {
