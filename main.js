@@ -183,6 +183,7 @@ function notModal(){
    
   cardList.appendChild(klon);
   });
+  
   let squareArray = document.querySelectorAll(".square");
   const gameFigure = document.createElement("img");
   gameFigure.className = "gamePawn";
