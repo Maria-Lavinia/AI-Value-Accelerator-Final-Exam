@@ -183,6 +183,18 @@ function notModal(){
    
   cardList.appendChild(klon);
   });
+  let squareArray = document.querySelectorAll(".square");
+  const gameFigure = document.createElement("img");
+  gameFigure.className = "gamePawn";
+  gameFigure.src = "public/assets/gameFigure.png"
+  gameFigure.style.width = "2rem"
+
+  squareArray.forEach((square) => {
+    square.addEventListener('focus', (event) => {
+      console.log(event.target);
+      event.target.insertBefore(gameFigure, event.target.children[0])
+      }, true);
+    })
 }
 
 document.querySelector(".unmutedButton").addEventListener("click", muteSound);
@@ -205,16 +217,3 @@ function unmuteSound() {
   diceSound.muted = false;
 }
 
-
-
-  /* document.querySelector(".finfish-button").addEventListener("click", e =>{
-    e.preventDefault();
-    const textareas = document.querySelectorAll("textarea");
-    const header = document.querySelectorAll("header");
-    console.log(textareas);
-
-    const newArray = [...textareas].map(area => area.value)
-   localStorage.setItem("insights", JSON.stringify(newArray))
-   window.location = "endScreen.html"
-    
-  }) */
