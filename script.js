@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", newstart);
 
 
 function newstart(){
-document.querySelector("#sign-in").addEventListener("click", validateForm);
+document.querySelector("#form").addEventListener("submit", validateForm);
 
 function validateForm(e){
   e.preventDefault();
