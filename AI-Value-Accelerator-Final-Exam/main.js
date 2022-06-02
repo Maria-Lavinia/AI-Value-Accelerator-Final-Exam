@@ -164,6 +164,7 @@ function showColor(){
 
 function notModal(){
   if(card.id === 0 || card.id === 4 || card.id === 7 || card.id === 12 || card.id === 17 || card.id === 23 || card.id === 24 || card.id === 26){
+  
     document.querySelector(".modal").classList.add("hide");
     const blur2 = document.querySelector(".blur");
     const gameDetails2 = document.querySelector(".game_details");
@@ -177,8 +178,8 @@ function notModal(){
     gameDetails2.style.visibility = "visible";
     roll2.style.visibility = "visible";
     game2.style.display = "grid";
-    clearInterval(refreshIntervalId);
     isModalOpen = false;
+
   }
   }
 

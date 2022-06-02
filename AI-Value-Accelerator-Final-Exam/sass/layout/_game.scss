@@ -204,8 +204,8 @@ html {
   border: solid 6px #ff6fbb;
   
 }
-.card:nth-child(26):nth-child(1){
-color: pink;
+.card:nth-child(0){
+  pointer-events: none;
 }
 
 .icon3{
