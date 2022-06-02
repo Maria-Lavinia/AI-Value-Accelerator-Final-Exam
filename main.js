@@ -68,7 +68,7 @@ function restartTimer(){
     time = startingMinutes * 60;
 }
 
-document.querySelector("#form").addEventListener("submit", validateForm);
+document.querySelector("#sign-in").addEventListener("click", validateForm);
 
 function validateForm(e){
   e.preventDefault();
