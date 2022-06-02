@@ -89,12 +89,10 @@ function visCard() {
     klon.querySelector(".icon").src = card.icon;
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
-      // const blur = document.querySelector(".blur");
-      // blur.style.visibility = "visible";
-      
+
         isModalOpen = true;
 
-        const newEl = document.createElement("form");
+      
 
         restartTimer();
       document.querySelector(".modal").classList.remove("hide");
