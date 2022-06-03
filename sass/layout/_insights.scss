@@ -105,28 +105,6 @@ textarea{
 }
 
 
-input[type="submit"]{
-  width: 208px;
-  height: 50px;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 15px 15px 17px 0 rgba(0, 0, 0, 0.16);
-  background-color: variables.$white;
-  color: variables.$dark-blue;
-  display: block;
-  margin: 0 auto;
-  font-size: 1.6rem;
-  border: 0;
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-}
-
 //   MOBIL 
 @media screen and (max-width: 50rem){
     .insights{
@@ -156,6 +134,15 @@ input[type="submit"]{
     }
     .modal .input-card .modal-questionAnswer{
       text-align: center;
+    }
+    .insigthButton{
+
+      &:hover {
+        transform: none;
+      }
+      &:active {
+        transform: none;
+      }
     }
    
 }

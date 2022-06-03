@@ -502,5 +502,25 @@ color: pink;
     .icon{
       margin-left: 1rem;
     }
-    
+    .mutedButton:hover{
+    transform: none;
+    }
+    .mutedButton:active{
+      transform: none;
+    }
+    .unmutedButton:hover{
+      transform: none;
+      }
+      .unmutedButton:active{
+        transform: none;
+      }
+      .finishButton{  
+        &:hover {
+          transform: none
+        }
+        &:active {
+          transform: none;
+          box-shadow: 0;
+        }
+      }
 }

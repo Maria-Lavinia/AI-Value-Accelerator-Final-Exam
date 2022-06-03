@@ -200,4 +200,12 @@ form {
 .form-group{
   margin-bottom: 1rem;
 }
+#sign-in {
+  &:hover {
+    transform: none;
+  }
+  &:active {
+    transform: none;
+  }
+}
 }
