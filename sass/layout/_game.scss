@@ -445,27 +445,18 @@ color: pink;
 
 
 @media screen and (max-width: 50rem){
-  .cardList{
-    display: grid;
-    grid-template-columns: repeat(5, 2fr);
-    max-width: 20rem;
-  }
-  .cardList::before{
-    content: "";
-    grid-row: 2/10;
-    grid-column: 2/5;
-  }
+
   .logo-white img{
     width: 18rem;
     
     }
     .logo-white{
-      left: 27%;
+      left: 23%;
    
     }
     .icon3{
       width: 10rem;
-      left: 40%;
+      left: 35%;
     }
     .icon{
       margin-top: 0 !important;
@@ -476,7 +467,12 @@ color: pink;
      left: 63%;
     }
     .unmutedButton {
-    left:30%;
+      top: 18%;
+      left:43%;
+    }
+    .mutedButton {
+      top: 18%;
+      left:43%;
     }
     #ui_dado{
       top:54%;
@@ -484,6 +480,7 @@ color: pink;
       width: 50%;
     }
     .rollme{
+      top: 80%;
       left:53%;
     }
     #result{
