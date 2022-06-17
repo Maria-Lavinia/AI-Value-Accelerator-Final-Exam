@@ -11,7 +11,7 @@
   margin-top: 40px;
   margin-left: 50px;
   width: 10rem;
-  height: 4rem;
+  height: auto;
 }
 
 .game-title {
@@ -145,6 +145,14 @@ button {
   }
   .button{
     font-size: 1rem ;
+  }
+  button {
+    &:hover {
+      transform: none;     
+    }
+    &:active {
+      transform: none;
+    }
   }
 
 }

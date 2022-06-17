@@ -1,20 +1,5 @@
 # AI-Value-Accelerator-Final-Exam
-
-In order to have Sass on our project, we need to:
-
-1. Make sure to have NPM Node.js and Git installed on your computer/VS Code
-2. We also need Vite in order to create a project, where we can use Sass. You can get it at this URL: https:vitejs.dev
-
-Next step:
-
-1. Run npm init vite@latest in the terminal and in the folder of our project
-2. Name the project and then choose "vanilla" or "vue" 😅
-3. NPM install -D sass in the termina to install Sass
-
-Next step:
-
-1. Run npm run dev to open localhost and get a live view of the website
-
- Next step|:
- 1. I believe that you have to install vue on your machine
- 2. so in the terminal npm install -g @vue/cli
+Open local version:
+1. npm install
+2. npm run dev
+3. Hold command and click on the link to localhost

@@ -46,6 +46,7 @@ function loading_anim() {
     gameDetails.style.visibility = "visible";
   }, 3500);
 }
+
 const startingMinutes = 1;
 let time = startingMinutes * 60;
 
@@ -80,7 +81,6 @@ async function hentData() {
 }
 
 function visCard() {
-  console.log("visCard", card);
   const cardList = document.querySelector(".cardList");
   const template = document.querySelector("template").content;
 
@@ -91,11 +91,11 @@ function visCard() {
     klon.querySelector(".card_text").textContent = card.takeActionCard;
     klon.querySelector("article").addEventListener("click", function () {
 
-        isModalOpen = true;
+   isModalOpen = true;
 
       
 
-        restartTimer();
+      restartTimer();
       document.querySelector(".modal").classList.remove("hide");
       popupSound.play(); 
       const refreshIntervalId = setInterval(updateCountdown, 1000); 
@@ -183,6 +183,8 @@ function notModal(){
    
   cardList.appendChild(klon);
   });
+  
+
 }
 
 document.querySelector(".unmutedButton").addEventListener("click", muteSound);
@@ -205,16 +207,3 @@ function unmuteSound() {
   diceSound.muted = false;
 }
 
-
-
-  /* document.querySelector(".finfish-button").addEventListener("click", e =>{
-    e.preventDefault();
-    const textareas = document.querySelectorAll("textarea");
-    const header = document.querySelectorAll("header");
-    console.log(textareas);
-
-    const newArray = [...textareas].map(area => area.value)
-   localStorage.setItem("insights", JSON.stringify(newArray))
-   window.location = "endScreen.html"
-    
-  }) */
